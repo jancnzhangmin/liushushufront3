@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window cfyyyYj" component="$model/UI2/system/components/justep/window/window" design="device:m;" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cfyyyYj" components="$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/distpicker/districtSelect,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/bootstrap/accordion/accordion,$model/UI2/system/components/justep/textarea/textarea,$model/UI2/system/components/justep/messageDialog/messageDialog,$model/UI2/system/components/justep/popOver/popOver,$model/UI2/system/components/justep/contents/content,$model/UI2/system/components/justep/select/select,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/distpicker/citySelect,$model/UI2/system/components/bootstrap/panel/panel,$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/smartContainer/smartContainer,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/distpicker/provinceSelect,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/row/row,$model/UI2/system/components/justep/contents/contents,$model/UI2/system/components/justep/button/radio,$model/UI2/system/components/bootstrap/inputGroup/inputGroup,$model/UI2/system/components/justep/button/buttonGroup,,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/windowContainer/windowContainer,">
+  <xhtml:style xmlns:xhtml="http://www.w3.org/1999/xhtml">.x-liushushu.btn-group.cfyyyYj{background-color: rgb(255, 255, 255); border-bottom: 1px solid rgb(240, 240, 240)} .x-liushushu.btn-group.cfyyyYj .btn.cfyyyYj{border-top: 0} .x-liushushu.btn-group.cfyyyYj .btn.cfyyyYj span.cfyyyYj{font-size: 12px; font-weight: normal} .x-card.btn-group.cfyyyYj .btn.active.cfyyyYj{color: rgb(38, 113, 185); padding: 0; border-top: 0}</xhtml:style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="cfyyyYj" class="cfyyyYj"/>  
+  <div component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pcJv2U3m-iosstatusbar cfyyyYj" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cfyyyYj"> 
+    <div class="x-panel-content x-cards cfyyyYj" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cfyyyYj">
+      <div component="$model/UI2/system/components/justep/contents/contents" class="x-contents x-full cfyyyYj" xid="contents1" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-config="{&quot;active&quot;:0}" __cid="cfyyyYj"> 
+        <div class="x-contents-content active cfyyyYj" xid="publishcontent" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cfyyyYj">
+          <div component="$model/UI2/system/components/justep/windowContainer/windowContainer" class="x-window-container cfyyyYj" xid="windowContainer1" __component-context__="block" data-bind="component:{name:'$model/UI2/system/components/justep/windowContainer/windowContainer'}" data-config="{&quot;src&quot;:&quot;$model/UI2/liushushufront3/publish/publish.w&quot;}" __cid="cfyyyYj">
+            <div component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cnEnuqa" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cnEnuqa" components="$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/distpicker/districtSelect,$model/UI2/system/components/justep/input/input,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/bootstrap/accordion/accordion,$model/UI2/system/components/justep/textarea/textarea,$model/UI2/system/components/justep/messageDialog/messageDialog,$model/UI2/system/components/justep/popOver/popOver,$model/UI2/system/components/justep/contents/content,$model/UI2/system/components/justep/select/select,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/distpicker/citySelect,$model/UI2/system/components/bootstrap/panel/panel,$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/smartContainer/smartContainer,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/distpicker/provinceSelect,$model/UI2/system/components/justep/panel/panel,$model/UI2/system/components/justep/row/row,$model/UI2/system/components/justep/contents/contents,$model/UI2/system/components/justep/button/radio,$model/UI2/system/components/bootstrap/inputGroup/inputGroup,$model/UI2/system/components/justep/button/buttonGroup,">  
+              <style xmlns="" xmlns:xhtml="http://www.w3.org/1999/xhtml">.form-control.cnEnuqa{border: none} .input-group-addon.cnEnuqa{border: none; background-color: transparent} .x-panel-content.cnEnuqa &gt; .list-group-item.cnEnuqa{border: none} .spacing.cnEnuqa{} .x-toggle.cnEnuqa{margin-top: 0px} .btn-outline-off.cnEnuqa{border: 0px; background-color: rgb(192, 192, 192)} .ios-fixed-panel.x-panel.cnEnuqa &gt; .x-panel-bottom.cnEnuqa{display: block !important} .ov_hi.cnEnuqa{overflow: hidden} .alwaysShow.cnEnuqa td.cnEnuqa{position: relative} .alwaysShow.cnEnuqa td.cnEnuqa .df-class.cnEnuqa{position: absolute; z-index: 1; top: 50%; left: 100%; transform: translate(-50%, -50%)} .df-persp.cnEnuqa, .persp-bg.cnEnuqa{position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 6000; pointer-events: auto} .persp-bg.cnEnuqa{-webkit-opacity: 0.5; -moz-opacity: 0.5; -khtml-opacity: 0.5; opacity: 0.5; filter: alpha(opacity = 50); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); width: 100%; height: 100%; background: rgb(0, 0, 0); z-index: 1} .df-box.cnEnuqa{min-width: 170px; background: rgb(255, 255, 255); border-radius: 10px; font-size: 12px; text-shadow: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; z-index: 2; position: absolute; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -ms-touch-action: none; overflow: hidden; text-align: center; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); top: 50%; left: 50%; transform: translate(-50%, -50%)} .df-main.cnEnuqa{} .df-item.cnEnuqa{position: relative; overflow: hidden} .df-item.cnEnuqa .G-bg.cnEnuqa{position: absolute; width: 100%; height: 100%; top: 0; left: 0} .G-top.cnEnuqa{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; background: linear-gradient(rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.85) 45%, rgba(255, 255, 255, 0.6) 75%, rgba(255, 255, 255, 0.4) 100%); background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), color-stop(0.45, rgba(255, 255, 255, 0.85)), color-stop(0.75, rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.4))); background: -moz-linear-gradient(rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.85) 45%, rgba(255, 255, 255, 0.6) 75%, rgba(255, 255, 255, 0.4) 100%); background: -o-linear-gradient(rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.85) 45%, rgba(255, 255, 255, 0.6) 75%, rgba(255, 255, 255, 0.4) 100%)} .G-mid.cnEnuqa{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box} .G-btm.cnEnuqa{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; background: linear-gradient(rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0.85) 65%, rgb(255, 255, 255) 100%); background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.4)), color-stop(0.25, rgba(255, 255, 255, 0.6)), color-stop(0.65, rgba(255, 255, 255, 0.85)), to(rgb(255, 255, 255))); background: -moz-linear-gradient(rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0.85) 48%, rgb(255, 255, 255) 100%); background: -o-linear-gradient(rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0.85) 48%, rgb(255, 255, 255) 100%)} .df-ctn.cnEnuqa{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0; padding: 0 2px; position: relative; background: rgb(0, 0, 0); zoom: 1} .df-wrap.cnEnuqa{display: inline-block} .df-strip.cnEnuqa{position: relative; z-index: 2} .df-ul.cnEnuqa{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; text-decoration: none; list-style: none; padding: 0; margin: 0} .df-li.cnEnuqa{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 5px; display: block; text-align: center; vertical-align: bottom; filter: Alpha(Opacity = 90); font-size: 18px; white-space: nowrap} .df-class.cnEnuqa{font-size: 18px} .df-btn.cnEnuqa{display: block} .df-btn.cnEnuqa div.cnEnuqa{display: inline-block; width: 50%; cursor: pointer; border: 1px solid rgb(221, 221, 221); -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis} .df-btn.cnEnuqa div.cnEnuqa:active{background: rgb(255, 102, 0); color: rgb(255, 255, 255); border: 1px solid rgb(255, 102, 0)} .df-hide.cnEnuqa{visibility: hidden} .panel-liushushu.cnEnuqa{width: 100%; background-color: rgb(255, 255, 255); display: inline-block; color: rgb(10, 120, 255); background-image: -webkit-gradient(linear, center top, center bottom, from(rgb(34, 198, 223)), to(rgb(10, 120, 255))); -webkit-background-clip: text; -webkit-text-fill-color: transparent; border-bottom: 1px solid rgb(238, 238, 238)} .blue-border.cnEnuqa{padding: 10px; padding-bottom: 0px; margin-bottom: 5px; box-shadow: 3px 3px 3px rgb(204, 204, 204)} .x-liushushu-top.btn-group.cnEnuqa{background-color: rgb(255, 255, 255); border-bottom: 1px solid rgb(240, 240, 240)} .x-liushushu-top.btn-group.cnEnuqa .btn.cnEnuqa{border-top: 0} .x-liushushu-top.btn-group.cnEnuqa .btn.cnEnuqa span.cnEnuqa{font-size: 12px; font-weight: normal} .x-card.btn-group.cnEnuqa .btn.active.cnEnuqa{color: rgb(38, 113, 185); padding: 0; border-top: 0; border-bottom: 2px solid rgb(38, 113, 185)}</style>  
+              <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onActive:modelActive;onLoad:modelLoad" __cid="cnEnuqa" class="cnEnuqa"></div>  
+              <div xmlns="" component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pcryEfai-iosstatusbar cnEnuqa" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cnEnuqa">  
+                <div class="x-panel-top cnEnuqa" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cnEnuqa"> 
+                  <div component="$model/UI2/system/components/justep/button/buttonGroup" class="btn-group x-card btn-group-justified x-liushushu-top cnEnuqa" xid="buttonGroup1" data-bind="component:{name:'$model/UI2/system/components/justep/button/buttonGroup'}" data-config="{&quot;tabbed&quot;:true}" __cid="cnEnuqa"> 
+                    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default cnEnuqa" xid="button12" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;我要发单&quot;,&quot;target&quot;:&quot;content2&quot;}" __cid="cnEnuqa"> 
+                      <i xid="i14" __cid="cnEnuqa" class="cnEnuqa"/>  
+                      <span xid="span13" __cid="cnEnuqa" class="cnEnuqa">我要发单</span> 
+                    </a>  
+                    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default cnEnuqa" xid="button13" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;待确认&quot;,&quot;target&quot;:&quot;content3&quot;}" __cid="cnEnuqa"> 
+                      <i xid="i15" __cid="cnEnuqa" class="cnEnuqa"/>  
+                      <span xid="span38" __cid="cnEnuqa" class="cnEnuqa">待确认</span> 
+                    </a>  
+                    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default cnEnuqa" xid="button14" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;正在安装&quot;,&quot;target&quot;:&quot;content4&quot;}" __cid="cnEnuqa"> 
+                      <i xid="i16" __cid="cnEnuqa" class="cnEnuqa"/>  
+                      <span xid="span39" __cid="cnEnuqa" class="cnEnuqa">正在安装</span> 
+                    </a>  
+                    <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default cnEnuqa" xid="button15" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;已完成&quot;,&quot;target&quot;:&quot;content5&quot;}" __cid="cnEnuqa"> 
+                      <i xid="i17" __cid="cnEnuqa" class="cnEnuqa"/>  
+                      <span xid="span40" __cid="cnEnuqa" class="cnEnuqa">已完成</span> 
+                    </a> 
+                  </div> 
+                </div>  
+                <div class="x-panel-content x-cards cnEnuqa" xid="content1" style="padding-top:0px;" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cnEnuqa"> 
+                  <div component="$model/UI2/system/components/justep/contents/contents" class="x-contents x-full cnEnuqa" xid="contents1" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-config="{&quot;active&quot;:0}" __cid="cnEnuqa"> 
+                    <div class="x-contents-content active cnEnuqa" xid="content2" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cnEnuqa"> 
+                      <div component="$model/UI2/system/components/bootstrap/accordion/accordion" class="panel-group cnEnuqa" xid="accordion2" style="margin-bottom:0px;" data-bind="component:{name:'$model/UI2/system/components/bootstrap/accordion/accordion'}" __cid="cnEnuqa"> 
+                        <div class="panel  cnEnuqa" component="$model/UI2/system/components/bootstrap/panel/panel" xid="panel3" data-bind="component:{name:'$model/UI2/system/components/bootstrap/panel/panel'}" __cid="cnEnuqa"> 
+                          <div class="panel-heading panel-liushushu cnEnuqa" xid="heading2" __cid="cnEnuqa"> 
+                            <h4 class="panel-title text-center cnEnuqa" xid="h42" __cid="cnEnuqa"> 
+                              <a xid="a2" __cid="cnEnuqa" class="cnEnuqa">门洞测量</a>  
+                              <span xid="span23" class="pull-right cnEnuqa" __cid="cnEnuqa" data-bind="text:$model.measureData.count(),visible:$model.measureData.count() &gt; 0"/> 
+                            </h4> 
+                          </div>  
+                          <div class="panel-collapse collapse cnEnuqa" xid="div3" __cid="cnEnuqa"> 
+                            <div class="panel-body cnEnuqa" xid="div4" style="padding:5px;background:#eeeeee;" __cid="cnEnuqa"> 
+                              <div component="$model/UI2/system/components/justep/list/list" class="x-list  cnEnuqa" xid="list1" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;measureData&quot;}" __cid="cnEnuqa"> 
+                                <ul class="x-list-template hide cnEnuqa" xid="listTemplateUl1" __cid="cnEnuqa" data-bind="foreach:{data:$model.foreach_list1($element),afterRender:$model.foreach_afterRender_list1.bind($model,$element)}"> 
+                                  <li xid="li1" class="list-group-item blue-border cnEnuqa" __cid="cnEnuqa"> 
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row1" style="display:none;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col3" style="padding-top:10px;" __cid="cnEnuqa"> 
+                                        <span xid="span1" __cid="cnEnuqa" class="cnEnuqa">门套</span> 
+                                      </div>  
+                                      <div class="x-col text-right cnEnuqa" xid="col31" style="padding:0px;" __cid="cnEnuqa"/> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row2" style="border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#F0F0F0;display:none;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col4" __cid="cnEnuqa"> 
+                                        <span component="$model/UI2/system/components/justep/button/radio" class="x-radio cnEnuqa" xid="radio1" label="无" name="doorset" data-config="{&quot;checked&quot;:false,&quot;disabled&quot;:false,&quot;label&quot;:&quot;无&quot;,&quot;name&quot;:&quot;doorset&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio'}" data-events="onChange:radio1Change" __cid="cnEnuqa"> 
+                                          <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="radio" name="doorset" __cid="cnEnuqa" class="cnEnuqa" data-bind="attr:{name:'doorset' +  val(&quot;id&quot;)}"></input>  
+                                          <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cnEnuqa" class="cnEnuqa">无</label> 
+                                        </span> 
+                                      </div>  
+                                      <div class="x-col cnEnuqa" xid="col5" __cid="cnEnuqa"> 
+                                        <span component="$model/UI2/system/components/justep/button/radio" class="x-radio cnEnuqa" xid="radio2" label="保留" name="doorset" data-config="{&quot;checked&quot;:false,&quot;disabled&quot;:false,&quot;label&quot;:&quot;保留&quot;,&quot;name&quot;:&quot;doorset&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio'}" data-events="onChange:radio2Change" __cid="cnEnuqa"> 
+                                          <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="radio" name="doorset" __cid="cnEnuqa" class="cnEnuqa" data-bind="attr:{name:'doorset' +  val(&quot;id&quot;)}"></input>  
+                                          <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cnEnuqa" class="cnEnuqa">保留</label> 
+                                        </span> 
+                                      </div>  
+                                      <div class="x-col cnEnuqa" xid="col6" __cid="cnEnuqa"> 
+                                        <span component="$model/UI2/system/components/justep/button/radio" class="x-radio cnEnuqa" xid="radio3" name="doorset" label="不保留" data-config="{&quot;checked&quot;:false,&quot;disabled&quot;:false,&quot;label&quot;:&quot;不保留&quot;,&quot;name&quot;:&quot;doorset&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio'}" data-events="onChange:radio3Change" __cid="cnEnuqa"> 
+                                          <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="radio" name="doorset" __cid="cnEnuqa" class="cnEnuqa" data-bind="attr:{name:'doorset' +  val(&quot;id&quot;)}"></input>  
+                                          <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cnEnuqa" class="cnEnuqa">不保留</label> 
+                                        </span> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row3" style="display:none;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col9" __cid="cnEnuqa"> 
+                                        <span xid="span2" __cid="cnEnuqa" class="cnEnuqa">地暖</span> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row4" style="border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#F0F0F0;display:none;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col11" __cid="cnEnuqa"> 
+                                        <span component="$model/UI2/system/components/justep/button/radio" class="x-radio cnEnuqa" xid="radio4" name="isfloorheat" label="无" data-config="{&quot;checked&quot;:false,&quot;disabled&quot;:false,&quot;label&quot;:&quot;无&quot;,&quot;name&quot;:&quot;isfloorheat&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio'}" data-events="onChange:radio4Change" __cid="cnEnuqa"> 
+                                          <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="radio" name="isfloorheat" __cid="cnEnuqa" class="cnEnuqa" data-bind="attr:{name:'isfloorheat' +  val(&quot;id&quot;)}"></input>  
+                                          <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cnEnuqa" class="cnEnuqa">无</label> 
+                                        </span> 
+                                      </div>  
+                                      <div class="x-col cnEnuqa" xid="col12" __cid="cnEnuqa"> 
+                                        <span component="$model/UI2/system/components/justep/button/radio" class="x-radio cnEnuqa" xid="radio5" name="isfloorheat" label="有" data-config="{&quot;checked&quot;:false,&quot;disabled&quot;:false,&quot;label&quot;:&quot;有&quot;,&quot;name&quot;:&quot;isfloorheat&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio'}" data-events="onChange:radio5Change" __cid="cnEnuqa"> 
+                                          <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="radio" name="isfloorheat" __cid="cnEnuqa" class="cnEnuqa" data-bind="attr:{name:'isfloorheat' +  val(&quot;id&quot;)}"></input>  
+                                          <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cnEnuqa" class="cnEnuqa">有</label> 
+                                        </span> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row5" style="display:none;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col15" __cid="cnEnuqa"> 
+                                        <span xid="span3" __cid="cnEnuqa" class="cnEnuqa">丁字墙</span> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row6" style="border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#F0F0F0;display:none;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col17" __cid="cnEnuqa"> 
+                                        <span component="$model/UI2/system/components/justep/button/radio" class="x-radio cnEnuqa" xid="radio6" name="isding" label="否" data-config="{&quot;checked&quot;:false,&quot;disabled&quot;:false,&quot;label&quot;:&quot;否&quot;,&quot;name&quot;:&quot;isding&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio'}" data-events="onChange:radio6Change" __cid="cnEnuqa"> 
+                                          <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="radio" name="isding" __cid="cnEnuqa" class="cnEnuqa" data-bind="attr:{name:'isding' +  val(&quot;id&quot;)}"></input>  
+                                          <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cnEnuqa" class="cnEnuqa">否</label> 
+                                        </span> 
+                                      </div>  
+                                      <div class="x-col cnEnuqa" xid="col18" __cid="cnEnuqa"> 
+                                        <span component="$model/UI2/system/components/justep/button/radio" class="x-radio cnEnuqa" xid="radio7" name="isding" label="是" data-config="{&quot;checked&quot;:false,&quot;disabled&quot;:false,&quot;label&quot;:&quot;是&quot;,&quot;name&quot;:&quot;isding&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio'}" data-events="onChange:radio7Change" __cid="cnEnuqa"> 
+                                          <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="radio" name="isding" __cid="cnEnuqa" class="cnEnuqa" data-bind="attr:{name:'isding' +  val(&quot;id&quot;)}"></input>  
+                                          <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cnEnuqa" class="cnEnuqa">是</label> 
+                                        </span> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row7" style="display:none;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col21" __cid="cnEnuqa"> 
+                                        <span xid="span4" __cid="cnEnuqa" class="cnEnuqa">开向</span> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row8" style="display:none;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col23" __cid="cnEnuqa"> 
+                                        <span component="$model/UI2/system/components/justep/button/radio" class="x-radio cnEnuqa" xid="radio8" name="openinout" label="外开" data-config="{&quot;checked&quot;:false,&quot;disabled&quot;:false,&quot;label&quot;:&quot;外开&quot;,&quot;name&quot;:&quot;openinout&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio'}" data-events="onChange:radio8Change" __cid="cnEnuqa"> 
+                                          <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="radio" name="openinout" __cid="cnEnuqa" class="cnEnuqa" data-bind="attr:{name:'openinout' +  val(&quot;id&quot;)}"></input>  
+                                          <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cnEnuqa" class="cnEnuqa">外开</label> 
+                                        </span> 
+                                      </div>  
+                                      <div class="x-col cnEnuqa" xid="col24" __cid="cnEnuqa"> 
+                                        <span component="$model/UI2/system/components/justep/button/radio" class="x-radio cnEnuqa" xid="radio9" name="openinout" label="内开" data-config="{&quot;checked&quot;:false,&quot;disabled&quot;:false,&quot;label&quot;:&quot;内开&quot;,&quot;name&quot;:&quot;openinout&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio'}" data-events="onChange:radio9Change" __cid="cnEnuqa"> 
+                                          <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="radio" name="openinout" __cid="cnEnuqa" class="cnEnuqa" data-bind="attr:{name:'openinout' +  val(&quot;id&quot;)}"></input>  
+                                          <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cnEnuqa" class="cnEnuqa">内开</label> 
+                                        </span> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row9" style="border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#F0F0F0;display:none;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col26" __cid="cnEnuqa"> 
+                                        <span component="$model/UI2/system/components/justep/button/radio" class="x-radio cnEnuqa" xid="radio10" name="openleftright" label="左开" data-config="{&quot;checked&quot;:false,&quot;disabled&quot;:false,&quot;label&quot;:&quot;左开&quot;,&quot;name&quot;:&quot;openleftright&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio'}" data-events="onChange:radio10Change" __cid="cnEnuqa"> 
+                                          <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="radio" name="openleftright" __cid="cnEnuqa" class="cnEnuqa" data-bind="attr:{name:'openleftright' +  val(&quot;id&quot;)}"></input>  
+                                          <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cnEnuqa" class="cnEnuqa">左开</label> 
+                                        </span> 
+                                      </div>  
+                                      <div class="x-col cnEnuqa" xid="col27" __cid="cnEnuqa"> 
+                                        <span component="$model/UI2/system/components/justep/button/radio" class="x-radio cnEnuqa" xid="radio11" name="openleftright" label="右开" data-config="{&quot;checked&quot;:false,&quot;disabled&quot;:false,&quot;label&quot;:&quot;右开&quot;,&quot;name&quot;:&quot;openleftright&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio'}" data-events="onChange:radio11Change" __cid="cnEnuqa"> 
+                                          <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="radio" name="openleftright" __cid="cnEnuqa" class="cnEnuqa" data-bind="attr:{name:'openleftright' +  val(&quot;id&quot;)}"></input>  
+                                          <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cnEnuqa" class="cnEnuqa">右开</label> 
+                                        </span> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row11" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col34" __cid="cnEnuqa"> 
+                                        <span xid="span7" __cid="cnEnuqa" class="cnEnuqa">描述</span> 
+                                      </div>  
+                                      <div class="x-col text-right cnEnuqa" xid="col49" __cid="cnEnuqa"> 
+                                        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cnEnuqa" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button2Click" data-config="{&quot;icon&quot;:&quot;fa fa-trash-o&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cnEnuqa"> 
+                                          <i xid="i2" class="fa fa-trash-o cnEnuqa" __cid="cnEnuqa"/>  
+                                          <span xid="span6" __cid="cnEnuqa" class="cnEnuqa"/> 
+                                        </a> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row12" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col37" __cid="cnEnuqa"> 
+                                        <div class="input-group cnEnuqa" component="$model/UI2/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup1" style="width:100%;" data-bind="component:{name:'$model/UI2/system/components/bootstrap/inputGroup/inputGroup'}" __cid="cnEnuqa"> 
+                                          <textarea component="$model/UI2/system/components/justep/textarea/textarea" class="form-control cnEnuqa" xid="textarea2" data-bind="component:{ref:ref(&quot;summary&quot;),name:'$model/UI2/system/components/justep/textarea/textarea'}" data-events="onChange:textarea2Change" __cid="cnEnuqa"/> 
+                                        </div> 
+                                      </div> 
+                                    </div> 
+                                  </li> 
+                                </ul> 
+                              </div>  
+                              <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row10" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'},event:{click:$model._callModelFn.bind($model, 'row10Click')}" __cid="cnEnuqa"> 
+                                <div class="x-col cnEnuqa" xid="col30" __cid="cnEnuqa"> 
+                                  <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon btn-block btn-outline cnEnuqa" xid="measureBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;fa fa-plus&quot;,&quot;label&quot;:&quot;新增&quot;}" __cid="cnEnuqa"> 
+                                    <i xid="i1" class="fa fa-plus cnEnuqa" __cid="cnEnuqa"/>  
+                                    <span xid="span5" __cid="cnEnuqa" class="cnEnuqa">新增</span> 
+                                  </a> 
+                                </div> 
+                              </div> 
+                            </div> 
+                          </div> 
+                        </div> 
+                      </div>  
+                      <div component="$model/UI2/system/components/bootstrap/accordion/accordion" class="panel-group cnEnuqa" xid="accordion3" style="margin-bottom:0px;" data-bind="component:{name:'$model/UI2/system/components/bootstrap/accordion/accordion'}" __cid="cnEnuqa"> 
+                        <div class="panel  cnEnuqa" component="$model/UI2/system/components/bootstrap/panel/panel" xid="panel4" data-bind="component:{name:'$model/UI2/system/components/bootstrap/panel/panel'}" __cid="cnEnuqa"> 
+                          <div class="panel-heading panel-liushushu cnEnuqa" xid="heading3" __cid="cnEnuqa"> 
+                            <h4 class="panel-title text-center cnEnuqa" xid="h43" __cid="cnEnuqa"> 
+                              <a xid="a3" __cid="cnEnuqa" class="cnEnuqa">运输服务</a>  
+                              <span xid="span24" class="pull-right cnEnuqa" __cid="cnEnuqa" data-bind="visible:$model.transitData.count() &gt; 0,text:$model.transitData.count()"/> 
+                            </h4> 
+                          </div>  
+                          <div class="panel-collapse collapse cnEnuqa" xid="div5" __cid="cnEnuqa"> 
+                            <div class="panel-body cnEnuqa" xid="div6" style="padding:5px;background:#eeeeee;" __cid="cnEnuqa"> 
+                              <div component="$model/UI2/system/components/justep/list/list" class="x-list cnEnuqa" xid="list2" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;transitData&quot;}" __cid="cnEnuqa"> 
+                                <ul class="x-list-template hide cnEnuqa" xid="listTemplateUl2" __cid="cnEnuqa" data-bind="foreach:{data:$model.foreach_list2($element),afterRender:$model.foreach_afterRender_list2.bind($model,$element)}"> 
+                                  <li xid="li2" class="list-group-item  blue-border cnEnuqa" __cid="cnEnuqa"> 
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row13" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col40" style="padding-top:10px;" __cid="cnEnuqa"> 
+                                        <span xid="span9" __cid="cnEnuqa" class="cnEnuqa">起点</span> 
+                                      </div>  
+                                      <div class="x-col text-right cnEnuqa" xid="col55" style="padding:0px;" __cid="cnEnuqa"> 
+                                        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cnEnuqa" xid="button4" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button4Click" data-config="{&quot;icon&quot;:&quot;fa fa-trash-o&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cnEnuqa"> 
+                                          <i xid="i4" class="fa fa-trash-o cnEnuqa" __cid="cnEnuqa"/>  
+                                          <span xid="span12" __cid="cnEnuqa" class="cnEnuqa"/> 
+                                        </a> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row14" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col41" __cid="cnEnuqa"> 
+                                        <select component="$model/UI2/system/components/justep/distpicker/provinceSelect" class="form-control cnEnuqa" xid="provinceSelect1" data-bind="component:{ref:ref(&quot;startprovince&quot;),name:'$model/UI2/system/components/justep/distpicker/provinceSelect'}" data-events="onChange:provinceSelect1Change" __cid="cnEnuqa"/> 
+                                      </div>  
+                                      <div class="x-col cnEnuqa" xid="col42" __cid="cnEnuqa"> 
+                                        <select component="$model/UI2/system/components/justep/distpicker/citySelect" class="form-control cnEnuqa" xid="citySelect1" data-bind="component:{ref:ref(&quot;startcity&quot;),name:'$model/UI2/system/components/justep/distpicker/citySelect',provinceRef:val(&quot;startprovince&quot;)}" data-events="onChange:citySelect1Change" __cid="cnEnuqa"/> 
+                                      </div>  
+                                      <div class="x-col cnEnuqa" xid="col43" __cid="cnEnuqa"> 
+                                        <select component="$model/UI2/system/components/justep/distpicker/districtSelect" class="form-control cnEnuqa" xid="districtSelect1" data-bind="component:{ref:ref(&quot;startdistrict&quot;),name:'$model/UI2/system/components/justep/distpicker/districtSelect',cityRef:val(&quot;startcity&quot;)}" data-events="onChange:districtSelect1Change" __cid="cnEnuqa"/> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row17" style="border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#F0F0F0;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col50" __cid="cnEnuqa"> 
+                                        <input component="$model/UI2/system/components/justep/input/input" class="form-control cnEnuqa" xid="input1" data-bind="component:{ref:ref(&quot;startaddress&quot;),name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input1Change" data-config="{&quot;placeHolder&quot;:&quot;起点详细地址&quot;}" __cid="cnEnuqa"/> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row15" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col44" __cid="cnEnuqa"> 
+                                        <span xid="span10" __cid="cnEnuqa" class="cnEnuqa">终点</span> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row16" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col47" __cid="cnEnuqa"> 
+                                        <select component="$model/UI2/system/components/justep/distpicker/provinceSelect" class="form-control cnEnuqa" xid="provinceSelect2" data-bind="component:{ref:ref(&quot;endprovince&quot;),name:'$model/UI2/system/components/justep/distpicker/provinceSelect'}" data-events="onChange:provinceSelect2Change" __cid="cnEnuqa"/> 
+                                      </div>  
+                                      <div class="x-col cnEnuqa" xid="col46" __cid="cnEnuqa"> 
+                                        <select component="$model/UI2/system/components/justep/distpicker/citySelect" class="form-control cnEnuqa" xid="citySelect2" data-bind="component:{ref:ref(&quot;endcity&quot;),name:'$model/UI2/system/components/justep/distpicker/citySelect',provinceRef:val(&quot;endprovince&quot;)}" __cid="cnEnuqa"/> 
+                                      </div>  
+                                      <div class="x-col cnEnuqa" xid="col45" __cid="cnEnuqa"> 
+                                        <select component="$model/UI2/system/components/justep/distpicker/districtSelect" class="form-control cnEnuqa" xid="districtSelect2" data-bind="component:{ref:ref(&quot;enddistrict&quot;),name:'$model/UI2/system/components/justep/distpicker/districtSelect',cityRef:val(&quot;endcity&quot;)}" data-events="onChange:districtSelect2Change" __cid="cnEnuqa"/> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row18" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col51" __cid="cnEnuqa"> 
+                                        <input component="$model/UI2/system/components/justep/input/input" class="form-control cnEnuqa" xid="input2" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input2Change" data-config="{&quot;placeHolder&quot;:&quot;终点详细地址&quot;}" __cid="cnEnuqa"/> 
+                                      </div> 
+                                    </div> 
+                                  </li> 
+                                </ul> 
+                              </div>  
+                              <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row19" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                <div class="x-col cnEnuqa" xid="col54" __cid="cnEnuqa"> 
+                                  <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon btn-block cnEnuqa" xid="button3" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button3Click" data-config="{&quot;icon&quot;:&quot;fa fa-plus&quot;,&quot;label&quot;:&quot;新增&quot;}" __cid="cnEnuqa"> 
+                                    <i xid="i3" class="fa fa-plus cnEnuqa" __cid="cnEnuqa"/>  
+                                    <span xid="span11" __cid="cnEnuqa" class="cnEnuqa">新增</span> 
+                                  </a> 
+                                </div> 
+                              </div> 
+                            </div> 
+                          </div> 
+                        </div> 
+                      </div>  
+                      <div component="$model/UI2/system/components/bootstrap/accordion/accordion" class="panel-group cnEnuqa" xid="accordion4" style="margin-bottom:0px;" data-bind="component:{name:'$model/UI2/system/components/bootstrap/accordion/accordion'}" __cid="cnEnuqa"> 
+                        <div class="panel  cnEnuqa" component="$model/UI2/system/components/bootstrap/panel/panel" xid="panel5" data-bind="component:{name:'$model/UI2/system/components/bootstrap/panel/panel'}" __cid="cnEnuqa"> 
+                          <div class="panel-heading  panel-liushushu cnEnuqa" xid="heading4" __cid="cnEnuqa"> 
+                            <h4 class="panel-title text-center cnEnuqa" xid="h44" __cid="cnEnuqa"> 
+                              <a xid="a4" __cid="cnEnuqa" class="cnEnuqa">安装服务</a>  
+                              <span xid="span25" class="pull-right cnEnuqa" __cid="cnEnuqa" data-bind="visible:$model.bartaskdetailData.count() &gt; 0,text:$model.bartaskdetailData.count()"/> 
+                            </h4> 
+                          </div>  
+                          <div class="panel-collapse collapse cnEnuqa" xid="div7" dir="ltr" __cid="cnEnuqa"> 
+                            <div class="panel-body cnEnuqa" xid="div8" style="padding:5px;background:#eeeeee;" __cid="cnEnuqa"> 
+                              <div component="$model/UI2/system/components/justep/list/list" class="x-list cnEnuqa" xid="list3" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;bartaskdetailData&quot;}" __cid="cnEnuqa"> 
+                                <ul class="x-list-template hide cnEnuqa" xid="listTemplateUl3" __cid="cnEnuqa" data-bind="foreach:{data:$model.foreach_list3($element),afterRender:$model.foreach_afterRender_list3.bind($model,$element)}"> 
+                                  <li xid="li3" class="list-group-item   blue-border cnEnuqa" style="padding:0px;" __cid="cnEnuqa"> 
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row43" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col8" __cid="cnEnuqa"> 
+                                        <div class="input-group cnEnuqa" component="$model/UI2/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup7" data-bind="component:{name:'$model/UI2/system/components/bootstrap/inputGroup/inputGroup'}" __cid="cnEnuqa"> 
+                                          <span class="input-group-addon cnEnuqa" xid="span41" __cid="cnEnuqa">品牌</span>  
+                                          <input class="form-control cnEnuqa" component="$model/UI2/system/components/justep/input/input" xid="input8" data-bind="component:{ref:ref(&quot;brand&quot;),name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input5Change" data-config="{&quot;dataType&quot;:&quot;String&quot;}" __cid="cnEnuqa"/> 
+                                        </div> 
+                                      </div>  
+                                      <div class="x-col x-col-fixed text-right cnEnuqa" xid="col74" style="width:50px;" __cid="cnEnuqa"> 
+                                        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cnEnuqa" xid="button8" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button8Click" data-config="{&quot;icon&quot;:&quot;fa fa-trash-o&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cnEnuqa"> 
+                                          <i xid="i8" class="fa fa-trash-o cnEnuqa" __cid="cnEnuqa"/>  
+                                          <span xid="span26" __cid="cnEnuqa" class="cnEnuqa"/> 
+                                        </a> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row44" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col10" __cid="cnEnuqa"> 
+                                        <div class="input-group cnEnuqa" component="$model/UI2/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup8" data-bind="component:{name:'$model/UI2/system/components/bootstrap/inputGroup/inputGroup'}" __cid="cnEnuqa"> 
+                                          <span class="input-group-addon cnEnuqa" xid="span42" __cid="cnEnuqa">类型</span>  
+                                          <select component="$model/UI2/system/components/justep/select/select" class="form-control cnEnuqa" xid="select1" data-bind="component:{name:'$model/UI2/system/components/justep/select/select'},optionsCaption:'请选择...',options:$model.productData.datas,optionsValue:'id',optionsText:'product',optionsAfterRender2:$model.__justep__.selectOptionsAfterRender.bind($model,$element),optionsBeforeRender:$model.__justep__.selectOptionsBeforeRender.bind($model,$element)" data-events="onChange:select1Change" __cid="cnEnuqa"/> 
+                                        </div> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row21" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col60" __cid="cnEnuqa"> 
+                                        <div class="input-group cnEnuqa" component="$model/UI2/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup2" data-bind="component:{name:'$model/UI2/system/components/bootstrap/inputGroup/inputGroup'}" __cid="cnEnuqa"> 
+                                          <span class="input-group-addon cnEnuqa" xid="span15" __cid="cnEnuqa">锁具</span>  
+                                          <select component="$model/UI2/system/components/justep/select/select" class="form-control cnEnuqa" xid="select2" data-bind="component:{name:'$model/UI2/system/components/justep/select/select'},optionsCaption:'请选择...',options:$model.lockData.datas,optionsValue:'id',optionsText:'lock',optionsAfterRender2:$model.__justep__.selectOptionsAfterRender.bind($model,$element),optionsBeforeRender:$model.__justep__.selectOptionsBeforeRender.bind($model,$element)" data-events="onChange:select2Change" __cid="cnEnuqa"/> 
+                                        </div> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row23" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col65" __cid="cnEnuqa"> 
+                                        <span xid="span16" __cid="cnEnuqa" class="cnEnuqa">基础服务</span> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/list/list" class="x-list cnEnuqa" xid="list4" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;barbaseData&quot;}" __cid="cnEnuqa"> 
+                                      <ul class="x-list-template hide cnEnuqa" xid="listTemplateUl4" __cid="cnEnuqa" data-bind="foreach:{data:$model.foreach_list4($element),afterRender:$model.foreach_afterRender_list4.bind($model,$element)}"> 
+                                        <li xid="li4" __cid="cnEnuqa" class="cnEnuqa"> 
+                                          <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row24" style="padding:0px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                            <div class="x-col cnEnuqa" xid="col70" __cid="cnEnuqa"> 
+                                              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-xs basebtn btn-outline-off cnEnuqa" xid="button5" style="margin-left:5px;" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},text:val(&quot;name&quot;)" data-events="onClick:button5Click" data-config="{&quot;label&quot;:&quot;button&quot;}" __cid="cnEnuqa"> 
+                                                <i xid="i5" __cid="cnEnuqa" class="cnEnuqa"/>  
+                                                <span xid="span17" __cid="cnEnuqa" class="cnEnuqa"/> 
+                                              </a>  
+                                              <span xid="span18" style="font-size:small;color:#C0C0C0;margin-left:5px;" __cid="cnEnuqa" class="cnEnuqa" data-bind="text:val(&quot;summary&quot;)"/> 
+                                            </div> 
+                                          </div> 
+                                        </li> 
+                                      </ul> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row26" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col72" __cid="cnEnuqa"> 
+                                        <span xid="span20" __cid="cnEnuqa" class="cnEnuqa">增值服务</span> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/list/list" class="x-list cnEnuqa" xid="list5" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;$model.barincrementData&quot;}" __cid="cnEnuqa"> 
+                                      <ul class="x-list-template hide cnEnuqa" xid="listTemplateUl5" __cid="cnEnuqa" data-bind="foreach:{data:$model.foreach_list5($element),afterRender:$model.foreach_afterRender_list5.bind($model,$element)}"> 
+                                        <li xid="li5" __cid="cnEnuqa" class="cnEnuqa"> 
+                                          <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row27" style="padding:0px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                            <div class="x-col cnEnuqa" xid="col73" __cid="cnEnuqa"> 
+                                              <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-xs basebtn btn-outline-off cnEnuqa" xid="button7" style="margin-left:5px;" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},text:val(&quot;name&quot;)" data-events="onClick:button7Click" data-config="{&quot;label&quot;:&quot;button&quot;}" __cid="cnEnuqa"> 
+                                                <i xid="i7" __cid="cnEnuqa" class="cnEnuqa"/>  
+                                                <span xid="span22" __cid="cnEnuqa" class="cnEnuqa"/> 
+                                              </a>  
+                                              <span xid="span21" style="font-size:small;color:#C0C0C0;margin-left:5px;" __cid="cnEnuqa" class="cnEnuqa" data-bind="text:val(&quot;summary&quot;)"/> 
+                                            </div> 
+                                          </div> 
+                                        </li> 
+                                      </ul> 
+                                    </div> 
+                                  </li> 
+                                </ul> 
+                              </div>  
+                              <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row25" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                <div class="x-col cnEnuqa" xid="col71" __cid="cnEnuqa"> 
+                                  <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon btn-block cnEnuqa" xid="button6" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button6Click" data-config="{&quot;icon&quot;:&quot;fa fa-plus&quot;,&quot;label&quot;:&quot;新增&quot;}" __cid="cnEnuqa"> 
+                                    <i xid="i6" class="fa fa-plus cnEnuqa" __cid="cnEnuqa"/>  
+                                    <span xid="span19" __cid="cnEnuqa" class="cnEnuqa">新增</span> 
+                                  </a> 
+                                </div> 
+                              </div> 
+                            </div> 
+                          </div> 
+                        </div> 
+                      </div>  
+                      <div component="$model/UI2/system/components/bootstrap/accordion/accordion" class="panel-group cnEnuqa" xid="accordion5" style="margin-bottom:0px;display:none;" data-bind="component:{name:'$model/UI2/system/components/bootstrap/accordion/accordion'}" __cid="cnEnuqa"> 
+                        <div class="panel panel-default cnEnuqa" component="$model/UI2/system/components/bootstrap/panel/panel" xid="panel6" data-bind="component:{name:'$model/UI2/system/components/bootstrap/panel/panel'}" __cid="cnEnuqa"> 
+                          <div class="panel-heading cnEnuqa" xid="heading5" __cid="cnEnuqa"> 
+                            <h4 class="panel-title text-center cnEnuqa" xid="h45" __cid="cnEnuqa"> 
+                              <a xid="a5" __cid="cnEnuqa" class="cnEnuqa">指纹锁 电子猫眼安装</a>  
+                              <span xid="span35" class="pull-right cnEnuqa" __cid="cnEnuqa" data-bind="text:$model.fingerData.count(),visible:$model.fingerData.count() &gt; 0"/> 
+                            </h4> 
+                          </div>  
+                          <div class="panel-collapse collapse cnEnuqa" xid="div9" __cid="cnEnuqa"> 
+                            <div class="panel-body cnEnuqa" xid="div10" style="padding:0px;" __cid="cnEnuqa"> 
+                              <div component="$model/UI2/system/components/justep/list/list" class="x-list cnEnuqa" xid="list6" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;fingerData&quot;}" __cid="cnEnuqa"> 
+                                <ul class="x-list-template hide cnEnuqa" xid="listTemplateUl6" __cid="cnEnuqa" data-bind="foreach:{data:$model.foreach_list6($element),afterRender:$model.foreach_afterRender_list6.bind($model,$element)}"> 
+                                  <li xid="li6" class="list-group-item  blue-border cnEnuqa" __cid="cnEnuqa"> 
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row  cnEnuqa" xid="row20" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col7" __cid="cnEnuqa"> 
+                                        <div class="input-group cnEnuqa" component="$model/UI2/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup6" data-bind="component:{name:'$model/UI2/system/components/bootstrap/inputGroup/inputGroup'}" __cid="cnEnuqa"> 
+                                          <span class="input-group-addon cnEnuqa" xid="span8" __cid="cnEnuqa">型号</span>  
+                                          <input class="form-control cnEnuqa" component="$model/UI2/system/components/justep/input/input" xid="input3" data-bind="component:{ref:ref(&quot;model&quot;),name:'$model/UI2/system/components/justep/input/input'}" data-config="{&quot;dataType&quot;:&quot;String&quot;}" __cid="cnEnuqa"/> 
+                                        </div> 
+                                      </div>  
+                                      <div class="x-col x-col-fixed cnEnuqa" xid="col22" style="width:40px;" __cid="cnEnuqa"> 
+                                        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cnEnuqa" xid="button10" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button10Click" data-config="{&quot;icon&quot;:&quot;fa fa-trash-o&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cnEnuqa"> 
+                                          <i xid="i11" class="fa fa-trash-o cnEnuqa" __cid="cnEnuqa"/>  
+                                          <span xid="span33" __cid="cnEnuqa" class="cnEnuqa"/> 
+                                        </a> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row22" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col13" style="padding-top:10px" __cid="cnEnuqa"> 
+                                        <textarea component="$model/UI2/system/components/justep/textarea/textarea" class="form-control cnEnuqa" xid="textarea1" data-bind="component:{ref:ref(&quot;summary&quot;),name:'$model/UI2/system/components/justep/textarea/textarea'}" data-config="{&quot;placeHolder&quot;:&quot;描述&quot;}" __cid="cnEnuqa"/> 
+                                      </div> 
+                                    </div> 
+                                  </li> 
+                                </ul> 
+                              </div>  
+                              <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row39" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                <div class="x-col cnEnuqa" xid="col20" __cid="cnEnuqa"> 
+                                  <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon btn-block cnEnuqa" xid="button9" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button9Click" data-config="{&quot;icon&quot;:&quot;fa fa-plus&quot;,&quot;label&quot;:&quot;新增&quot;}" __cid="cnEnuqa"> 
+                                    <i xid="i10" class="fa fa-plus cnEnuqa" __cid="cnEnuqa"/>  
+                                    <span xid="span32" __cid="cnEnuqa" class="cnEnuqa">新增</span> 
+                                  </a> 
+                                </div> 
+                              </div> 
+                            </div> 
+                          </div> 
+                        </div> 
+                      </div>  
+                      <div component="$model/UI2/system/components/bootstrap/accordion/accordion" class="panel-group cnEnuqa" xid="accordion1" data-bind="component:{name:'$model/UI2/system/components/bootstrap/accordion/accordion'}" __cid="cnEnuqa"> 
+                        <div class="panel cnEnuqa" component="$model/UI2/system/components/bootstrap/panel/panel" xid="panel2" data-bind="component:{name:'$model/UI2/system/components/bootstrap/panel/panel'}" __cid="cnEnuqa"> 
+                          <div class="panel-heading  panel-liushushu cnEnuqa" xid="heading1" __cid="cnEnuqa"> 
+                            <h4 class="panel-title text-center cnEnuqa" xid="h41" __cid="cnEnuqa"> 
+                              <a xid="a1" __cid="cnEnuqa" class="cnEnuqa">维修 开锁服务</a>  
+                              <span xid="span36" class="pull-right cnEnuqa" __cid="cnEnuqa" data-bind="text:$model.openlockData.count(),visible:$model.openlockData.count() &gt; 0"/> 
+                            </h4> 
+                          </div>  
+                          <div class="panel-collapse collapse cnEnuqa" xid="div2" __cid="cnEnuqa"> 
+                            <div class="panel-body cnEnuqa" xid="div1" style="padding:5px;background:#eeeeee;" __cid="cnEnuqa"> 
+                              <div component="$model/UI2/system/components/justep/list/list" class="x-list cnEnuqa" xid="list7" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;openlockData&quot;}" __cid="cnEnuqa"> 
+                                <ul class="x-list-template hide cnEnuqa" xid="listTemplateUl7" __cid="cnEnuqa" data-bind="foreach:{data:$model.foreach_list7($element),afterRender:$model.foreach_afterRender_list7.bind($model,$element)}"> 
+                                  <li xid="li7" class="list-group-item  blue-border cnEnuqa" __cid="cnEnuqa"> 
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row list-group-item cnEnuqa" xid="row37" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col16" __cid="cnEnuqa"/>  
+                                      <div class="x-col x-col-fixed cnEnuqa" xid="col25" style="width:40px;" __cid="cnEnuqa"> 
+                                        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cnEnuqa" xid="button11" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button11Click" data-config="{&quot;icon&quot;:&quot;fa fa-trash-o&quot;,&quot;label&quot;:&quot;button&quot;}" __cid="cnEnuqa"> 
+                                          <i xid="i12" class="fa fa-trash-o cnEnuqa" __cid="cnEnuqa"/>  
+                                          <span xid="span34" __cid="cnEnuqa" class="cnEnuqa"/> 
+                                        </a> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row36" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col14" style="padding-top:10px" __cid="cnEnuqa"> 
+                                        <textarea component="$model/UI2/system/components/justep/textarea/textarea" class="form-control cnEnuqa" xid="textarea4" data-bind="component:{ref:ref(&quot;summary&quot;),name:'$model/UI2/system/components/justep/textarea/textarea'}" data-config="{&quot;placeHolder&quot;:&quot;描述&quot;}" __cid="cnEnuqa"/> 
+                                      </div> 
+                                    </div> 
+                                  </li> 
+                                </ul> 
+                              </div> 
+                            </div>  
+                            <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row38" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                              <div class="x-col cnEnuqa" xid="col19" __cid="cnEnuqa"> 
+                                <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon btn-block cnEnuqa" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button1Click" data-config="{&quot;icon&quot;:&quot;fa fa-plus&quot;,&quot;label&quot;:&quot;新增&quot;}" __cid="cnEnuqa"> 
+                                  <i xid="i9" class="fa fa-plus cnEnuqa" __cid="cnEnuqa"/>  
+                                  <span xid="span14" __cid="cnEnuqa" class="cnEnuqa">新增</span> 
+                                </a> 
+                              </div> 
+                            </div> 
+                          </div> 
+                        </div> 
+                      </div>  
+                      <div component="$model/UI2/system/components/justep/smartContainer/smartContainer" xid="smartContainer1" style="margin:5px;background-color:white;height:550px;" class="x-smartcontainer blue-border cnEnuqa" data-bind="component:{name:'$model/UI2/system/components/justep/smartContainer/smartContainer'}" __cid="cnEnuqa"> 
+                        <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row28" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                          <div class="x-col cnEnuqa" xid="col77" __cid="cnEnuqa"> 
+                            <span xid="span27" style="margin-left:10px;" __cid="cnEnuqa" class="cnEnuqa">服务地址</span> 
+                          </div> 
+                        </div>  
+                        <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row29" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                          <div class="x-col cnEnuqa" xid="col78" __cid="cnEnuqa"> 
+                            <select component="$model/UI2/system/components/justep/distpicker/provinceSelect" class="form-control cnEnuqa" xid="provinceSelect3" data-bind="component:{name:'$model/UI2/system/components/justep/distpicker/provinceSelect'}" data-events="onChange:provinceSelect3Change" __cid="cnEnuqa"/> 
+                          </div>  
+                          <div class="x-col cnEnuqa" xid="col79" __cid="cnEnuqa"> 
+                            <select component="$model/UI2/system/components/justep/distpicker/citySelect" class="form-control cnEnuqa" xid="citySelect3" data-bind="component:{name:'$model/UI2/system/components/justep/distpicker/citySelect',provinceRef:$model.provinceData.val(&quot;province&quot;)}" data-events="onChange:citySelect3Change" __cid="cnEnuqa"/> 
+                          </div>  
+                          <div class="x-col cnEnuqa" xid="col80" __cid="cnEnuqa"> 
+                            <select component="$model/UI2/system/components/justep/distpicker/districtSelect" class="form-control cnEnuqa" xid="districtSelect3" data-bind="component:{name:'$model/UI2/system/components/justep/distpicker/districtSelect',cityRef:$model.cityData.val(&quot;city&quot;)}" data-events="onChange:districtSelect3Change" __cid="cnEnuqa"/> 
+                          </div> 
+                        </div>  
+                        <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row41" style="border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#f0f0f0;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                          <div class="x-col cnEnuqa" xid="col36" __cid="cnEnuqa"> 
+                            <input component="$model/UI2/system/components/justep/input/input" class="form-control cnEnuqa" xid="input9" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input9Change" data-config="{&quot;placeHolder&quot;:&quot;详细地址&quot;}" __cid="cnEnuqa"/> 
+                          </div> 
+                        </div>  
+                        <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row30" style="padding-top:10px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                          <div class="x-col cnEnuqa" xid="col83" __cid="cnEnuqa"> 
+                            <span xid="span28" style="margin-left:10px;" __cid="cnEnuqa" class="cnEnuqa">预约服务时间</span> 
+                          </div> 
+                        </div>  
+                        <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row31" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                          <div class="x-col cnEnuqa" xid="col86" __cid="cnEnuqa"> 
+                            <input component="$model/UI2/system/components/justep/input/input" class="form-control cnEnuqa" xid="input4" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input4Change;onFocus:input4Focus" data-config="{&quot;dataType&quot;:&quot;Date&quot;}" __cid="cnEnuqa"/> 
+                          </div> 
+                        </div>  
+                        <div component="$model/UI2/system/components/justep/row/row" class="x-row list-group-item cnEnuqa" xid="row32" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                          <div class="x-col cnEnuqa" xid="col89" __cid="cnEnuqa"> 
+                            <div class="input-group cnEnuqa" component="$model/UI2/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup3" data-bind="component:{name:'$model/UI2/system/components/bootstrap/inputGroup/inputGroup'}" __cid="cnEnuqa"> 
+                              <span class="input-group-addon cnEnuqa" xid="span29" __cid="cnEnuqa">预出价格</span>  
+                              <input class="form-control cnEnuqa" component="$model/UI2/system/components/justep/input/input" xid="input5" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input5Change" data-config="{&quot;dataType&quot;:&quot;String&quot;}" __cid="cnEnuqa"/> 
+                            </div> 
+                          </div> 
+                        </div>  
+                        <div component="$model/UI2/system/components/justep/row/row" class="x-row list-group-item cnEnuqa" xid="row33" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                          <div class="x-col cnEnuqa" xid="col90" __cid="cnEnuqa"> 
+                            <div class="input-group cnEnuqa" component="$model/UI2/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup4" data-bind="component:{name:'$model/UI2/system/components/bootstrap/inputGroup/inputGroup'}" __cid="cnEnuqa"> 
+                              <span class="input-group-addon cnEnuqa" xid="span30" __cid="cnEnuqa">联系人　</span>  
+                              <input class="form-control cnEnuqa" component="$model/UI2/system/components/justep/input/input" xid="input6" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input6Change" data-config="{&quot;dataType&quot;:&quot;String&quot;}" __cid="cnEnuqa"/> 
+                            </div> 
+                          </div> 
+                        </div>  
+                        <div component="$model/UI2/system/components/justep/row/row" class="x-row list-group-item cnEnuqa" xid="row34" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                          <div class="x-col cnEnuqa" xid="col91" __cid="cnEnuqa"> 
+                            <div class="input-group cnEnuqa" component="$model/UI2/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup5" data-bind="component:{name:'$model/UI2/system/components/bootstrap/inputGroup/inputGroup'}" __cid="cnEnuqa"> 
+                              <span class="input-group-addon cnEnuqa" xid="span31" __cid="cnEnuqa">联系方式</span>  
+                              <input class="form-control cnEnuqa" component="$model/UI2/system/components/justep/input/input" xid="input7" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input7Change" data-config="{&quot;dataType&quot;:&quot;String&quot;}" __cid="cnEnuqa"/> 
+                            </div> 
+                          </div> 
+                        </div>  
+                        <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row45" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                          <div class="x-col cnEnuqa" xid="col28" __cid="cnEnuqa"> 
+                            <span xid="span43" style="margin-left:10px;" __cid="cnEnuqa" class="cnEnuqa">额外费用支付</span> 
+                          </div> 
+                        </div>  
+                        <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row46" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                          <div class="x-col cnEnuqa" xid="col33" __cid="cnEnuqa"> 
+                            <span component="$model/UI2/system/components/justep/button/radio" class="x-radio cnEnuqa" xid="radio12" label="发单人支付" name="pay" checked="true" data-config="{&quot;checked&quot;:true,&quot;disabled&quot;:false,&quot;label&quot;:&quot;发单人支付&quot;,&quot;name&quot;:&quot;pay&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio'}" data-events="onChange:radio12Change" __cid="cnEnuqa"> 
+                              <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="radio" name="pay" __cid="cnEnuqa" class="cnEnuqa"></input>  
+                              <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cnEnuqa" class="cnEnuqa">发单人支付</label> 
+                            </span> 
+                          </div>  
+                          <div class="x-col cnEnuqa" xid="col35" __cid="cnEnuqa"> 
+                            <span component="$model/UI2/system/components/justep/button/radio" class="x-radio cnEnuqa" xid="radio13" label="现场客户支付" name="pay" data-config="{&quot;checked&quot;:false,&quot;disabled&quot;:false,&quot;label&quot;:&quot;现场客户支付&quot;,&quot;name&quot;:&quot;pay&quot;}" data-bind="component:{name:'$model/UI2/system/components/justep/button/radio'}" data-events="onChange:radio13Change" __cid="cnEnuqa"> 
+                              <input xmlns:xhtml="http://www.w3.org/1999/xhtml" type="radio" name="pay" __cid="cnEnuqa" class="cnEnuqa"></input>  
+                              <label xmlns:xhtml="http://www.w3.org/1999/xhtml" __cid="cnEnuqa" class="cnEnuqa">现场客户支付</label> 
+                            </span> 
+                          </div> 
+                        </div>  
+                        <div component="$model/UI2/system/components/justep/row/row" class="x-row list-group-item cnEnuqa" xid="row35" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                          <div class="x-col cnEnuqa" xid="col94" __cid="cnEnuqa"> 
+                            <textarea component="$model/UI2/system/components/justep/textarea/textarea" class="form-control cnEnuqa" xid="textarea3" data-bind="component:{name:'$model/UI2/system/components/justep/textarea/textarea'}" data-events="onChange:textarea3Change" data-config="{&quot;placeHolder&quot;:&quot;描述&quot;}" __cid="cnEnuqa"/> 
+                          </div> 
+                        </div> 
+                      </div>  
+                      <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row40" style="background-color:#eee;padding-top:10px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                        <div class="x-col cnEnuqa" xid="col32" __cid="cnEnuqa"> 
+                          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-block cnEnuqa" xid="publicBtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:publicBtnClick" data-config="{&quot;label&quot;:&quot;发布订单&quot;}" __cid="cnEnuqa"> 
+                            <i xid="i13" __cid="cnEnuqa" class="cnEnuqa"/>  
+                            <span xid="span37" __cid="cnEnuqa" class="cnEnuqa">发布订单</span> 
+                          </a> 
+                        </div> 
+                      </div>  
+                      <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row42" style="background-color:#eee;height:55px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                        <div class="x-col cnEnuqa" xid="col38" __cid="cnEnuqa"/>  
+                        <div class="x-col cnEnuqa" xid="col39" __cid="cnEnuqa"/>  
+                        <div class="x-col cnEnuqa" xid="col48" __cid="cnEnuqa"/> 
+                      </div> 
+                    </div>  
+                    <div class="x-contents-content x-cards cnEnuqa" xid="content3" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cnEnuqa"> 
+                      <div component="$model/UI2/system/components/justep/list/list" class="x-list cnEnuqa" xid="list8" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;receiptbartaskData&quot;}" __cid="cnEnuqa"> 
+                        <ul class="x-list-template hide cnEnuqa" xid="listTemplateUl8" __cid="cnEnuqa" data-bind="foreach:{data:$model.foreach_list8($element),afterRender:$model.foreach_afterRender_list8.bind($model,$element)}"> 
+                          <li xid="li8" class="list-group-item cnEnuqa" __cid="cnEnuqa" data-bind="event:{click:$model._callModelFn.bind($model, 'li8Click')}"> 
+                            <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row48" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                              <div class="x-col cnEnuqa" xid="col53" __cid="cnEnuqa"> 
+                                <span xid="span44" __cid="cnEnuqa" class="cnEnuqa">订单编号</span> 
+                              </div>  
+                              <div class="x-col text-right cnEnuqa" xid="col56" __cid="cnEnuqa"> 
+                                <span xid="span45" class="text-info cnEnuqa" __cid="cnEnuqa" data-bind="text:val(&quot;ordernumber&quot;)"/> 
+                              </div> 
+                            </div>  
+                            <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row49" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                              <div class="x-col cnEnuqa" xid="col58" __cid="cnEnuqa"> 
+                                <span xid="span46" __cid="cnEnuqa" class="cnEnuqa">参与技工</span> 
+                              </div>  
+                              <div class="x-col text-right cnEnuqa" xid="col59" __cid="cnEnuqa"> 
+                                <span xid="span47" __cid="cnEnuqa" class="cnEnuqa" data-bind="text:val(&quot;artisancount&quot;)">0</span> 
+                              </div> 
+                            </div>  
+                            <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row51" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                              <div class="x-col cnEnuqa" xid="col66" __cid="cnEnuqa"> 
+                                <span xid="span49" __cid="cnEnuqa" class="cnEnuqa">我的任务</span> 
+                              </div>  
+                              <div class="x-col text-right cnEnuqa" xid="col67" __cid="cnEnuqa"> 
+                                <span xid="span50" __cid="cnEnuqa" class="cnEnuqa" data-bind="text:val(&quot;measurecount&quot;) + val(&quot;transitcount&quot;) + val(&quot;fingercount&quot;) + val(&quot;bartaskdetailcount&quot;) + val(&quot;openlockcount&quot;)">0</span> 
+                              </div> 
+                            </div> 
+                          </li> 
+                        </ul> 
+                      </div> 
+                    </div>  
+                    <div class="x-contents-content cnEnuqa" xid="content4" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cnEnuqa"/>  
+                    <div class="x-contents-content cnEnuqa" xid="content5" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cnEnuqa"/> 
+                  </div> 
+                </div>  
+                <style __cid="cnEnuqa" class="cnEnuqa">.x-panel.pcryEfai-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pcryEfai-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pcryEfai-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcryEfai-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcryEfai-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pcryEfai-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcryEfai-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcryEfai-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcryEfai-iosstatusbar &gt;.x-panel-content {top: 48px;}</style> 
+              </div>  
+              <span xmlns="" component="$model/UI2/system/components/justep/messageDialog/messageDialog" xid="messageDialog1" data-bind="component:{name:'$model/UI2/system/components/justep/messageDialog/messageDialog'}" data-config="{&quot;type&quot;:&quot;OK&quot;}" __cid="cnEnuqa" class="cnEnuqa">  
+                <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-modal-overlay cnEnuqa" __cid="cnEnuqa"></div>  
+                <div xmlns:xhtml="http://www.w3.org/1999/xhtml" class="x-modal cnEnuqa" __cid="cnEnuqa">  
+                  <div class="x-modal-inner cnEnuqa" __cid="cnEnuqa"> 
+                    <div class="x-modal-title cnEnuqa" __cid="cnEnuqa"/>  
+                    <div class="x-modal-text cnEnuqa" __cid="cnEnuqa"/>  
+                    <input class="x-modal-prompt-input cnEnuqa" type="text" __cid="cnEnuqa"/> 
+                  </div>  
+                  <div class="x-modal-buttons cnEnuqa" __cid="cnEnuqa"> 
+                    <a class="x-modal-button x-modal-button-bold OK cnEnuqa" value="ok" __cid="cnEnuqa">确定</a>  
+                    <a class="x-modal-button x-modal-button-bold Yes cnEnuqa" value="yes" __cid="cnEnuqa">是</a>  
+                    <a class="x-modal-button x-modal-button-bold No cnEnuqa" value="no" __cid="cnEnuqa">否</a>  
+                    <a class="x-modal-button x-modal-button-bold Cancel cnEnuqa" value="cancel" __cid="cnEnuqa">取消</a> 
+                  </div> 
+                </div> 
+              </span>  
+              <div xmlns="" component="$model/UI2/system/components/justep/popOver/popOver" class="x-popOver cnEnuqa" xid="popOver1" data-bind="component:{name:'$model/UI2/system/components/justep/popOver/popOver'}" data-config="{&quot;direction&quot;:&quot;auto&quot;,&quot;opacity&quot;:1}" __cid="cnEnuqa">  
+                <div class="x-popOver-overlay cnEnuqa" xid="div11" __cid="cnEnuqa"/>  
+                <div class="x-popOver-content cnEnuqa" xid="div12" style="width:100%;" __cid="cnEnuqa"/> 
+              </div> 
+            </div>
+          </div>
+        </div>  
+        <div class="x-contents-content cfyyyYj" xid="ordercontent" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cfyyyYj">
+          <div component="$model/UI2/system/components/justep/windowContainer/windowContainer" class="x-window-container cfyyyYj" xid="windowContainer2" __component-context__="block" data-bind="component:{name:'$model/UI2/system/components/justep/windowContainer/windowContainer'}" data-config="{&quot;src&quot;:&quot;$model/UI2/liushushufront3/order/order.w&quot;}" __cid="cfyyyYj">
+            <div component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cfABBbq" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cfABBbq" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/panel/panel,">  
+              <style xmlns="" xmlns:xhtml="http://www.w3.org/1999/xhtml">.headimg.cfABBbq{border-radius: 50%; width: 40px; height: 40px; border-style: solid solid solid solid; border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0)}</style>  
+              <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad" __cid="cfABBbq" class="cfABBbq"></div>  
+              <div xmlns="" component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pca6Fjuu-iosstatusbar cfABBbq" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cfABBbq">  
+                <div class="x-panel-top cfABBbq" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cfABBbq"> 
+                  <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cfABBbq" style="background-color:white;" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" __cid="cfABBbq"> 
+                    <div class="x-titlebar-left cfABBbq" __cid="cfABBbq"> 
+                      <img src="@justepContextPath@/v_4fce6a2406d94b56aa19b55b2e18212el_zh_CNs_d_m/liushushufront3/image/head.png" alt="" xid="image1" class="headimg cfABBbq" __cid="cfABBbq"/> 
+                    </div>  
+                    <div class="x-titlebar-title cfABBbq" __cid="cfABBbq"/>  
+                    <div class="x-titlebar-right  cfABBbq" __cid="cfABBbq"> 
+                      <div class="empty cfABBbq" __cid="cfABBbq"/> 
+                    </div> 
+                  </div> 
+                </div>  
+                <div class="x-panel-content x-cards cfABBbq" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cfABBbq"/>  
+                <style __cid="cfABBbq" class="cfABBbq">.x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-content {top: 48px;}</style> 
+              </div> 
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>  
+    <div class="x-panel-bottom cfyyyYj" xid="bottom1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cfyyyYj">
+      <div component="$model/UI2/system/components/justep/button/buttonGroup" class="btn-group x-card btn-group-justified x-liushushu cfyyyYj" xid="buttonGroup1" data-bind="component:{name:'$model/UI2/system/components/justep/button/buttonGroup'}" data-config="{&quot;tabbed&quot;:true}" __cid="cfyyyYj"> 
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-icon-top cfyyyYj" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;fa fa-file-text-o&quot;,&quot;label&quot;:&quot;订单&quot;,&quot;target&quot;:&quot;publishcontent&quot;}" __cid="cfyyyYj"> 
+          <i xid="i1" class="fa fa-file-text-o cfyyyYj" __cid="cfyyyYj"/>  
+          <span xid="span1" __cid="cfyyyYj" class="cfyyyYj">订单</span>
+        </a>  
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-icon-top cfyyyYj" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;icon&quot;:&quot;fa fa-user&quot;,&quot;label&quot;:&quot;我的&quot;,&quot;target&quot;:&quot;ordercontent&quot;}" __cid="cfyyyYj"> 
+          <i xid="i2" class="fa fa-user cfyyyYj" __cid="cfyyyYj"/>  
+          <span xid="span2" __cid="cfyyyYj" class="cfyyyYj">我的</span>
+        </a> 
+      </div>
+    </div>
+    <style __cid="cfyyyYj" class="cfyyyYj">.x-panel.pcJv2U3m-iosstatusbar &gt;.x-panel-top {height: 0px;}.x-panel.pcJv2U3m-iosstatusbar &gt;.x-panel-content { top: 0px;bottom: nullpx;}.x-panel.pcJv2U3m-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcJv2U3m-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcJv2U3m-iosstatusbar &gt;.x-panel-top {height: 0px;}.iosstatusbar .x-panel.pcJv2U3m-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcJv2U3m-iosstatusbar &gt;.x-panel-content { top: 0px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcJv2U3m-iosstatusbar &gt;.x-panel-top {height: 0px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcJv2U3m-iosstatusbar &gt;.x-panel-content {top: 0px;}</style>
+  </div> 
+</div>

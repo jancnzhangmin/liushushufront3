@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cfYNf2a" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cfYNf2a" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/row/row,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/justep/smartContainer/smartContainer,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/panel/panel,">  
+  <style xmlns="" xmlns:xhtml="http://www.w3.org/1999/xhtml">null</style>  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onParamsReceive:modelParamsReceive" __cid="cfYNf2a" class="cfYNf2a"/>  
+  <div xmlns="" component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pcrQjIFv-iosstatusbar cfYNf2a" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cfYNf2a"> 
+    <div class="x-panel-top cfYNf2a" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cfYNf2a"> 
+      <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cfYNf2a" style="color:#808080;font-weight:lighter;background-color:white;" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&quot;title&quot;:&quot;订单明细&quot;}" __cid="cfYNf2a"> 
+        <div class="x-titlebar-left cfYNf2a" __cid="cfYNf2a"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-link btn-only-icon cfYNf2a" xid="backBtn" style="font-weight:lighter;" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:{operation:'window.close'}" data-config="{&quot;icon&quot;:&quot;icon-chevron-left&quot;,&quot;label&quot;:&quot;&quot;}" __cid="cfYNf2a"> 
+            <i class="icon-chevron-left cfYNf2a" __cid="cfYNf2a"/>  
+            <span __cid="cfYNf2a" class="cfYNf2a"/> 
+          </a> 
+        </div>  
+        <div class="x-titlebar-title cfYNf2a" style="font-weight:lighter;" __cid="cfYNf2a">订单明细</div>  
+        <div class="x-titlebar-right  cfYNf2a" __cid="cfYNf2a"> 
+          <div class="empty cfYNf2a" __cid="cfYNf2a"/> 
+        </div> 
+      </div> 
+    </div>  
+    <div class="x-panel-content x-cards cfYNf2a" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cfYNf2a"> 
+      <div component="$model/UI2/system/components/justep/smartContainer/smartContainer" class="x-smartcontainer cfYNf2a" xid="smartContainer1" style="background-color:white;" data-bind="component:{name:'$model/UI2/system/components/justep/smartContainer/smartContainer'}" __cid="cfYNf2a"> 
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row1" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'},event:{click:$model._callModelFn.bind($model, 'row1Click')}" __cid="cfYNf2a"> 
+          <div class="x-col cfYNf2a" xid="col2" __cid="cfYNf2a"> 
+            <span xid="span1" __cid="cfYNf2a" class="cfYNf2a">参与技工</span> 
+          </div>  
+          <div class="x-col text-right cfYNf2a" xid="col3" __cid="cfYNf2a"> 
+            <span xid="span2" __cid="cfYNf2a" class="cfYNf2a">0</span>  
+            <i xid="i1" class="fa fa-chevron-right cfYNf2a" style="width:20px;" __cid="cfYNf2a"/> 
+          </div> 
+        </div>  
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row2" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+          <div class="x-col cfYNf2a" xid="col5" __cid="cfYNf2a"> 
+            <span xid="span3" __cid="cfYNf2a" class="cfYNf2a">订单号</span> 
+          </div>  
+          <div class="x-col text-right cfYNf2a" xid="col6" __cid="cfYNf2a"> 
+            <span xid="span4" __cid="cfYNf2a" class="cfYNf2a" data-bind="text:$model.bartaskData.val(&quot;ordernumber&quot;)"/> 
+          </div> 
+        </div>  
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row3" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+          <div class="x-col cfYNf2a" xid="col8" __cid="cfYNf2a"> 
+            <span xid="span5" __cid="cfYNf2a" class="cfYNf2a">服务地址</span> 
+          </div> 
+        </div>  
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row4" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+          <div class="x-col cfYNf2a" xid="col12" __cid="cfYNf2a"> 
+            <span xid="span7" __cid="cfYNf2a" class="cfYNf2a" data-bind="text:$model.bartaskData.val(&quot;province&quot;) + $model.bartaskData.val(&quot;city&quot;) + $model.bartaskData.val(&quot;district&quot;) + $model.bartaskData.val(&quot;address&quot;)"/> 
+          </div> 
+        </div>  
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row5" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+          <div class="x-col cfYNf2a" xid="col14" __cid="cfYNf2a"> 
+            <span xid="span8" __cid="cfYNf2a" class="cfYNf2a">预约服务时间</span> 
+          </div>  
+          <div class="x-col text-right cfYNf2a" xid="col15" __cid="cfYNf2a"> 
+            <span xid="span9" __cid="cfYNf2a" class="cfYNf2a" data-bind="text:$model.bartaskData.val(&quot;installtime&quot;)"/> 
+          </div> 
+        </div>  
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row6" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+          <div class="x-col cfYNf2a" xid="col17" __cid="cfYNf2a"> 
+            <span xid="span10" __cid="cfYNf2a" class="cfYNf2a">预出价格</span> 
+          </div>  
+          <div class="x-col text-right cfYNf2a" xid="col18" __cid="cfYNf2a"> 
+            <span xid="span11" __cid="cfYNf2a" class="cfYNf2a" data-bind="text:'￥' +  $model.bartaskData.val(&quot;preprice&quot;)"/> 
+          </div> 
+        </div>  
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row7" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+          <div class="x-col cfYNf2a" xid="col20" __cid="cfYNf2a"> 
+            <span xid="span12" __cid="cfYNf2a" class="cfYNf2a">联系人</span> 
+          </div>  
+          <div class="x-col text-right cfYNf2a" xid="col21" __cid="cfYNf2a"> 
+            <span xid="span13" __cid="cfYNf2a" class="cfYNf2a" data-bind="text:$model.bartaskData.val(&quot;contact&quot;)"/> 
+          </div> 
+        </div>  
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row8" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+          <div class="x-col cfYNf2a" xid="col23" __cid="cfYNf2a"> 
+            <span xid="span14" __cid="cfYNf2a" class="cfYNf2a">联系方式</span> 
+          </div>  
+          <div class="x-col text-right cfYNf2a" xid="col24" __cid="cfYNf2a"> 
+            <span xid="span15" __cid="cfYNf2a" class="cfYNf2a" data-bind="text:$model.bartaskData.val(&quot;contactphone&quot;)"/> 
+          </div> 
+        </div>  
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row11" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+          <div class="x-col cfYNf2a" xid="col32" __cid="cfYNf2a"> 
+            <span xid="span18" __cid="cfYNf2a" class="cfYNf2a">额外费用支付</span> 
+          </div>  
+          <div class="x-col text-right cfYNf2a" xid="col31" __cid="cfYNf2a"> 
+            <span xid="span19" __cid="cfYNf2a" class="cfYNf2a" data-bind="text:$model.bartaskData.val(&quot;paytype&quot;) == 1 ? '现场支付' : '发单人支付'"/> 
+          </div> 
+        </div>  
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row9" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+          <div class="x-col cfYNf2a" xid="col27" __cid="cfYNf2a"> 
+            <span xid="span16" __cid="cfYNf2a" class="cfYNf2a">描述</span> 
+          </div> 
+        </div>  
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row10" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+          <div class="x-col cfYNf2a" xid="col30" __cid="cfYNf2a"> 
+            <span xid="span17" __cid="cfYNf2a" class="cfYNf2a" data-bind="text:$model.bartaskData.val(&quot;summary&quot;)"/> 
+          </div> 
+        </div> 
+      </div>  
+      <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row12" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'},visible:$model.measureData.count() &gt; 0" __cid="cfYNf2a"> 
+        <div class="x-col text-center cfYNf2a" xid="col35" __cid="cfYNf2a"> 
+          <span xid="span20" __cid="cfYNf2a" class="cfYNf2a">门洞测量</span> 
+        </div> 
+      </div>  
+      <div component="$model/UI2/system/components/justep/list/list" class="x-list x-cards cfYNf2a" xid="list1" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;measureData&quot;}" __cid="cfYNf2a"> 
+        <ul class="x-list-template hide cfYNf2a" xid="listTemplateUl1" __cid="cfYNf2a" data-bind="foreach:{data:$model.foreach_list1($element),afterRender:$model.foreach_afterRender_list1.bind($model,$element)}"> 
+          <li xid="li1" class="list-group-item cfYNf2a" style="padding:0px;" __cid="cfYNf2a"> 
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row13" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+              <div class="x-col cfYNf2a" xid="col38" __cid="cfYNf2a"> 
+                <span xid="span21" __cid="cfYNf2a" class="cfYNf2a">描述</span> 
+              </div> 
+            </div>  
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row14" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+              <div class="x-col cfYNf2a" xid="col41" __cid="cfYNf2a"> 
+                <span xid="span22" __cid="cfYNf2a" class="cfYNf2a" data-bind="text:val(&quot;summary&quot;)"/> 
+              </div> 
+            </div> 
+          </li> 
+        </ul> 
+      </div>  
+      <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row15" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'},visible:$model.transitData.count() &gt; 0" __cid="cfYNf2a"> 
+        <div class="x-col text-center cfYNf2a" xid="col42" __cid="cfYNf2a"> 
+          <span xid="span23" __cid="cfYNf2a" class="cfYNf2a">运输服务</span> 
+        </div> 
+      </div>  
+      <div component="$model/UI2/system/components/justep/list/list" class="x-list cfYNf2a" xid="list2" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;transitData&quot;}" __cid="cfYNf2a"> 
+        <ul class="x-list-template hide cfYNf2a" xid="listTemplateUl2" __cid="cfYNf2a" data-bind="foreach:{data:$model.foreach_list2($element),afterRender:$model.foreach_afterRender_list2.bind($model,$element)}"> 
+          <li xid="li2" class="list-group-item cfYNf2a" style="padding:0px;" __cid="cfYNf2a"> 
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row16" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+              <div class="x-col cfYNf2a" xid="col43" __cid="cfYNf2a"> 
+                <span xid="span24" __cid="cfYNf2a" class="cfYNf2a">起点</span> 
+              </div> 
+            </div>  
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row17" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+              <div class="x-col cfYNf2a" xid="col46" __cid="cfYNf2a"> 
+                <span xid="span25" __cid="cfYNf2a" class="cfYNf2a" data-bind="text:val(&quot;startaddress&quot;)"/> 
+              </div> 
+            </div>  
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row18" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+              <div class="x-col cfYNf2a" xid="col47" __cid="cfYNf2a"> 
+                <span xid="span26" __cid="cfYNf2a" class="cfYNf2a">终点</span> 
+              </div> 
+            </div>  
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row19" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+              <div class="x-col cfYNf2a" xid="col48" __cid="cfYNf2a"> 
+                <span xid="span27" __cid="cfYNf2a" class="cfYNf2a" data-bind="text:val(&quot;endaddress&quot;)"/> 
+              </div> 
+            </div>  
+            <div component="$model/UI2/system/components/justep/list/list" class="x-list cfYNf2a" xid="list3" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" __cid="cfYNf2a"> 
+              <ul class="x-list-template hide cfYNf2a" xid="listTemplateUl3" __cid="cfYNf2a" data-bind="foreach:{data:$model.foreach_list3($element),afterRender:$model.foreach_afterRender_list3.bind($model,$element)}"> 
+                <li xid="li3" __cid="cfYNf2a" class="cfYNf2a"/> 
+              </ul> 
+            </div> 
+          </li> 
+        </ul> 
+      </div>  
+      <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row20" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'},visible:$model.bartaskdetailData.count() &gt; 0" __cid="cfYNf2a"> 
+        <div class="x-col text-center cfYNf2a" xid="col51" __cid="cfYNf2a"> 
+          <span xid="span28" __cid="cfYNf2a" class="cfYNf2a">安装服务</span> 
+        </div> 
+      </div>  
+      <div component="$model/UI2/system/components/justep/list/list" class="x-list cfYNf2a" xid="list4" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;bartaskdetailData&quot;}" __cid="cfYNf2a"> 
+        <ul class="x-list-template hide cfYNf2a" xid="listTemplateUl4" __cid="cfYNf2a" data-bind="foreach:{data:$model.foreach_list4($element),afterRender:$model.foreach_afterRender_list4.bind($model,$element)}"> 
+          <li xid="li4" class="list-group-item cfYNf2a" style="padding:0px;padding-bottom:10px;" __cid="cfYNf2a"> 
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row21" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+              <div class="x-col cfYNf2a" xid="col53" __cid="cfYNf2a"> 
+                <span xid="span29" __cid="cfYNf2a" class="cfYNf2a">品牌</span> 
+              </div>  
+              <div class="x-col text-right cfYNf2a" xid="col54" __cid="cfYNf2a"> 
+                <span xid="span30" __cid="cfYNf2a" class="cfYNf2a" data-bind="text:val(&quot;brand&quot;)"/> 
+              </div> 
+            </div>  
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row22" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+              <div class="x-col cfYNf2a" xid="col56" __cid="cfYNf2a"> 
+                <span xid="span32" __cid="cfYNf2a" class="cfYNf2a">型号</span> 
+              </div>  
+              <div class="x-col text-right cfYNf2a" xid="col55" __cid="cfYNf2a"> 
+                <span xid="span31" __cid="cfYNf2a" class="cfYNf2a" data-bind="text:val(&quot;product&quot;)"/> 
+              </div> 
+            </div>  
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row23" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+              <div class="x-col cfYNf2a" xid="col57" __cid="cfYNf2a"> 
+                <span xid="span33" __cid="cfYNf2a" class="cfYNf2a">锁具</span> 
+              </div>  
+              <div class="x-col text-right cfYNf2a" xid="col58" __cid="cfYNf2a"> 
+                <span xid="span34" __cid="cfYNf2a" class="cfYNf2a" data-bind="text:val(&quot;lock&quot;)"/> 
+              </div> 
+            </div>  
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row24" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+              <div class="x-col cfYNf2a" xid="col61" __cid="cfYNf2a"> 
+                <span xid="span35" __cid="cfYNf2a" class="cfYNf2a">基础服务</span> 
+              </div> 
+            </div>  
+            <div component="$model/UI2/system/components/justep/list/list" class="x-list cfYNf2a" xid="list5" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;barbaseData&quot;,&quot;filter&quot;:&quot; $row.val(\&quot;bartaskdetail_id\&quot;) == val(\&quot;id\&quot;)&quot;}" __cid="cfYNf2a"> 
+              <ul class="x-list-template hide cfYNf2a" xid="listTemplateUl5" style="padding-left:10px;padding-right:10px;" __cid="cfYNf2a" data-bind="foreach:{data:$model.foreach_list5($element),afterRender:$model.foreach_afterRender_list5.bind($model,$element)}"> 
+                <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-xs cfYNf2a" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},text:val(&quot;name&quot;)" data-config="{&quot;label&quot;:&quot;button&quot;}" __cid="cfYNf2a"> 
+                  <i xid="i2" __cid="cfYNf2a" class="cfYNf2a"/>  
+                  <span xid="span36" __cid="cfYNf2a" class="cfYNf2a"/> 
+                </a> 
+              </ul> 
+            </div>  
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row26" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+              <div class="x-col cfYNf2a" xid="col65" __cid="cfYNf2a"> 
+                <span xid="span37" __cid="cfYNf2a" class="cfYNf2a">增值服务</span> 
+              </div> 
+            </div>  
+            <div component="$model/UI2/system/components/justep/list/list" class="x-list cfYNf2a" xid="list6" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;$model.barincrementData&quot;,&quot;filter&quot;:&quot; $row.val(\&quot;bartaskdetail_id\&quot;) == val(\&quot;id\&quot;)&quot;}" __cid="cfYNf2a"> 
+              <ul class="x-list-template hide cfYNf2a" xid="listTemplateUl6" style="padding-left:10px;padding-right:10px;" __cid="cfYNf2a" data-bind="foreach:{data:$model.foreach_list6($element),afterRender:$model.foreach_afterRender_list6.bind($model,$element)}"> 
+                <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-xs cfYNf2a" xid="button2" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'},text:val(&quot;name&quot;)" data-config="{&quot;label&quot;:&quot;button&quot;}" __cid="cfYNf2a"> 
+                  <i xid="i3" __cid="cfYNf2a" class="cfYNf2a"/>  
+                  <span xid="span38" __cid="cfYNf2a" class="cfYNf2a"/> 
+                </a> 
+              </ul> 
+            </div> 
+          </li> 
+        </ul> 
+      </div>  
+      <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row27" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'},visible:$model.bartaskdetailData.count() &gt; 0" __cid="cfYNf2a"> 
+        <div class="x-col text-center cfYNf2a" xid="col66" __cid="cfYNf2a" data-bind="visible:false"> 
+          <span xid="span39" __cid="cfYNf2a" class="cfYNf2a">指纹锁 电子猫眼安装</span> 
+        </div> 
+      </div>  
+      <div component="$model/UI2/system/components/justep/list/list" class="x-list cfYNf2a" xid="list7" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'},visible:false" data-config="{&quot;data&quot;:&quot;fingerData&quot;}" __cid="cfYNf2a"> 
+        <ul class="x-list-template hide cfYNf2a" xid="listTemplateUl7" __cid="cfYNf2a" data-bind="foreach:{data:$model.foreach_list7($element),afterRender:$model.foreach_afterRender_list7.bind($model,$element)}"> 
+          <li xid="li6" class="list-group-item cfYNf2a" style="padding:0px;" __cid="cfYNf2a"> 
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row28" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+              <div class="x-col cfYNf2a" xid="col68" __cid="cfYNf2a"> 
+                <span xid="span40" __cid="cfYNf2a" class="cfYNf2a"/> 
+              </div>  
+              <div class="x-col cfYNf2a" xid="col69" __cid="cfYNf2a"/> 
+            </div> 
+          </li> 
+        </ul> 
+      </div>  
+      <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row25" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'},visible:$model.openlockData.count() &gt; 0" __cid="cfYNf2a"> 
+        <div class="x-col text-center cfYNf2a" xid="col1" __cid="cfYNf2a"> 
+          <span xid="span6" __cid="cfYNf2a" class="cfYNf2a">维修 开锁服务</span> 
+        </div> 
+      </div>  
+      <div component="$model/UI2/system/components/justep/list/list" class="x-list cfYNf2a" xid="list8" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;openlockData&quot;}" __cid="cfYNf2a"> 
+        <ul class="x-list-template hide cfYNf2a" xid="listTemplateUl8" __cid="cfYNf2a" data-bind="foreach:{data:$model.foreach_list8($element),afterRender:$model.foreach_afterRender_list8.bind($model,$element)}"> 
+          <li xid="li5" class="list-group-item cfYNf2a" style="padding:0px;" __cid="cfYNf2a"> 
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row29" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+              <div class="x-col cfYNf2a" xid="col7" __cid="cfYNf2a"> 
+                <span xid="span41" __cid="cfYNf2a" class="cfYNf2a">描述</span> 
+              </div>  
+              <div class="x-col cfYNf2a" xid="col4" __cid="cfYNf2a"/> 
+            </div>  
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cfYNf2a" xid="row30" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfYNf2a"> 
+              <div class="x-col cfYNf2a" xid="col11" __cid="cfYNf2a"> 
+                <span xid="span42" __cid="cfYNf2a" class="cfYNf2a" data-bind="text:val(&quot;summary&quot;)"/> 
+              </div> 
+            </div> 
+          </li> 
+        </ul> 
+      </div> 
+    </div>  
+    <style __cid="cfYNf2a" class="cfYNf2a">.x-panel.pcrQjIFv-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pcrQjIFv-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pcrQjIFv-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcrQjIFv-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcrQjIFv-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pcrQjIFv-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcrQjIFv-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcrQjIFv-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcrQjIFv-iosstatusbar &gt;.x-panel-content {top: 48px;}</style> 
+  </div> 
+</div>
