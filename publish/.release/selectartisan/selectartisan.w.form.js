@@ -2,8 +2,11 @@ define(function(require){
 require('$model/UI2/system/components/justep/model/model');
 require('$model/UI2/system/components/justep/loadingBar/loadingBar');
 require('$model/UI2/system/components/justep/button/button');
+require('$model/UI2/system/components/justep/row/row');
+require('$model/UI2/system/components/justep/list/list');
 require('$model/UI2/system/components/justep/titleBar/titleBar');
 require('$model/UI2/system/components/justep/panel/child');
+require('$model/UI2/system/components/justep/data/data');
 require('$model/UI2/system/components/justep/window/window');
 require('$model/UI2/system/components/justep/panel/panel');
 var __parent1=require('$model/UI2/system/lib/base/modelBase'); 
@@ -18,5 +21,7 @@ var __result = __parent1._extend(__parent0).extend({
 	this._wCfg_={};
 	this._appCfg_={};
 	this.callParent(contextUrl);
+ var __Data__ = require("$UI/system/components/justep/data/data");new __Data__(this,{"autoLoad":true,"confirmDelete":true,"confirmRefresh":true,"defCols":{"headurl":{"define":"headurl","name":"headurl","relation":"headurl","type":"String"},"id":{"define":"id","name":"id","relation":"id","type":"String"},"login":{"define":"login","name":"login","relation":"login","type":"String"},"username":{"define":"username","name":"username","relation":"username","type":"String"}},"directDelete":false,"events":{},"idColumn":"id","isMain":false,"limit":20,"xid":"artisanuserData"});
+ new __Data__(this,{"autoLoad":true,"confirmDelete":true,"confirmRefresh":true,"defCols":{"artisanuser_id":{"define":"artisanuser_id","name":"artisanuser_id","relation":"artisanuser_id","type":"String"},"bartask_id":{"define":"bartask_id","name":"bartask_id","relation":"bartask_id","type":"String"},"id":{"define":"id","name":"id","relation":"id","type":"String"},"isselect":{"define":"isselect","name":"isselect","relation":"isselect","type":"String"},"price":{"define":"price","name":"price","relation":"price","type":"String"},"summary":{"define":"summary","name":"summary","relation":"summary","type":"String"}},"directDelete":false,"events":{},"idColumn":"id","isMain":false,"limit":20,"xid":"offerData"});
 }}); 
 return __result;});

@@ -1,7 +1,7 @@
-var url = 'http://192.168.0.100:3000/';
-var url = 'http://artisan.liushushu.com/';
+var url = 'http://192.168.0.106:3000/';
+//var url = 'http://artisan.liushushu.com/';
 var openid = '';
-//openid = 'jancn';
+openid = 'jancn';
 define(function(require) {
 	var $ = require("jquery");
 	var justep = require("$UI/system/lib/justep");
@@ -21,7 +21,7 @@ define(function(require) {
 	};
 
 	Model.prototype.modelLoad = function(event) {
-		openid = this.getContext().getRequestParameter("openid");
+		//openid = this.getContext().getRequestParameter("openid");
 		$.ajax({
 			async : false,
 			url : url + "apis/setwxuserinfo",

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cVVVJzm" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cVVVJzm" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/panel/panel,">  
-  <style xmlns="" xmlns:xhtml="http://www.w3.org/1999/xhtml">null</style>  
-  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="cVVVJzm" class="cVVVJzm"/>  
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cVVVJzm" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cVVVJzm" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/button/button,$model/UI2/system/components/justep/row/row,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/data/data,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/panel/panel,">  
+  <style xmlns="" xmlns:xhtml="http://www.w3.org/1999/xhtml">.headimg.cVVVJzm{border-radius: 50%; width: 40px; height: 40px; border-style: solid solid solid solid; border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0)} .selectcolor.cVVVJzm{background: rgba(20, 171, 240, 0.05); border-color: rgb(20, 171, 240); border-radius: 5px; box-shadow: 0px 0px 2px rgb(20, 171, 240)}</style>  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onParamsReceive:modelParamsReceive" __cid="cVVVJzm" class="cVVVJzm"/>  
   <div xmlns="" component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pc2qqyMj-iosstatusbar cVVVJzm" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cVVVJzm"> 
     <div class="x-panel-top cVVVJzm" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cVVVJzm"> 
       <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cVVVJzm" style="background-color:white;" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" data-config="{&quot;title&quot;:&quot;选择技工&quot;}" __cid="cVVVJzm"> 
@@ -18,7 +18,49 @@
         </div> 
       </div> 
     </div>  
-    <div class="x-panel-content x-cards cVVVJzm" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cVVVJzm"/>  
+    <div class="x-panel-content x-cards cVVVJzm" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cVVVJzm"> 
+      <div component="$model/UI2/system/components/justep/list/list" class="x-list cVVVJzm" xid="list1" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;artisanuserData&quot;}" __cid="cVVVJzm"> 
+        <ul class="x-list-template hide cVVVJzm" xid="listTemplateUl1" __cid="cVVVJzm" data-bind="foreach:{data:$model.foreach_list1($element),afterRender:$model.foreach_afterRender_list1.bind($model,$element)}"> 
+          <li xid="li1" class="list-group-item cVVVJzm" style="padding:0px;" __cid="cVVVJzm"> 
+            <div component="$model/UI2/system/components/justep/row/row" class="x-row cVVVJzm" xid="row1" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cVVVJzm"> 
+              <div class="x-col cVVVJzm" xid="col2" __cid="cVVVJzm"> 
+                <img src=" " alt="" xid="image1" style="width:40px;" class="headimg cVVVJzm" __cid="cVVVJzm" data-bind="attr:{src:val(&quot;headurl&quot;)}"/> 
+              </div>  
+              <div class="x-col text-right cVVVJzm" xid="col3" style="padding-top:15px;" __cid="cVVVJzm"> 
+                <span xid="span1" __cid="cVVVJzm" class="cVVVJzm" data-bind="text:val(&quot;username&quot;)"/> 
+              </div> 
+            </div>  
+            <div component="$model/UI2/system/components/justep/list/list" class="x-list cVVVJzm" xid="list2" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;offerData&quot;,&quot;filter&quot;:&quot; $row.val(\&quot;artisanuser_id\&quot;) == val(\&quot;id\&quot;)&quot;}" __cid="cVVVJzm"> 
+              <ul class="x-list-template hide cVVVJzm" xid="listTemplateUl2" __cid="cVVVJzm" data-bind="foreach:{data:$model.foreach_list2($element),afterRender:$model.foreach_afterRender_list2.bind($model,$element)}"> 
+                <li xid="li2" __cid="cVVVJzm" class="cVVVJzm" data-bind="css:val(&quot;isselect&quot;) == 1 ? 'selectcolor' : '',event:{click:$model._callModelFn.bind($model, 'li2Click')}"> 
+                  <div component="$model/UI2/system/components/justep/row/row" class="x-row cVVVJzm" xid="row2" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cVVVJzm"> 
+                    <div class="x-col cVVVJzm" xid="col5" __cid="cVVVJzm"> 
+                      <span xid="span2" __cid="cVVVJzm" class="cVVVJzm">报价</span> 
+                    </div>  
+                    <div class="x-col text-right cVVVJzm" xid="col6" __cid="cVVVJzm"> 
+                      <span xid="span3" __cid="cVVVJzm" class="cVVVJzm" data-bind="text:val(&quot;price&quot;)"/> 
+                    </div> 
+                  </div>  
+                  <div component="$model/UI2/system/components/justep/row/row" class="x-row cVVVJzm" xid="row3" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cVVVJzm"> 
+                    <div class="x-col cVVVJzm" xid="col7" __cid="cVVVJzm"> 
+                      <span xid="span4" style="color:#C0C0C0;font-size:x-small;" __cid="cVVVJzm" class="cVVVJzm" data-bind="text:val(&quot;summary&quot;)"/> 
+                    </div> 
+                  </div> 
+                </li> 
+              </ul> 
+            </div> 
+          </li> 
+        </ul> 
+      </div>  
+      <div component="$model/UI2/system/components/justep/row/row" class="x-row cVVVJzm" xid="row4" style="margin-top:10px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cVVVJzm"> 
+        <div class="x-col cVVVJzm" xid="col10" __cid="cVVVJzm"> 
+          <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-block cVVVJzm" xid="nextbtn" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:nextbtnClick" data-config="{&quot;disabled&quot;:true,&quot;label&quot;:&quot;下一步&quot;}" __cid="cVVVJzm"> 
+            <i xid="i1" __cid="cVVVJzm" class="cVVVJzm"/>  
+            <span xid="span5" __cid="cVVVJzm" class="cVVVJzm">下一步</span> 
+          </a> 
+        </div> 
+      </div> 
+    </div>  
     <style __cid="cVVVJzm" class="cVVVJzm">.x-panel.pc2qqyMj-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pc2qqyMj-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pc2qqyMj-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pc2qqyMj-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pc2qqyMj-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pc2qqyMj-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pc2qqyMj-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pc2qqyMj-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pc2qqyMj-iosstatusbar &gt;.x-panel-content {top: 48px;}</style> 
   </div> 
 </div>
