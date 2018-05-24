@@ -25,10 +25,10 @@
    <div class="x-col text-right" xid="col3"><span xid="span2"><![CDATA[]]></span></div></div>
   <div component="$UI/system/components/justep/row/row" class="x-row" xid="row2">
    <div class="x-col" xid="col5"><span xid="span3"><![CDATA[费用]]></span></div>
-   <div class="x-col text-right" xid="col6"><span xid="span4"></span></div></div>
+   <div class="x-col text-right" xid="col6"><span xid="span4" style="color:#ff651a;"><![CDATA[]]></span></div></div>
   </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row3">
    <div class="x-col text-center" xid="col9"><span xid="span5" style="color:#C0C0C0;"><![CDATA[该费用预支付到刘叔叔安装平台，待技工完成安装，您通过验收后，该费用支付给技工]]></span></div></div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row4">
-   <div class="x-col" xid="col12"><a component="$UI/system/components/justep/button/button" class="btn btn-success btn-block" label="微信支付" xid="button1">
+   <div class="x-col" xid="col12"><a component="$UI/system/components/justep/button/button" class="btn btn-success btn-block" label="微信支付" xid="wxpaybtn" onClick="wxpaybtnClick">
    <i xid="i1"></i>
    <span xid="span6">微信支付</span></a></div></div></div>
   </div> 

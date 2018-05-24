@@ -80,7 +80,13 @@
   <column name="fingercount" type="String" xid="xid74"></column>
   <column name="bartaskdetailcount" type="String" xid="xid75"></column>
   <column name="openlockcount" type="String" xid="xid76"></column>
-  <column name="artisancount" type="String" xid="xid80"></column></div></div>  
+  <column name="artisancount" type="String" xid="xid80"></column></div>
+  <div component="$UI/system/components/justep/data/data" autoLoad="true" xid="processData" idColumn="id"><column name="id" type="String" xid="xid81"></column>
+  <column name="ordernumber" type="String" xid="xid82"></column>
+  <column name="artisan" type="String" xid="xid83"></column>
+  <column name="price" type="String" xid="xid84"></column>
+  <column name="taskcount" type="String" xid="xid85"></column>
+  <column name="status" type="String" xid="xid86"></column></div></div>  
   <div component="$UI/system/components/justep/panel/panel" 
     class="x-panel x-full" xid="panel1"> 
       <div class="x-panel-top" xid="top1"><div component="$UI/system/components/justep/button/buttonGroup" class="btn-group x-card btn-group-justified x-liushushu-top" tabbed="true" xid="buttonGroup1">
@@ -328,7 +334,7 @@
    <div class="x-col" xid="col38"></div>
    <div class="x-col" xid="col39"></div>
    <div class="x-col" xid="col48"></div></div></div>
-  <div class="x-contents-content x-cards" xid="content3"><div component="$UI/system/components/justep/list/list" class="x-list" xid="list8" data="receiptbartaskData">
+  <div class="x-contents-content x-cards" xid="content3"><div component="$UI/system/components/justep/list/list" class="x-list" xid="list8" data="receiptbartaskData" filter=' $row.val("status") == 1'>
    <ul class="x-list-template" xid="listTemplateUl8">
     <li xid="li8" class="list-group-item" bind-click="li8Click"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row48">
    <div class="x-col" xid="col53"><![CDATA[]]>
@@ -340,8 +346,56 @@
   <div component="$UI/system/components/justep/row/row" class="x-row" xid="row51">
    <div class="x-col" xid="col66"><span xid="span49"><![CDATA[我的任务]]></span></div>
    <div class="x-col text-right" xid="col67"><span xid="span50" bind-text=' val("measurecount") + val("transitcount") + val("fingercount") + val("bartaskdetailcount") + val("openlockcount")'><![CDATA[0]]></span></div></div></li></ul> </div></div>
-  <div class="x-contents-content" xid="content4"></div>
-  <div class="x-contents-content" xid="content5"></div></div></div>
+  <div class="x-contents-content" xid="content4"><div component="$UI/system/components/justep/list/list" class="x-list" xid="list9" data="processData" filter='$row.val("status") == 3'>
+   <ul class="x-list-template" xid="listTemplateUl9">
+    <li xid="li9" class="list-group-item" bind-click="li9Click">
+     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row47">
+      <div class="x-col" xid="col61">
+       <span xid="span55">订单编号</span></div> 
+      <div class="x-col text-right" xid="col29">
+       <span xid="span54" bind-text='val("ordernumber")' class="text-info"></span></div> </div> 
+     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row50">
+      <div class="x-col" xid="col2">
+       <span xid="span52"><![CDATA[技工]]></span></div> 
+      <div class="x-col text-right" xid="col1">
+       <span xid="span51" bind-text='val("artisan")'>0</span></div> </div> 
+     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row53">
+   <div class="x-col" xid="col62">
+    <span xid="span56"><![CDATA[报价]]></span></div> 
+   <div class="x-col text-right" xid="col63">
+    <span xid="span57" bind-text='val("price")'>0</span></div> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row52">
+      <div class="x-col" xid="col57">
+       <span xid="span53">我的任务</span></div> 
+      <div class="x-col text-right" xid="col52">
+       <span xid="span48" bind-text='val("taskcount")'>0</span></div> </div> 
+  </li> </ul> </div></div>
+  <div class="x-contents-content" xid="content5"><div component="$UI/system/components/justep/list/list" class="x-list" xid="list10" data="processData" filter=' $row.val("status") == 4 ||  $row.val("status") == 5'>
+   <ul class="x-list-template" xid="listTemplateUl10">
+    <li xid="li10" class="list-group-item" bind-click="li9Click">
+     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row55">
+      <div class="x-col" xid="col81">
+       <span xid="span65">订单编号</span></div> 
+      <div class="x-col text-right" xid="col64">
+       <span xid="span62" bind-text='val("ordernumber")' class="text-info"></span></div> </div> 
+     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row57">
+      <div class="x-col" xid="col82">
+       <span xid="span58">技工</span></div> 
+      <div class="x-col text-right" xid="col84">
+       <span xid="span59" bind-text='val("artisan")'>0</span></div> </div> 
+     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row54">
+      <div class="x-col" xid="col76">
+       <span xid="span64">报价</span></div> 
+      <div class="x-col text-right" xid="col69">
+       <span xid="span60" bind-text='val("price")'>0</span></div> </div> 
+     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row56">
+      <div class="x-col" xid="col68">
+       <span xid="span63">我的任务</span></div> 
+      <div class="x-col text-right" xid="col75">
+       <span xid="span61" bind-text='val("taskcount")'>0</span></div> </div> 
+  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row58">
+   <div class="x-col" xid="col87"><span xid="span66"><![CDATA[验收]]></span></div>
+   <div class="x-col text-right" xid="col88"><span xid="span67" bind-visible=' val("status") == 4'><![CDATA[等待验收]]></span>
+  <span xid="span68" bind-visible=' val("status") == 5'><![CDATA[已验收]]></span></div></div></li> </ul> </div></div></div></div>
   </div> 
 <resource xid="resource2"><require xid="require1" url="css!$UI/liushushufront3/font-awesome-4.7.0/css/fa.icons"></require></resource>
   <span component="$UI/system/components/justep/messageDialog/messageDialog" xid="messageDialog1"></span>

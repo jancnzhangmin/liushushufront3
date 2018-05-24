@@ -206,6 +206,39 @@ define(function(require) {
 				// justep.Util.hint("错误，请检查网络");
 			}
 		});
+		
+				$.ajax({
+			async : false,
+			url : url + "apis/getprocesstask",
+			type : "GET",
+			dataType : 'jsonp',
+			jsonp : 'callback',
+			timeout : 5000,
+			data:{
+			openid:openid
+			},
+			success : function(jsonstr) {// 客户端jquery预先定义好的callback函数,成功获取跨域服务器上的json数据后,会动态执行这个callback函数
+				var data = self.comp("processData");
+				data.clear();
+				$.each(jsonstr.processtask, function(i, item) {
+
+					var options = {
+						defaultValues : [ {
+							id : item.id,
+							ordernumber : item.ordernumber,
+							artisan : item.artisan,
+							price : item.price,
+							taskcount : parseInt(item.measurecount) + parseInt(item.transitcount) + parseInt(item.fingercount) + parseInt(item.openlockcount),
+							status:item.status
+						} ]
+					};
+					data.newData(options);
+				});
+			},
+			error : function(xhr) {
+				// justep.Util.hint("错误，请检查网络");
+			}
+		});
 
 		var uuid = UUID.createUUID();
 		var options = {
@@ -635,6 +668,17 @@ define(function(require) {
 	Model.prototype.select1Change = function(event){
 		var row = event.bindingContext.$object;
 		row.val('product_id', event.value);
+	};
+
+	Model.prototype.li9Click = function(event){
+		var row = event.bindingContext.$object;
+		var params = {
+			data : {
+			artisancount:row.val('artisancount'),
+				id : row.val('id')
+			}
+		}
+		justep.Shell.showPage(require.toUrl("./processbartaskdetail.w"), params);
 	};
 
 	return Model;

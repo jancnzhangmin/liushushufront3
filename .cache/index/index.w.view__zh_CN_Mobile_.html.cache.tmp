@@ -543,7 +543,7 @@
                               </div> 
                             </div>  
                             <div class="x-contents-content x-cards cnEnuqa" xid="content3" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cnEnuqa"> 
-                              <div component="$model/UI2/system/components/justep/list/list" class="x-list cnEnuqa" xid="list8" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;receiptbartaskData&quot;}" __cid="cnEnuqa"> 
+                              <div component="$model/UI2/system/components/justep/list/list" class="x-list cnEnuqa" xid="list8" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;receiptbartaskData&quot;,&quot;filter&quot;:&quot; $row.val(\&quot;status\&quot;) == 1&quot;}" __cid="cnEnuqa"> 
                                 <ul class="x-list-template hide cnEnuqa" xid="listTemplateUl8" __cid="cnEnuqa" data-bind="foreach:{data:$model.foreach_list8($element),afterRender:$model.foreach_afterRender_list8.bind($model,$element)}"> 
                                   <li xid="li8" class="list-group-item cnEnuqa" __cid="cnEnuqa" data-bind="event:{click:$model._callModelFn.bind($model, 'li8Click')}"> 
                                     <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row48" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
@@ -574,8 +574,95 @@
                                 </ul> 
                               </div> 
                             </div>  
-                            <div class="x-contents-content cnEnuqa" xid="content4" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cnEnuqa"/>  
-                            <div class="x-contents-content cnEnuqa" xid="content5" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cnEnuqa"/> 
+                            <div class="x-contents-content cnEnuqa" xid="content4" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cnEnuqa"> 
+                              <div component="$model/UI2/system/components/justep/list/list" class="x-list cnEnuqa" xid="list9" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;processData&quot;,&quot;filter&quot;:&quot;$row.val(\&quot;status\&quot;) == 3&quot;}" __cid="cnEnuqa"> 
+                                <ul class="x-list-template hide cnEnuqa" xid="listTemplateUl9" __cid="cnEnuqa" data-bind="foreach:{data:$model.foreach_list9($element),afterRender:$model.foreach_afterRender_list9.bind($model,$element)}"> 
+                                  <li xid="li9" class="list-group-item cnEnuqa" __cid="cnEnuqa" data-bind="event:{click:$model._callModelFn.bind($model, 'li9Click')}"> 
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row47" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col61" __cid="cnEnuqa"> 
+                                        <span xid="span55" __cid="cnEnuqa" class="cnEnuqa">订单编号</span> 
+                                      </div>  
+                                      <div class="x-col text-right cnEnuqa" xid="col29" __cid="cnEnuqa"> 
+                                        <span xid="span54" class="text-info cnEnuqa" __cid="cnEnuqa" data-bind="text:val(&quot;ordernumber&quot;)"/> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row50" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col2" __cid="cnEnuqa"> 
+                                        <span xid="span52" __cid="cnEnuqa" class="cnEnuqa">技工</span> 
+                                      </div>  
+                                      <div class="x-col text-right cnEnuqa" xid="col1" __cid="cnEnuqa"> 
+                                        <span xid="span51" __cid="cnEnuqa" class="cnEnuqa" data-bind="text:val(&quot;artisan&quot;)">0</span> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row53" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col62" __cid="cnEnuqa"> 
+                                        <span xid="span56" __cid="cnEnuqa" class="cnEnuqa">报价</span> 
+                                      </div>  
+                                      <div class="x-col text-right cnEnuqa" xid="col63" __cid="cnEnuqa"> 
+                                        <span xid="span57" __cid="cnEnuqa" class="cnEnuqa" data-bind="text:val(&quot;price&quot;)">0</span> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row52" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col57" __cid="cnEnuqa"> 
+                                        <span xid="span53" __cid="cnEnuqa" class="cnEnuqa">我的任务</span> 
+                                      </div>  
+                                      <div class="x-col text-right cnEnuqa" xid="col52" __cid="cnEnuqa"> 
+                                        <span xid="span48" __cid="cnEnuqa" class="cnEnuqa" data-bind="text:val(&quot;taskcount&quot;)">0</span> 
+                                      </div> 
+                                    </div> 
+                                  </li> 
+                                </ul> 
+                              </div> 
+                            </div>  
+                            <div class="x-contents-content cnEnuqa" xid="content5" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cnEnuqa"> 
+                              <div component="$model/UI2/system/components/justep/list/list" class="x-list cnEnuqa" xid="list10" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;processData&quot;,&quot;filter&quot;:&quot; $row.val(\&quot;status\&quot;) == 4 ||  $row.val(\&quot;status\&quot;) == 5&quot;}" __cid="cnEnuqa"> 
+                                <ul class="x-list-template hide cnEnuqa" xid="listTemplateUl10" __cid="cnEnuqa" data-bind="foreach:{data:$model.foreach_list10($element),afterRender:$model.foreach_afterRender_list10.bind($model,$element)}"> 
+                                  <li xid="li10" class="list-group-item cnEnuqa" __cid="cnEnuqa" data-bind="event:{click:$model._callModelFn.bind($model, 'li9Click')}"> 
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row55" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col81" __cid="cnEnuqa"> 
+                                        <span xid="span65" __cid="cnEnuqa" class="cnEnuqa">订单编号</span> 
+                                      </div>  
+                                      <div class="x-col text-right cnEnuqa" xid="col64" __cid="cnEnuqa"> 
+                                        <span xid="span62" class="text-info cnEnuqa" __cid="cnEnuqa" data-bind="text:val(&quot;ordernumber&quot;)"/> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row57" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col82" __cid="cnEnuqa"> 
+                                        <span xid="span58" __cid="cnEnuqa" class="cnEnuqa">技工</span> 
+                                      </div>  
+                                      <div class="x-col text-right cnEnuqa" xid="col84" __cid="cnEnuqa"> 
+                                        <span xid="span59" __cid="cnEnuqa" class="cnEnuqa" data-bind="text:val(&quot;artisan&quot;)">0</span> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row54" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col76" __cid="cnEnuqa"> 
+                                        <span xid="span64" __cid="cnEnuqa" class="cnEnuqa">报价</span> 
+                                      </div>  
+                                      <div class="x-col text-right cnEnuqa" xid="col69" __cid="cnEnuqa"> 
+                                        <span xid="span60" __cid="cnEnuqa" class="cnEnuqa" data-bind="text:val(&quot;price&quot;)">0</span> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row56" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col68" __cid="cnEnuqa"> 
+                                        <span xid="span63" __cid="cnEnuqa" class="cnEnuqa">我的任务</span> 
+                                      </div>  
+                                      <div class="x-col text-right cnEnuqa" xid="col75" __cid="cnEnuqa"> 
+                                        <span xid="span61" __cid="cnEnuqa" class="cnEnuqa" data-bind="text:val(&quot;taskcount&quot;)">0</span> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row58" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col87" __cid="cnEnuqa"> 
+                                        <span xid="span66" __cid="cnEnuqa" class="cnEnuqa">验收</span> 
+                                      </div>  
+                                      <div class="x-col text-right cnEnuqa" xid="col88" __cid="cnEnuqa"> 
+                                        <span xid="span67" __cid="cnEnuqa" class="cnEnuqa" data-bind="visible:val(&quot;status&quot;) == 4">等待验收</span>  
+                                        <span xid="span68" __cid="cnEnuqa" class="cnEnuqa" data-bind="visible:val(&quot;status&quot;) == 5">已验收</span> 
+                                      </div> 
+                                    </div> 
+                                  </li> 
+                                </ul> 
+                              </div> 
+                            </div> 
                           </div> 
                         </div>  
                         <style __cid="cnEnuqa" class="cnEnuqa">.x-panel.pcryEfai-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pcryEfai-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pcryEfai-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pcryEfai-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcryEfai-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pcryEfai-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pcryEfai-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcryEfai-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pcryEfai-iosstatusbar &gt;.x-panel-content {top: 48px;}</style> 
@@ -612,7 +699,7 @@
                         <div class="x-panel-top cfABBbq" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cfABBbq"> 
                           <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cfABBbq" style="background-color:white;" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" __cid="cfABBbq"> 
                             <div class="x-titlebar-left cfABBbq" __cid="cfABBbq"> 
-                              <img src="@justepContextPath@/v_4fce6a2406d94b56aa19b55b2e18212el_zh_CNs_d_m/liushushufront3/image/head.png" alt="" xid="image1" class="headimg cfABBbq" __cid="cfABBbq"/> 
+                              <img src="@justepContextPath@/v_e6ba6854925f459aaf5ad8b9296eeab5l_zh_CNs_d_m/liushushufront3/image/head.png" alt="" xid="image1" class="headimg cfABBbq" __cid="cfABBbq"/> 
                             </div>  
                             <div class="x-titlebar-title cfABBbq" __cid="cfABBbq"/>  
                             <div class="x-titlebar-right  cfABBbq" __cid="cfABBbq"> 
