@@ -326,31 +326,34 @@
    <ul class="x-list-template" xid="listTemplateUl11">
     <li xid="li11" class="list-group-item" bind-click="li9Click">
      <div component="$UI/system/components/justep/row/row" class="x-row" xid="row37">
-      <div class="x-col" xid="col96">
-       <span xid="span35">订单编号</span></div> 
-      <div class="x-col text-right" xid="col71">
-       <span xid="span33" bind-text='val("ordernumber")' class="text-info"></span></div> </div> 
-     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row42">
-      <div class="x-col" xid="col95">
+      <div class="x-col x-col-fixed" xid="col96" style="width:80px;">
+       <span xid="span35"><![CDATA[预约时间]]></span></div> 
+      <div class="x-col" xid="col71">
+       <span xid="span33" bind-text='val("installtime")' class="text-info"></span></div> </div> 
+     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row62">
+   <div class="x-col x-col-fixed" xid="col106" style="width:80px;">
+    <span xid="span82"><![CDATA[服务类型]]></span></div> 
+   <div class="x-col" xid="col107">
+    <span xid="span83" bind-text='val("servicetype")'>0</span></div> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row63">
+   <div class="x-col x-col-fixed" xid="col109" style="width:80px;">
+    <span xid="span85"><![CDATA[任务地址]]></span></div> 
+   <div class="x-col" xid="col108">
+    <span xid="span84" bind-text=' val("province") + val("city") + val("district")'>0</span></div> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row42">
+      <div class="x-col x-col-fixed" xid="col95" style="width:80px;">
        <span xid="span76">技工</span></div> 
-      <div class="x-col text-right" xid="col92">
+      <div class="x-col" xid="col92">
        <span xid="span77" bind-text='val("artisan")'>0</span></div> </div> 
      <div component="$UI/system/components/justep/row/row" class="x-row" xid="row39">
-      <div class="x-col" xid="col100">
+      <div class="x-col x-col-fixed" xid="col100" style="width:80px;">
        <span xid="span36">报价</span></div> 
-      <div class="x-col text-right" xid="col97">
+      <div class="x-col" xid="col97">
        <span xid="span26" bind-text="'￥' + val(&quot;price&quot;)" style="color:#ff651a;;">0</span></div> </div> 
-     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row38">
-      <div class="x-col" xid="col98">
-       <span xid="span32">我的任务</span></div> 
-      <div class="x-col text-right" xid="col101">
-       <span xid="span25" bind-text='val("taskcount")'>0</span></div> </div> 
-     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row60">
-      <div class="x-col" xid="col54">
-       <span xid="span75">验收</span></div> 
-      <div class="x-col text-right" xid="col99">
-       <span xid="span74" bind-visible=' val("status") == 4'>等待验收</span>
-       <span xid="span34" bind-visible=' val("status") == 5'>已验收</span></div> </div> </li> </ul> </div></div><div class="x-contents-content" xid="content5"><div component="$UI/system/components/justep/list/list" class="x-list" xid="list10" data="processData" filter="$row.val(&quot;status&quot;) == 5 || $row.val(&quot;status&quot;) == '-1'">
+     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row64">
+   <div class="x-col x-col-fixed" xid="col110" style="width:80px;">
+    <span xid="span86"><![CDATA[额外费用]]></span></div> 
+   <div class="x-col" xid="col111">
+    <span xid="span87" bind-text='val("paytype")'>0</span></div> </div>
+  </li> </ul> </div></div><div class="x-contents-content" xid="content5"><div component="$UI/system/components/justep/list/list" class="x-list" xid="list10" data="processData" filter="$row.val(&quot;status&quot;) == 5 || $row.val(&quot;status&quot;) == '-1'">
    <ul class="x-list-template" xid="listTemplateUl10">
     <li xid="li10" class="list-group-item" bind-click="li9Click">
      <div component="$UI/system/components/justep/row/row" class="x-row" xid="row55">

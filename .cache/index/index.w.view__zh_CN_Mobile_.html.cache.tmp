@@ -47,7 +47,7 @@
                             <div class="x-contents-content x-cards active cnEnuqa" xid="content2" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cnEnuqa"> 
                               <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row19" style="padding:0px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
                                 <div class="x-col cnEnuqa" xid="col25" style="padding:0px;" __cid="cnEnuqa"> 
-                                  <img src="@justepContextPath@/v_fc024459646e4ff08057c30344184dccl_zh_CNs_d_m/liushushufront3/image/back01.png" alt="" xid="image1" style="width:100%;" __cid="cnEnuqa" class="cnEnuqa"/> 
+                                  <img src="@justepContextPath@/v_6a4b60b00d8040b9a896c7389987094dl_zh_CNs_d_m/liushushufront3/image/back01.png" alt="" xid="image1" style="width:100%;" __cid="cnEnuqa" class="cnEnuqa"/> 
                                 </div> 
                               </div>  
                               <div component="$model/UI2/system/components/justep/row/row" class="x-row list-group-item cnEnuqa" xid="row59" style="padding-top:5px;margin-bottom:10px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
@@ -533,44 +533,51 @@
                                 <ul class="x-list-template hide cnEnuqa" xid="listTemplateUl11" __cid="cnEnuqa" data-bind="foreach:{data:$model.foreach_list11($element),afterRender:$model.foreach_afterRender_list11.bind($model,$element)}"> 
                                   <li xid="li11" class="list-group-item cnEnuqa" __cid="cnEnuqa" data-bind="event:{click:$model._callModelFn.bind($model, 'li9Click')}"> 
                                     <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row37" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
-                                      <div class="x-col cnEnuqa" xid="col96" __cid="cnEnuqa"> 
-                                        <span xid="span35" __cid="cnEnuqa" class="cnEnuqa">订单编号</span> 
+                                      <div class="x-col x-col-fixed cnEnuqa" xid="col96" style="width:80px;" __cid="cnEnuqa"> 
+                                        <span xid="span35" __cid="cnEnuqa" class="cnEnuqa">预约时间</span> 
                                       </div>  
-                                      <div class="x-col text-right cnEnuqa" xid="col71" __cid="cnEnuqa"> 
-                                        <span xid="span33" class="text-info cnEnuqa" __cid="cnEnuqa" data-bind="text:val(&quot;ordernumber&quot;)"/> 
+                                      <div class="x-col cnEnuqa" xid="col71" __cid="cnEnuqa"> 
+                                        <span xid="span33" class="text-info cnEnuqa" __cid="cnEnuqa" data-bind="text:val(&quot;installtime&quot;)"/> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row62" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col x-col-fixed cnEnuqa" xid="col106" style="width:80px;" __cid="cnEnuqa"> 
+                                        <span xid="span82" __cid="cnEnuqa" class="cnEnuqa">服务类型</span> 
+                                      </div>  
+                                      <div class="x-col cnEnuqa" xid="col107" __cid="cnEnuqa"> 
+                                        <span xid="span83" __cid="cnEnuqa" class="cnEnuqa" data-bind="text:val(&quot;servicetype&quot;)">0</span> 
+                                      </div> 
+                                    </div>  
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row63" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col x-col-fixed cnEnuqa" xid="col109" style="width:80px;" __cid="cnEnuqa"> 
+                                        <span xid="span85" __cid="cnEnuqa" class="cnEnuqa">任务地址</span> 
+                                      </div>  
+                                      <div class="x-col cnEnuqa" xid="col108" __cid="cnEnuqa"> 
+                                        <span xid="span84" __cid="cnEnuqa" class="cnEnuqa" data-bind="text:val(&quot;province&quot;) + val(&quot;city&quot;) + val(&quot;district&quot;)">0</span> 
                                       </div> 
                                     </div>  
                                     <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row42" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
-                                      <div class="x-col cnEnuqa" xid="col95" __cid="cnEnuqa"> 
+                                      <div class="x-col x-col-fixed cnEnuqa" xid="col95" style="width:80px;" __cid="cnEnuqa"> 
                                         <span xid="span76" __cid="cnEnuqa" class="cnEnuqa">技工</span> 
                                       </div>  
-                                      <div class="x-col text-right cnEnuqa" xid="col92" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col92" __cid="cnEnuqa"> 
                                         <span xid="span77" __cid="cnEnuqa" class="cnEnuqa" data-bind="text:val(&quot;artisan&quot;)">0</span> 
                                       </div> 
                                     </div>  
                                     <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row39" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
-                                      <div class="x-col cnEnuqa" xid="col100" __cid="cnEnuqa"> 
+                                      <div class="x-col x-col-fixed cnEnuqa" xid="col100" style="width:80px;" __cid="cnEnuqa"> 
                                         <span xid="span36" __cid="cnEnuqa" class="cnEnuqa">报价</span> 
                                       </div>  
-                                      <div class="x-col text-right cnEnuqa" xid="col97" __cid="cnEnuqa"> 
+                                      <div class="x-col cnEnuqa" xid="col97" __cid="cnEnuqa"> 
                                         <span xid="span26" style="color:#ff651a;;" __cid="cnEnuqa" class="cnEnuqa" data-bind="text:'￥' + val(&quot;price&quot;)">0</span> 
                                       </div> 
                                     </div>  
-                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row38" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
-                                      <div class="x-col cnEnuqa" xid="col98" __cid="cnEnuqa"> 
-                                        <span xid="span32" __cid="cnEnuqa" class="cnEnuqa">我的任务</span> 
+                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row64" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                                      <div class="x-col x-col-fixed cnEnuqa" xid="col110" style="width:80px;" __cid="cnEnuqa"> 
+                                        <span xid="span86" __cid="cnEnuqa" class="cnEnuqa">额外费用</span> 
                                       </div>  
-                                      <div class="x-col text-right cnEnuqa" xid="col101" __cid="cnEnuqa"> 
-                                        <span xid="span25" __cid="cnEnuqa" class="cnEnuqa" data-bind="text:val(&quot;taskcount&quot;)">0</span> 
-                                      </div> 
-                                    </div>  
-                                    <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row60" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
-                                      <div class="x-col cnEnuqa" xid="col54" __cid="cnEnuqa"> 
-                                        <span xid="span75" __cid="cnEnuqa" class="cnEnuqa">验收</span> 
-                                      </div>  
-                                      <div class="x-col text-right cnEnuqa" xid="col99" __cid="cnEnuqa"> 
-                                        <span xid="span74" __cid="cnEnuqa" class="cnEnuqa" data-bind="visible:val(&quot;status&quot;) == 4">等待验收</span>  
-                                        <span xid="span34" __cid="cnEnuqa" class="cnEnuqa" data-bind="visible:val(&quot;status&quot;) == 5">已验收</span> 
+                                      <div class="x-col cnEnuqa" xid="col111" __cid="cnEnuqa"> 
+                                        <span xid="span87" __cid="cnEnuqa" class="cnEnuqa" data-bind="text:val(&quot;paytype&quot;)">0</span> 
                                       </div> 
                                     </div> 
                                   </li> 
@@ -671,7 +678,7 @@
                         <div class="x-panel-top cfABBbq" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cfABBbq"> 
                           <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cfABBbq" style="background-color:white;" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" __cid="cfABBbq"> 
                             <div class="x-titlebar-left cfABBbq" __cid="cfABBbq"> 
-                              <img src="@justepContextPath@/v_d3bcc7a01c584e24a5677c806fec2e65l_zh_CNs_d_m/liushushufront3/image/head.png" alt="" xid="image1" class="headimg cfABBbq" __cid="cfABBbq"/> 
+                              <img src="@justepContextPath@/v_a3019d7be7d84c018374d2432c5a6438l_zh_CNs_d_m/liushushufront3/image/head.png" alt="" xid="image1" class="headimg cfABBbq" __cid="cfABBbq"/> 
                             </div>  
                             <div class="x-titlebar-title cfABBbq" __cid="cfABBbq"/>  
                             <div class="x-titlebar-right  cfABBbq" __cid="cfABBbq"> 
