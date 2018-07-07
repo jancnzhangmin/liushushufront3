@@ -20,24 +20,25 @@
     <div class="x-panel-content x-cards cVVVJzm" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cVVVJzm">
       <div component="$model/UI2/system/components/justep/list/list" class="x-list cVVVJzm" xid="list1" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&#34;data&#34;:&#34;artisanuserData&#34;}" __cid="cVVVJzm"> 
         <ul class="x-list-template hide cVVVJzm" xid="listTemplateUl1" __cid="cVVVJzm" data-bind="foreach:{data:$model.foreach_list1($element),afterRender:$model.foreach_afterRender_list1.bind($model,$element)}"> 
-          <li xid="li1" class="list-group-item cVVVJzm" style="padding:0px;" __cid="cVVVJzm">
-            <div component="$model/UI2/system/components/justep/row/row" class="x-row cVVVJzm" xid="row1" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cVVVJzm"> 
-              <div class="x-col cVVVJzm" xid="col2" __cid="cVVVJzm">
-                <img src=" " alt="" xid="image1" style="width:40px;" class="headimg cVVVJzm" __cid="cVVVJzm" data-bind="attr:{src:val(&#34;headurl&#34;)}">
-              </div>  
-              <div class="x-col text-right cVVVJzm" xid="col3" style="padding-top:15px;" __cid="cVVVJzm">
-                <span xid="span1" __cid="cVVVJzm" class="cVVVJzm" data-bind="text:val(&#34;username&#34;)"></span>
-              </div>
-            </div>  
+          <li xid="li1" class="list-group-item cVVVJzm" style="padding:0px;margin-bottom:5px;" __cid="cVVVJzm"> 
             <div component="$model/UI2/system/components/justep/list/list" class="x-list cVVVJzm" xid="list2" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&#34;data&#34;:&#34;offerData&#34;,&#34;filter&#34;:&#34; $row.val(\&#34;artisanuser_id\&#34;) == val(\&#34;id\&#34;)&#34;}" __cid="cVVVJzm"> 
               <ul class="x-list-template hide cVVVJzm" xid="listTemplateUl2" __cid="cVVVJzm" data-bind="foreach:{data:$model.foreach_list2($element),afterRender:$model.foreach_afterRender_list2.bind($model,$element)}"> 
                 <li xid="li2" __cid="cVVVJzm" class="cVVVJzm" data-bind="css:val(&#34;isselect&#34;) == 1 ? 'selectcolor' : '',event:{click:$model._callModelFn.bind($model, 'li2Click')}">
+                  <div component="$model/UI2/system/components/justep/row/row" class="x-row cVVVJzm" xid="row1" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cVVVJzm"> 
+                    <div class="x-col cVVVJzm" xid="col2" __cid="cVVVJzm">
+                      <img src=" " alt="" xid="image1" style="width:40px;" class="headimg cVVVJzm" __cid="cVVVJzm" data-bind="attr:{src:val(&#34;headurl&#34;)}">
+                    </div>  
+                    <div class="x-col text-right cVVVJzm" xid="col3" style="padding-top:15px;" __cid="cVVVJzm">
+                      <span xid="span1" __cid="cVVVJzm" class="cVVVJzm" data-bind="text:val(&#34;username&#34;)"></span>  
+                      <span xid="span6" style="color:#C0C0C0;" __cid="cVVVJzm" class="cVVVJzm" data-bind="visible:val(&#34;iscollection&#34;) == 1">(已收藏)</span>
+                    </div>
+                  </div>
                   <div component="$model/UI2/system/components/justep/row/row" class="x-row cVVVJzm" xid="row2" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cVVVJzm"> 
                     <div class="x-col cVVVJzm" xid="col5" __cid="cVVVJzm">
                       <span xid="span2" __cid="cVVVJzm" class="cVVVJzm">报价</span>
                     </div>  
                     <div class="x-col text-right cVVVJzm" xid="col6" __cid="cVVVJzm">
-                      <span xid="span3" __cid="cVVVJzm" class="cVVVJzm" data-bind="text:val(&#34;price&#34;)"></span>
+                      <span xid="span3" style="color:#ff651a;" __cid="cVVVJzm" class="cVVVJzm" data-bind="text:'￥' + val(&#34;price&#34;)"></span>
                     </div>
                   </div>  
                   <div component="$model/UI2/system/components/justep/row/row" class="x-row cVVVJzm" xid="row3" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cVVVJzm"> 

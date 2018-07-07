@@ -1,6 +1,8 @@
 define(function(require){
 require('$model/UI2/system/components/justep/model/model');
 require('$model/UI2/system/components/justep/loadingBar/loadingBar');
+require('$model/UI2/system/components/justep/row/row');
+require('$model/UI2/system/components/justep/smartContainer/smartContainer');
 require('$model/UI2/system/components/justep/titleBar/titleBar');
 require('$model/UI2/system/components/justep/panel/child');
 require('$model/UI2/system/components/justep/window/window');
@@ -17,5 +19,6 @@ var __result = __parent1._extend(__parent0).extend({
 	this._wCfg_={};
 	this._appCfg_={};
 	this.callParent(contextUrl);
+ require('css!$UI/liushushufront3/font-awesome-4.7.0/css/fa.icons').load();
 }}); 
 return __result;});

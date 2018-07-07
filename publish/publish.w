@@ -46,7 +46,8 @@
   <column name="product_id" type="String" xid="xid41"></column></div>
   <div component="$UI/system/components/justep/data/data" autoLoad="true" xid="fingerData" idColumn="id" confirmDelete="false"><column name="id" type="String" xid="xid21"></column>
   <column name="model" type="String" xid="xid43"></column>
-  <column name="summary" type="String" xid="xid44"></column></div>
+  <column name="summary" type="String" xid="xid44"></column>
+  <column name="fingermodeldef_id" type="String" xid="xid87"></column></div>
   <div component="$UI/system/components/justep/data/data" autoLoad="true" xid="openlockData" idColumn="id" confirmDelete="false"><column name="id" type="String" xid="xid45"></column>
   <column name="summary" type="String" xid="xid46"></column></div>
   <div component="$UI/system/components/justep/data/data" autoLoad="true" xid="bartaskData" idColumn="id"><column name="id" type="String" xid="xid47"></column>
@@ -66,7 +67,7 @@
   <column name="lock" type="String" xid="xid60"></column></div>
   <div component="$UI/system/components/justep/data/data" autoLoad="true" xid="receiptbartaskData" idColumn="id"><column name="id" type="String" xid="xid61"></column>
   <column name="preprice" type="String" xid="xid62"></column>
-  <column name="prvoince" type="String" xid="xid63"></column>
+  <column name="province" type="String" xid="xid63"></column>
   <column name="city" type="String" xid="xid64"></column>
   <column name="district" type="String" xid="xid65"></column>
   <column name="address" type="String" xid="xid66"></column>
@@ -80,16 +81,27 @@
   <column name="fingercount" type="String" xid="xid74"></column>
   <column name="bartaskdetailcount" type="String" xid="xid75"></column>
   <column name="openlockcount" type="String" xid="xid76"></column>
-  <column name="artisancount" type="String" xid="xid80"></column></div>
+  <column name="artisancount" type="String" xid="xid80"></column>
+  <column name="servicetype" type="String" xid="xid90"></column>
+  <column name="paytype" type="String" xid="xid91"></column></div>
   <div component="$UI/system/components/justep/data/data" autoLoad="true" xid="processData" idColumn="id"><column name="id" type="String" xid="xid81"></column>
   <column name="ordernumber" type="String" xid="xid82"></column>
   <column name="artisan" type="String" xid="xid83"></column>
   <column name="price" type="String" xid="xid84"></column>
   <column name="taskcount" type="String" xid="xid85"></column>
-  <column name="status" type="String" xid="xid86"></column></div></div>  
+  <column name="status" type="String" xid="xid86"></column>
+  <column name="province" type="String" xid="xid92"></column>
+  <column name="city" type="String" xid="xid93"></column>
+  <column name="district" type="String" xid="xid94"></column>
+  <column name="address" type="String" xid="xid95"></column>
+  <column name="servicetype" type="String" xid="xid96"></column>
+  <column name="paytype" type="String" xid="xid97"></column>
+  <column name="installtime" type="String" xid="xid98"></column></div>
+  <div component="$UI/system/components/justep/data/data" autoLoad="true" xid="fingermodeldefData" idColumn="id"><column name="id" type="String" xid="xid88"></column>
+  <column name="model" type="String" xid="xid89"></column></div></div>  
   <div component="$UI/system/components/justep/panel/panel" 
     class="x-panel x-full" xid="panel1"> 
-      <div class="x-panel-top" xid="top1"><div component="$UI/system/components/justep/button/buttonGroup" class="btn-group x-card btn-group-justified x-liushushu-top" tabbed="true" xid="buttonGroup1">
+      <div class="x-panel-top" xid="top1" height="48"><div component="$UI/system/components/justep/button/buttonGroup" class="btn-group x-card btn-group-justified x-liushushu-top" tabbed="true" xid="buttonGroup1">
    <a component="$UI/system/components/justep/button/button" class="btn btn-default" label="我要发单" xid="button12" target="content2">
     <i xid="i14"></i>
     <span xid="span13">我要发单</span></a> 
@@ -99,30 +111,32 @@
   <a component="$UI/system/components/justep/button/button" class="btn btn-default" label="正在安装" xid="button14" target="content4">
    <i xid="i16"></i>
    <span xid="span39">正在安装</span></a>
-  <a component="$UI/system/components/justep/button/button" class="btn btn-default" label="已完成" xid="button15" target="content5">
+  <a component="$UI/system/components/justep/button/button" class="btn btn-default" label="待验收" xid="button1" target="content6">
+   <i xid="i1"></i>
+   <span xid="span5">待验收</span></a><a component="$UI/system/components/justep/button/button" class="btn btn-default" label="已完成" xid="button15" target="content5">
    <i xid="i17"></i>
-   <span xid="span40">已完成</span></a></div></div><div class="x-panel-content x-cards" xid="content1" style="padding-top:0px;">
+   <span xid="span40">已完成</span></a>
+  </div>
+  </div><div class="x-panel-content x-cards" xid="content1" style="padding-top:0px;">
   
   
   <div component="$UI/system/components/justep/contents/contents" class="x-contents x-full" active="0" xid="contents1">
-   <div class="x-contents-content" xid="content2"><div component="$UI/system/components/bootstrap/accordion/accordion" class="panel-group" xid="accordion2" style="margin-bottom:0px;">
-   <div class="panel " component="$UI/system/components/bootstrap/panel/panel" xid="panel3">
-    <div class="panel-heading panel-liushushu" xid="heading2">
-     <h4 class="panel-title text-center" xid="h42">
-      <a xid="a2"><![CDATA[门洞测量]]></a>
-  <span xid="span23" class="pull-right" bind-text=" $model.measureData.count()" bind-visible=" $model.measureData.count() &gt; 0"></span></h4> </div> 
-    <div class="panel-collapse collapse" xid="div3">
-     <div class="panel-body" xid="div4" style="padding:5px;background:#eeeeee;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+   <div class="x-contents-content x-cards" xid="content2"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row19" style="padding:0px;">
+   <div class="x-col" xid="col25" style="padding:0px;"><img src="$UI/liushushufront3/image/back01.png" alt="" xid="image1" style="width:100%;"></img></div></div><div component="$UI/system/components/justep/row/row" class="x-row list-group-item" xid="row59" style="padding-top:5px;margin-bottom:10px;">
+   <div class="x-col x-col-25" xid="col85"><span xid="span69"><![CDATA[服务类型]]></span></div>
+   <div class="x-col text-right" xid="col93"><a component="$UI/system/components/justep/button/button" class="btn x-gray btn-sm" label="测量" xid="measure_btn" onClick="measure_btnClick" style="display:none;">
+   <i xid="i18"></i>
+   <span xid="span70">测量</span></a>
+  <label xid="label1" style="width:5px;"><![CDATA[]]></label><a component="$UI/system/components/justep/button/button" class="btn x-gray btn-xs" label="运输" xid="transit_btn" onClick="transit_btnClick" bind-visible="false" style="display:none;">
+   <i xid="i19"></i>
+   <span xid="span71">运输</span></a>
+  <label xid="label2" bind-visible="false"></label><a component="$UI/system/components/justep/button/button" class="btn x-gray btn-sm" label="安装" xid="bartask_btn" onClick="bartask_btnClick">
+   <i xid="i20"></i>
+   <span xid="span72">安装</span></a>
+  <label xid="label3" style="width:5px;"></label><a component="$UI/system/components/justep/button/button" class="btn x-gray btn-sm" label="维修 开锁" xid="finger_btn" onClick="finger_btnClick">
+   <i xid="i21"></i>
+   <span xid="span73">维修 开锁</span></a>
+  </div></div>
   <div component="$UI/system/components/justep/list/list" class="x-list " xid="list1" data="measureData">
    <ul class="x-list-template" xid="listTemplateUl1">
     <li xid="li1" class="list-group-item blue-border"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row1" style="display:none;">
@@ -144,35 +158,16 @@
    <div class="x-col" xid="col27"><span component="$UI/system/components/justep/button/radio" class="x-radio" xid="radio11" name="openleftright" label="右开" bind-name="'openleftright' +  val(&quot;id&quot;)" onChange="radio11Change"></span></div></div>
   <div component="$UI/system/components/justep/row/row" class="x-row" xid="row11">
    <div class="x-col" xid="col34"><span xid="span7"><![CDATA[描述]]></span></div>
-  <div class="x-col text-right" xid="col49"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-icon" label="button" xid="button2" icon="fa fa-trash-o" onClick="button2Click">
-   <i xid="i2" class="fa fa-trash-o"></i>
-   <span xid="span6"></span></a></div></div>
+  <div class="x-col text-right" xid="col49"></div></div>
   <div component="$UI/system/components/justep/row/row" class="x-row" xid="row12">
    <div class="x-col" xid="col37"><div class="input-group" component="$UI/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup1" style="width:100%;">
    
   <textarea component="$UI/system/components/justep/textarea/textarea" class="form-control" xid="textarea2" onChange="textarea2Change" bind-ref='ref("summary")'></textarea></div></div></div>
-  </li></ul> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row10" bind-click="row10Click">
-   <div class="x-col" xid="col30"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-icon btn-block btn-outline" label="新增" xid="measureBtn" icon="fa fa-plus">
-   <i xid="i1" class="fa fa-plus"></i>
-   <span xid="span5">新增</span></a></div></div></div></div> </div> </div><div component="$UI/system/components/bootstrap/accordion/accordion" class="panel-group" xid="accordion3" style="margin-bottom:0px;">
-   <div class="panel " component="$UI/system/components/bootstrap/panel/panel" xid="panel4">
-    <div class="panel-heading panel-liushushu" xid="heading3">
-     <h4 class="panel-title text-center" xid="h43">
-      <a xid="a3"><![CDATA[运输服务]]></a>
-  <span xid="span24" class="pull-right" bind-visible=" $model.transitData.count() &gt; 0" bind-text=" $model.transitData.count()"></span></h4> </div> 
-    <div class="panel-collapse collapse" xid="div5">
-     <div class="panel-body" xid="div6" style="padding:5px;background:#eeeeee;">
-  
-  
-  
-  
-  <div component="$UI/system/components/justep/list/list" class="x-list" xid="list2" data="transitData">
+  </li></ul> </div><div component="$UI/system/components/justep/list/list" class="x-list" xid="list2" data="transitData">
    <ul class="x-list-template" xid="listTemplateUl2">
     <li xid="li2" class="list-group-item  blue-border"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row13">
    <div class="x-col" xid="col40" style="padding-top:10px;"><span xid="span9"><![CDATA[起点]]></span></div>
-  <div class="x-col text-right" xid="col55" style="padding:0px;"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-icon" label="button" xid="button4" icon="fa fa-trash-o" onClick="button4Click">
-   <i xid="i4" class="fa fa-trash-o"></i>
-   <span xid="span12"></span></a></div></div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row14">
+  <div class="x-col text-right" xid="col55" style="padding:0px;"></div></div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row14">
    <div class="x-col" xid="col41"><select component="$UI/system/components/justep/distpicker/provinceSelect" class="form-control" xid="provinceSelect1" onChange="provinceSelect1Change" bind-ref='ref("startprovince")'></select></div>
    <div class="x-col" xid="col42"><select component="$UI/system/components/justep/distpicker/citySelect" class="form-control" xid="citySelect1" bind-provinceRef='val("startprovince")' bind-ref='ref("startcity")' onChange="citySelect1Change"></select></div>
    <div class="x-col" xid="col43"><select component="$UI/system/components/justep/distpicker/districtSelect" class="form-control" xid="districtSelect1" bind-cityRef='val("startcity")' bind-ref='ref("startdistrict")' onChange="districtSelect1Change"></select></div></div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row17" style="border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#F0F0F0;">
@@ -187,134 +182,71 @@
     <select component="$UI/system/components/justep/distpicker/districtSelect" class="form-control" xid="districtSelect2" onChange="districtSelect2Change" bind-ref='ref("enddistrict")' bind-cityRef='val("endcity")'></select></div> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row18">
    <div class="x-col" xid="col51">
     <input component="$UI/system/components/justep/input/input" class="form-control" xid="input2" placeHolder="终点详细地址" onChange="input2Change"></input></div> </div>
-  </li></ul> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row19">
-   <div class="x-col" xid="col54"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-icon btn-block" label="新增" xid="button3" onClick="button3Click" icon="fa fa-plus">
-   <i xid="i3" class="fa fa-plus"></i>
-   <span xid="span11">新增</span></a></div></div>
-  </div></div> </div> </div><div component="$UI/system/components/bootstrap/accordion/accordion" class="panel-group" xid="accordion4" style="margin-bottom:0px;">
-   <div class="panel " component="$UI/system/components/bootstrap/panel/panel" xid="panel5">
-    <div class="panel-heading  panel-liushushu" xid="heading4">
-     <h4 class="panel-title text-center" xid="h44">
-      <a xid="a4"><![CDATA[安装服务]]></a>
-  <span xid="span25" class="pull-right" bind-visible=" $model.bartaskdetailData.count() &gt; 0" bind-text=" $model.bartaskdetailData.count()"></span></h4> </div> 
-    <div class="panel-collapse collapse" xid="div7" dir="ltr">
-     <div class="panel-body" xid="div8" style="padding:5px;background:#eeeeee;">
-  <div component="$UI/system/components/justep/list/list" class="x-list" xid="list3" data="bartaskdetailData">
-   <ul class="x-list-template" xid="listTemplateUl3">
-    <li xid="li3" class="list-group-item   blue-border" style="padding:0px;"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row43">
+  </li></ul> </div><div component="$UI/system/components/justep/list/list" class="x-list" xid="list3" data="bartaskdetailData">
+   <ul class="x-list-template" xid="listTemplateUl3" style="padding-left:5px;padding-right:5px;">
+    <li xid="li3" class="list-group-item  blue-border " style="padding:0px;"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row43">
    <div class="x-col" xid="col8"><div class="input-group" component="$UI/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup7">
-   <span class="input-group-addon" xid="span41"><![CDATA[品牌]]></span>
-   <input class="form-control" component="$UI/system/components/justep/input/input" xid="input8" dataType="String" onChange="input5Change" bind-ref='ref("brand")'></input></div></div>
-  <div class="x-col x-col-fixed text-right" xid="col74" style="width:50px;">
-   <a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-icon" label="button" xid="button8" icon="fa fa-trash-o" onClick="button8Click">
-    <i xid="i8" class="fa fa-trash-o"></i>
-    <span xid="span26"></span></a> </div></div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row44">
+   <span class="input-group-addon" xid="span41"><![CDATA[品　　牌]]></span>
+   <input class="form-control" component="$UI/system/components/justep/input/input" xid="input8" dataType="String" onChange="input5Change" bind-ref='ref("brand")' placeHolder="品牌"></input></div></div>
+  </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row44">
    <div class="x-col" xid="col10">
     <div class="input-group" component="$UI/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup8">
-     <span class="input-group-addon" xid="span42"><![CDATA[类型]]></span>
+     <span class="input-group-addon" xid="span42"><![CDATA[类　　型]]></span>
      <select component="$UI/system/components/justep/select/select" bind-optionsCaption="请选择..." class="form-control" xid="select1" bind-options="$model.productData" bind-optionsValue="id" bind-optionsLabel="product" onChange="select1Change"></select></div> </div> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row21">
    <div class="x-col" xid="col60"><div class="input-group" component="$UI/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup2">
-   <span class="input-group-addon" xid="span15"><![CDATA[锁具]]></span>
+   <span class="input-group-addon" xid="span15"><![CDATA[锁　　具]]></span>
    <select component="$UI/system/components/justep/select/select" bind-optionsCaption="请选择..." class="form-control" xid="select2" bind-options="$model.lockData" bind-optionsValue="id" bind-optionsLabel="lock" onChange="select2Change"></select></div>
   </div>
    </div>
-  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row23">
-   <div class="x-col" xid="col65"><span xid="span16"><![CDATA[基础服务]]></span></div>
+  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row23" style="background-color:#eee;">
+   <div class="x-col" xid="col65" style="padding-left:16px;"><span xid="span16"><![CDATA[基础服务]]></span></div>
    </div><div component="$UI/system/components/justep/list/list" class="x-list" xid="list4" data="barbaseData">
    <ul class="x-list-template" xid="listTemplateUl4">
     <li xid="li4"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row24" style="padding:0px;">
-   <div class="x-col" xid="col70"><a component="$UI/system/components/justep/button/button" class="btn btn-default btn-xs basebtn btn-outline-off" label="button" xid="button5" bind-text='val("name")' style="margin-left:5px;" onClick="button5Click">
+   <div class="x-col" xid="col70" style="padding-left:36px;"><a component="$UI/system/components/justep/button/button" class="btn btn-default btn-xs basebtn btn-outline-off" label="button" xid="button5" bind-text='val("name")' style="margin-left:5px;width:80px;" onClick="button5Click">
    <i xid="i5"></i>
    <span xid="span17"></span></a>
   <span xid="span18" bind-text='val("summary")' style="font-size:small;color:#C0C0C0;margin-left:5px;"></span></div></div></li></ul> </div>
-  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row26">
-   <div class="x-col" xid="col72">
+  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row26" style="background-color:#eee;">
+   <div class="x-col" xid="col72" style="padding-left:16px;">
     <span xid="span20"><![CDATA[增值服务]]></span></div> </div>
+  
   <div component="$UI/system/components/justep/list/list" class="x-list" xid="list5" data="$model.barincrementData">
    <ul class="x-list-template" xid="listTemplateUl5">
     <li xid="li5">
      <div component="$UI/system/components/justep/row/row" class="x-row" xid="row27" style="padding:0px;">
-      <div class="x-col" xid="col73">
-       <a component="$UI/system/components/justep/button/button" class="btn btn-default btn-xs basebtn btn-outline-off" label="button" xid="button7" bind-text='val("name")' style="margin-left:5px;" onClick="button7Click">
+      <div class="x-col" xid="col73" style="padding-left:36px;">
+       <a component="$UI/system/components/justep/button/button" class="btn btn-default btn-xs basebtn btn-outline-off" label="button" xid="button7" bind-text='val("name")' style="margin-left:5px;width:80px;" onClick="button7Click">
         <i xid="i7"></i>
         <span xid="span22"></span></a> 
-       <span xid="span21" bind-text='val("summary")' style="font-size:small;color:#C0C0C0;margin-left:5px;"></span></div> </div> </li> </ul> </div>
-  </li></ul> </div>
-  
-  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row25">
-   <div class="x-col" xid="col71">
-    <a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-icon btn-block" label="新增" xid="button6" onClick="button6Click" icon="fa fa-plus">
-     <i xid="i6" class="fa fa-plus"></i>
-     <span xid="span19">新增</span></a> </div> </div></div></div> </div> </div><div component="$UI/system/components/bootstrap/accordion/accordion" class="panel-group" xid="accordion5" style="margin-bottom:0px;display:none;">
-   <div class="panel panel-default" component="$UI/system/components/bootstrap/panel/panel" xid="panel6">
-    <div class="panel-heading" xid="heading5">
-     <h4 class="panel-title text-center" xid="h45">
-      <a xid="a5"><![CDATA[指纹锁 电子猫眼安装]]></a>
-  <span xid="span35" class="pull-right" bind-text=" $model.fingerData.count()" bind-visible=" $model.fingerData.count() &gt; 0"></span></h4> </div> 
-    <div class="panel-collapse collapse" xid="div9">
-     <div class="panel-body" xid="div10" style="padding:0px;">
-  
-  <div component="$UI/system/components/justep/list/list" class="x-list" xid="list6" data="fingerData">
+       <span xid="span21" bind-text='val("summary")' style="font-size:small;color:#C0C0C0;margin-left:5px;"></span></div> </div> </li> </ul> </div></li></ul> </div><div component="$UI/system/components/justep/list/list" class="x-list" xid="list6" data="fingerData">
    <ul class="x-list-template" xid="listTemplateUl6">
     <li xid="li6" class="list-group-item  blue-border"><div component="$UI/system/components/justep/row/row" class="x-row " xid="row20">
-   <div class="x-col" xid="col7"><div class="input-group" component="$UI/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup6">
-   <span class="input-group-addon" xid="span8"><![CDATA[型号]]></span>
-   <input class="form-control" component="$UI/system/components/justep/input/input" xid="input3" dataType="String" bind-ref='ref("model")'></input></div></div>
-  <div class="x-col x-col-fixed" xid="col22" style="width:40px;"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-icon" label="button" xid="button10" icon="fa fa-trash-o" onClick="button10Click">
-   <i xid="i11" class="fa fa-trash-o"></i>
-   <span xid="span33"></span></a></div></div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row22">
+   <div class="x-col" xid="col7"><div component="$UI/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label30" xid="labelEdit1">
+   <label class="x-label" xid="label4"><![CDATA[服务项目]]></label>
+   <select component="$UI/system/components/justep/select/select" class="form-control x-edit" xid="fingermodeldefselect" bind-optionsValue="id" bind-optionsLabel="model" bind-options="$model.fingermodeldefData" onChange="fingermodeldefselectChange"></select></div></div>
+  </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row22">
    <div class="x-col" xid="col13" style="padding-top:10px"><textarea component="$UI/system/components/justep/textarea/textarea" class="form-control" xid="textarea1" placeHolder="描述" bind-ref='ref("summary")'></textarea></div></div>
-  </li></ul> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row39">
-   <div class="x-col" xid="col20">
-    <a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-icon btn-block" label="新增" xid="button9" onClick="button9Click" icon="fa fa-plus">
-     <i xid="i10" class="fa fa-plus"></i>
-     <span xid="span32">新增</span></a> </div> </div>
-  </div></div> </div> </div><div component="$UI/system/components/bootstrap/accordion/accordion" class="panel-group" xid="accordion1">
-   <div class="panel" component="$UI/system/components/bootstrap/panel/panel" xid="panel2">
-    <div class="panel-heading  panel-liushushu" xid="heading1">
-     <h4 class="panel-title text-center" xid="h41">
-      <a xid="a1"><![CDATA[维修 开锁服务]]></a>
-  <span xid="span36" class="pull-right" bind-text=" $model.openlockData.count()" bind-visible=" $model.openlockData.count() &gt; 0"></span></h4> </div> 
-    <div class="panel-collapse collapse" xid="div2">
-     <div class="panel-body" xid="div1" style="padding:5px;background:#eeeeee;">
-       
-       
-  <div component="$UI/system/components/justep/list/list" class="x-list" xid="list7" data="openlockData">
-   <ul class="x-list-template" xid="listTemplateUl7">
-    <li xid="li7" class="list-group-item  blue-border"><div component="$UI/system/components/justep/row/row" class="x-row list-group-item" xid="row37">
-       <div class="x-col" xid="col16">
-        </div> 
-  <div class="x-col x-col-fixed" xid="col25" style="width:40px;"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-icon" label="button" xid="button11" icon="fa fa-trash-o" onClick="button11Click">
-   <i xid="i12" class="fa fa-trash-o"></i>
-   <span xid="span34"></span></a></div></div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row36">
-       <div class="x-col" xid="col14" style="padding-top:10px">
-        <textarea component="$UI/system/components/justep/textarea/textarea" class="form-control" xid="textarea4" placeHolder="描述" bind-ref='ref("summary")'></textarea></div> </div></li></ul> </div></div> 
-  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row38">
-   <div class="x-col" xid="col19">
-    <a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-icon btn-block" label="新增" xid="button1" onClick="button1Click" icon="fa fa-plus">
-     <i xid="i9" class="fa fa-plus"></i>
-     <span xid="span14">新增</span></a> </div> </div></div> </div> </div><div component="$UI/system/components/justep/smartContainer/smartContainer" xid="smartContainer1" style="margin:5px;background-color:white;height:550px;" class="x-smartcontainer blue-border"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row28">
-   <div class="x-col" xid="col77"><span xid="span27" style="margin-left:10px;"><![CDATA[服务地址]]></span></div></div>
-  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row29">
-   <div class="x-col" xid="col78"><select component="$UI/system/components/justep/distpicker/provinceSelect" class="form-control" xid="provinceSelect3" onChange="provinceSelect3Change"></select></div>
-   <div class="x-col" xid="col79"><select component="$UI/system/components/justep/distpicker/citySelect" class="form-control" xid="citySelect3" bind-provinceRef='$model.provinceData.val("province")' onChange="citySelect3Change"></select></div>
-   <div class="x-col" xid="col80"><select component="$UI/system/components/justep/distpicker/districtSelect" class="form-control" xid="districtSelect3" bind-cityRef='$model.cityData.val("city")' onChange="districtSelect3Change"></select></div></div>
-  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row41" style="border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#f0f0f0;">
-   <div class="x-col" xid="col36"><input component="$UI/system/components/justep/input/input" class="form-control" xid="input9" placeHolder="详细地址" onChange="input9Change"></input></div></div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row30" style="padding-top:10px;">
-   <div class="x-col" xid="col83"><span xid="span28" style="margin-left:10px;"><![CDATA[预约服务时间]]></span></div></div>
-  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row31">
-   <div class="x-col" xid="col86"><input component="$UI/system/components/justep/input/input" class="form-control" xid="input4" dataType="Date" onChange="input4Change" onFocus="input4Focus"></input>
-  </div></div>
-  <div component="$UI/system/components/justep/row/row" class="x-row list-group-item" xid="row32">
+  </li></ul> </div><div component="$UI/system/components/justep/smartContainer/smartContainer" xid="smartContainer1" style="margin:5px;background-color:white;height:550px;" class="x-smartcontainer blue-border"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row28">
+   <div class="x-col x-col-fixed" xid="col77" style="width:80px;padding-top:12px;"><span xid="span27" style="margin-left:10px;"><![CDATA[服务地址]]></span></div>
+  <div class="x-col" xid="col38" style="padding-right:0px;"><select component="$UI/system/components/justep/distpicker/provinceSelect" class="form-control" xid="provinceSelect3" onChange="provinceSelect3Change" optionsCaption=" 省 "></select></div>
+  <div class="x-col" xid="col39" style="padding-left:0px;padding-right:0px;"><select component="$UI/system/components/justep/distpicker/citySelect" class="form-control" xid="citySelect3" bind-provinceRef='$model.provinceData.val("province")' onChange="citySelect3Change" optionsCaption=" 市 "></select></div>
+  <div class="x-col" xid="col48" style="padding-left:0px;"><select component="$UI/system/components/justep/distpicker/districtSelect" class="form-control" xid="districtSelect3" bind-cityRef='$model.cityData.val("city")' onChange="districtSelect3Change" optionsCaption=" 县 "></select></div></div>
+  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row41">
+   <div class="x-col x-col-fixed" xid="col36" style="width:80px;"></div>
+  <div class="x-col" xid="col68"><input component="$UI/system/components/justep/input/input" class="form-control" xid="input9" placeHolder="详细地址" onChange="input9Change"></input></div></div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row30" style="padding-top:10px;">
+   <div class="x-col x-col-fixed" xid="col83" style="padding-top:12px;width:80px;"><span xid="span28" style="margin-left:10px;"><![CDATA[预约时间]]></span></div>
+  <div class="x-col" xid="col30"><input component="$UI/system/components/justep/input/input" class="form-control" xid="input4" dataType="Date" onChange="input4Change" onFocus="input4Focus"></input></div></div>
+  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row32">
    <div class="x-col" xid="col89"><div class="input-group" component="$UI/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup3">
-   <span class="input-group-addon" xid="span29"><![CDATA[预出价格]]></span>
+   <span xid="span29" class="input-group-addon"><![CDATA[代收款　]]></span>
    <input class="form-control" component="$UI/system/components/justep/input/input" xid="input5" dataType="String" onChange="input5Change"></input></div></div></div>
-  <div component="$UI/system/components/justep/row/row" class="x-row list-group-item" xid="row33">
+  <div component="$UI/system/components/justep/row/row" class="x-row " xid="row33">
    <div class="x-col" xid="col90">
     <div class="input-group" component="$UI/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup4">
      <span class="input-group-addon" xid="span30"><![CDATA[联系人　]]></span>
      <input class="form-control" component="$UI/system/components/justep/input/input" xid="input6" dataType="String" onChange="input6Change"></input></div> </div> </div>
-  <div component="$UI/system/components/justep/row/row" class="x-row list-group-item" xid="row34">
+  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row34">
    <div class="x-col" xid="col91">
     <div class="input-group" component="$UI/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup5">
      <span class="input-group-addon" xid="span31"><![CDATA[联系方式]]></span>
@@ -322,83 +254,139 @@
   <div component="$UI/system/components/justep/row/row" class="x-row" xid="row45">
    <div class="x-col" xid="col28">
     <span xid="span43" style="margin-left:10px;"><![CDATA[额外费用支付]]></span></div> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row46">
-   <div class="x-col" xid="col33"><span component="$UI/system/components/justep/button/radio" class="x-radio" xid="radio12" label="发单人支付" name="pay" checked="true" onChange="radio12Change"></span></div>
-   <div class="x-col" xid="col35"><span component="$UI/system/components/justep/button/radio" class="x-radio" xid="radio13" label="现场客户支付" name="pay" onChange="radio13Change"></span></div></div><div component="$UI/system/components/justep/row/row" class="x-row list-group-item" xid="row35">
+   <div class="x-col text-center" xid="col33"><span component="$UI/system/components/justep/button/radio" class="x-radio" xid="radio12" label="发单人支付" name="pay" checked="false" onChange="radio12Change" style="font-size:12px;"></span></div>
+   <div class="x-col text-center" xid="col35"><span component="$UI/system/components/justep/button/radio" class="x-radio" xid="radio13" label="客户支付" name="pay" onChange="radio13Change"></span></div>
+  </div><div component="$UI/system/components/justep/row/row" class="x-row " xid="row35">
    <div class="x-col" xid="col94"><textarea component="$UI/system/components/justep/textarea/textarea" class="form-control" xid="textarea3" placeHolder="描述" onChange="textarea3Change"></textarea></div></div>
   
   
   </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row40" style="background-color:#eee;padding-top:10px;">
    <div class="x-col" xid="col32"><a component="$UI/system/components/justep/button/button" class="btn btn-default btn-block" label="发布订单" xid="publicBtn" onClick="publicBtnClick">
    <i xid="i13"></i>
-   <span xid="span37">发布订单</span></a></div></div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row42" style="background-color:#eee;height:55px;">
-   <div class="x-col" xid="col38"></div>
-   <div class="x-col" xid="col39"></div>
-   <div class="x-col" xid="col48"></div></div></div>
+   <span xid="span37">发布订单</span></a></div></div>
+  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row10" style="margin-top:10px;">
+   <div class="x-col" xid="col14"><span xid="span6"><![CDATA[　]]></span></div>
+   <div class="x-col" xid="col16"></div>
+   <div class="x-col" xid="col19"></div></div>
+  </div>
   <div class="x-contents-content x-cards" xid="content3"><div component="$UI/system/components/justep/list/list" class="x-list" xid="list8" data="receiptbartaskData" filter=' $row.val("status") == 1'>
    <ul class="x-list-template" xid="listTemplateUl8">
     <li xid="li8" class="list-group-item" bind-click="li8Click"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row48">
-   <div class="x-col" xid="col53"><![CDATA[]]>
-  <span xid="span44"><![CDATA[订单编号]]></span></div>
-   <div class="x-col text-right" xid="col56"><span xid="span45" bind-text='val("ordernumber")' class="text-info"></span></div></div>
+   <div class="x-col x-col-fixed" xid="col53" style="width:80px;"><![CDATA[]]>
+  <span xid="span44"><![CDATA[预约时间]]></span></div>
+   <div class="x-col" xid="col56"><span xid="span45" bind-text='val("installtime")' class="text-info"></span></div></div>
   <div component="$UI/system/components/justep/row/row" class="x-row" xid="row49">
-   <div class="x-col" xid="col58"><span xid="span46"><![CDATA[参与技工]]></span></div>
-   <div class="x-col text-right" xid="col59"><span xid="span47" bind-text='val("artisancount")'><![CDATA[0]]></span></div></div>
+   <div class="x-col x-col-fixed" xid="col58" style="width:80px;"><span xid="span46"><![CDATA[参与技工]]></span></div>
+   <div class="x-col" xid="col59"><span xid="span47" bind-text='val("artisancount")'><![CDATA[0]]></span></div></div>
   <div component="$UI/system/components/justep/row/row" class="x-row" xid="row51">
-   <div class="x-col" xid="col66"><span xid="span49"><![CDATA[我的任务]]></span></div>
-   <div class="x-col text-right" xid="col67"><span xid="span50" bind-text=' val("measurecount") + val("transitcount") + val("fingercount") + val("bartaskdetailcount") + val("openlockcount")'><![CDATA[0]]></span></div></div></li></ul> </div></div>
-  <div class="x-contents-content" xid="content4"><div component="$UI/system/components/justep/list/list" class="x-list" xid="list9" data="processData" filter='$row.val("status") == 3'>
+   <div class="x-col x-col-fixed" xid="col66" style="width:80px;"><span xid="span49"><![CDATA[服务类型]]></span></div>
+   <div class="x-col" xid="col67"><span xid="span23" bind-text='val("servicetype")'></span></div></div>
+  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row25">
+   <div class="x-col x-col-fixed" xid="col75" style="width:80px;">
+    <span xid="span12"><![CDATA[任务地址]]></span></div> 
+   <div class="x-col" xid="col74">
+    <span xid="span8" bind-text=' val("province") + val("city") + val("district")'>0</span></div> </div>
+  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row29">
+   <div class="x-col x-col-fixed" xid="col79" style="width:80px;">
+    <span xid="span19"><![CDATA[额外费用]]></span></div> 
+   <div class="x-col" xid="col78">
+    <span xid="span14" bind-text='val("paytype")'>0</span></div> </div></li></ul> </div></div>
+  <div class="x-contents-content" xid="content4"><div component="$UI/system/components/justep/list/list" class="x-list" xid="list9" data="processData" filter="$row.val(&quot;status&quot;) == '2' || $row.val(&quot;status&quot;) == '3'">
    <ul class="x-list-template" xid="listTemplateUl9">
     <li xid="li9" class="list-group-item" bind-click="li9Click">
      <div component="$UI/system/components/justep/row/row" class="x-row" xid="row47">
-      <div class="x-col" xid="col61">
-       <span xid="span55">订单编号</span></div> 
-      <div class="x-col text-right" xid="col29">
-       <span xid="span54" bind-text='val("ordernumber")' class="text-info"></span></div> </div> 
-     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row50">
-      <div class="x-col" xid="col2">
+      <div class="x-col x-col-fixed" xid="col61" style="width:80px;">
+       <span xid="span55"><![CDATA[预约时间]]></span></div> 
+      <div class="x-col" xid="col29">
+       <span xid="span54" bind-text='val("installtime")' class="text-info"></span></div> </div> 
+     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row31">
+   <div class="x-col x-col-fixed" xid="col22" style="width:80px;">
+    <span xid="span50"><![CDATA[服务类型]]></span></div> 
+   <div class="x-col" xid="col20">
+    <span xid="span24" bind-text='val("servicetype")'></span></div> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row36">
+   <div class="x-col x-col-fixed" xid="col80" style="width:80px;">
+    <span xid="span61"><![CDATA[任务地址]]></span></div> 
+   <div class="x-col" xid="col86">
+    <span xid="span63" bind-text=' val("province") + val("city") + val("district")'></span></div> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row50">
+      <div class="x-col x-col-fixed" xid="col2" style="width:80px;">
        <span xid="span52"><![CDATA[技工]]></span></div> 
-      <div class="x-col text-right" xid="col1">
+      <div class="x-col" xid="col1">
        <span xid="span51" bind-text='val("artisan")'>0</span></div> </div> 
      <div component="$UI/system/components/justep/row/row" class="x-row" xid="row53">
-   <div class="x-col" xid="col62">
+   <div class="x-col x-col-fixed" xid="col62" style="width:80px;">
     <span xid="span56"><![CDATA[报价]]></span></div> 
-   <div class="x-col text-right" xid="col63">
-    <span xid="span57" bind-text='val("price")'>0</span></div> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row52">
-      <div class="x-col" xid="col57">
-       <span xid="span53">我的任务</span></div> 
-      <div class="x-col text-right" xid="col52">
-       <span xid="span48" bind-text='val("taskcount")'>0</span></div> </div> 
+   <div class="x-col" xid="col63">
+    <span xid="span57" bind-text="'￥' + val(&quot;price&quot;)" style="color:#ff651a;">0</span></div> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row52">
+      <div class="x-col x-col-fixed" xid="col57" style="width:80px;">
+       <span xid="span53"><![CDATA[额外费用]]></span></div> 
+      <div class="x-col" xid="col52">
+       <span xid="span48" bind-text='val("paytype")'>0</span></div> </div> 
   </li> </ul> </div></div>
-  <div class="x-contents-content" xid="content5"><div component="$UI/system/components/justep/list/list" class="x-list" xid="list10" data="processData" filter=' $row.val("status") == 4 ||  $row.val("status") == 5'>
+  <div class="x-contents-content" xid="content6"><div component="$UI/system/components/justep/list/list" class="x-list" xid="list11" data="processData" filter='$row.val("status") == 4'>
+   <ul class="x-list-template" xid="listTemplateUl11">
+    <li xid="li11" class="list-group-item" bind-click="li9Click">
+     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row37">
+      <div class="x-col" xid="col96">
+       <span xid="span35">订单编号</span></div> 
+      <div class="x-col text-right" xid="col71">
+       <span xid="span33" bind-text='val("ordernumber")' class="text-info"></span></div> </div> 
+     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row42">
+      <div class="x-col" xid="col95">
+       <span xid="span76">技工</span></div> 
+      <div class="x-col text-right" xid="col92">
+       <span xid="span77" bind-text='val("artisan")'>0</span></div> </div> 
+     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row39">
+      <div class="x-col" xid="col100">
+       <span xid="span36">报价</span></div> 
+      <div class="x-col text-right" xid="col97">
+       <span xid="span26" bind-text="'￥' + val(&quot;price&quot;)" style="color:#ff651a;;">0</span></div> </div> 
+     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row38">
+      <div class="x-col" xid="col98">
+       <span xid="span32">我的任务</span></div> 
+      <div class="x-col text-right" xid="col101">
+       <span xid="span25" bind-text='val("taskcount")'>0</span></div> </div> 
+     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row60">
+      <div class="x-col" xid="col54">
+       <span xid="span75">验收</span></div> 
+      <div class="x-col text-right" xid="col99">
+       <span xid="span74" bind-visible=' val("status") == 4'>等待验收</span>
+       <span xid="span34" bind-visible=' val("status") == 5'>已验收</span></div> </div> </li> </ul> </div></div><div class="x-contents-content" xid="content5"><div component="$UI/system/components/justep/list/list" class="x-list" xid="list10" data="processData" filter="$row.val(&quot;status&quot;) == 5 || $row.val(&quot;status&quot;) == '-1'">
    <ul class="x-list-template" xid="listTemplateUl10">
     <li xid="li10" class="list-group-item" bind-click="li9Click">
      <div component="$UI/system/components/justep/row/row" class="x-row" xid="row55">
-      <div class="x-col" xid="col81">
-       <span xid="span65">订单编号</span></div> 
-      <div class="x-col text-right" xid="col64">
-       <span xid="span62" bind-text='val("ordernumber")' class="text-info"></span></div> </div> 
-     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row57">
-      <div class="x-col" xid="col82">
+      <div class="x-col x-col-fixed" xid="col81" style="width:80px;">
+       <span xid="span65"><![CDATA[预约时间]]></span></div> 
+      <div class="x-col" xid="col64">
+       <span xid="span62" bind-text='val("installtime")' class="text-info"></span></div> </div> 
+     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row56">
+   <div class="x-col x-col-fixed" xid="col103" style="width:80px;">
+    <span xid="span79"><![CDATA[服务类型]]></span></div> 
+   <div class="x-col" xid="col102">
+    <span xid="span78" bind-text='val("servicetype")'></span></div> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row61">
+   <div class="x-col x-col-fixed" xid="col104" style="width:80px;">
+    <span xid="span80"><![CDATA[任务地址]]></span></div> 
+   <div class="x-col" xid="col105">
+    <span xid="span81" bind-text=' val("province") + val("city") + val("district")'></span></div> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row57">
+      <div class="x-col x-col-fixed" xid="col82" style="width:80px;">
        <span xid="span58">技工</span></div> 
-      <div class="x-col text-right" xid="col84">
+      <div class="x-col" xid="col84">
        <span xid="span59" bind-text='val("artisan")'>0</span></div> </div> 
      <div component="$UI/system/components/justep/row/row" class="x-row" xid="row54">
-      <div class="x-col" xid="col76">
+      <div class="x-col x-col-fixed" xid="col76" style="width:80px;">
        <span xid="span64">报价</span></div> 
-      <div class="x-col text-right" xid="col69">
-       <span xid="span60" bind-text='val("price")'>0</span></div> </div> 
-     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row56">
-      <div class="x-col" xid="col68">
-       <span xid="span63">我的任务</span></div> 
-      <div class="x-col text-right" xid="col75">
-       <span xid="span61" bind-text='val("taskcount")'>0</span></div> </div> 
-  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row58">
-   <div class="x-col" xid="col87"><span xid="span66"><![CDATA[验收]]></span></div>
-   <div class="x-col text-right" xid="col88"><span xid="span67" bind-visible=' val("status") == 4'><![CDATA[等待验收]]></span>
-  <span xid="span68" bind-visible=' val("status") == 5'><![CDATA[已验收]]></span></div></div></li> </ul> </div></div></div></div>
+      <div class="x-col" xid="col69">
+       <span xid="span60" bind-text="'￥' + val(&quot;price&quot;)" style="color:#ff651a;">0</span></div> </div> 
+     <div component="$UI/system/components/justep/row/row" class="x-row" xid="row58">
+   <div class="x-col x-col-fixed" xid="col87" style="width:80px;"><span xid="span66"><![CDATA[状态]]></span></div>
+   <div class="x-col" xid="col88"><span xid="span67" bind-visible=' val("status") == 4'><![CDATA[等待验收]]></span>
+  <span xid="span68" bind-visible=' val("status") == 5'><![CDATA[已验收]]></span>
+  <span xid="span11" class="text-danger" bind-visible=' val("status") == -1'><![CDATA[已取消]]></span></div></div>
+  </li> </ul> </div></div>
+  </div></div>
   </div> 
 <resource xid="resource2"><require xid="require1" url="css!$UI/liushushufront3/font-awesome-4.7.0/css/fa.icons"></require></resource>
   <span component="$UI/system/components/justep/messageDialog/messageDialog" xid="messageDialog1"></span>
   <div component="$UI/system/components/justep/popOver/popOver" class="x-popOver" direction="auto" xid="popOver1" opacity="1">
    <div class="x-popOver-overlay" xid="div11"></div>
-   <div class="x-popOver-content" xid="div12" style="width:100%;"></div></div></div>
+   <div class="x-popOver-content" xid="div12" style="width:100%;"></div></div>
+  </div>

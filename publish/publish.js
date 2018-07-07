@@ -3,6 +3,7 @@ define(function(require) {
 	var justep = require("$UI/system/lib/justep");
 	var UUID = require("$UI/system/lib/base/uuid");
 	require("../js/jquer_shijian");
+	var servicetype = 'install';// install:安装 finger:维修开锁
 	var Model = function() {
 		this.callParent();
 	};
@@ -95,9 +96,9 @@ define(function(require) {
 		var row = event.bindingContext.$object;
 		this.comp('transitData').deleteData(row)
 	};
-
-	Model.prototype.modelLoad = function(event) {
-		var self = this;
+	
+	Model.prototype.refresh = function(){
+	var self = this;
 		$.ajax({
 			async : false,
 			url : url + "apis/getproducts",
@@ -206,22 +207,27 @@ define(function(require) {
 				// justep.Util.hint("错误，请检查网络");
 			}
 		});
-		
-				$.ajax({
+
+		$.ajax({
 			async : false,
 			url : url + "apis/getprocesstask",
 			type : "GET",
 			dataType : 'jsonp',
 			jsonp : 'callback',
 			timeout : 5000,
-			data:{
-			openid:openid
+			data : {
+				openid : openid
 			},
 			success : function(jsonstr) {// 客户端jquery预先定义好的callback函数,成功获取跨域服务器上的json数据后,会动态执行这个callback函数
 				var data = self.comp("processData");
 				data.clear();
 				$.each(jsonstr.processtask, function(i, item) {
-
+				var paytype = '发单人支付';
+				if (item.paytype == 1) {
+					paytype = '现场客户支付';
+				} else if (item.paytype == 2) {
+					paytype = '省心全包报价';
+				}
 					var options = {
 						defaultValues : [ {
 							id : item.id,
@@ -229,7 +235,43 @@ define(function(require) {
 							artisan : item.artisan,
 							price : item.price,
 							taskcount : parseInt(item.measurecount) + parseInt(item.transitcount) + parseInt(item.fingercount) + parseInt(item.openlockcount),
-							status:item.status
+							status : item.status,
+							province:item.province,
+							city:item.city,
+							district:item.district,
+							address:item.address,
+							servicetype:item.servicetype,
+							paytype:paytype,
+							installtime:justep.Date.toString(new Date(Date.parse(item.installtime)), "yyyy-MM-dd"),
+						} ]
+					};
+					data.newData(options);
+				});
+			},
+			error : function(xhr) {
+				// justep.Util.hint("错误，请检查网络");
+			}
+		});
+
+		$.ajax({
+			async : false,
+			url : url + "apis/getfingermodeldefs",
+			type : "GET",
+			dataType : 'jsonp',
+			jsonp : 'callback',
+			timeout : 5000,
+			data : {
+				openid : openid
+			},
+			success : function(jsonstr) {// 客户端jquery预先定义好的callback函数,成功获取跨域服务器上的json数据后,会动态执行这个callback函数
+				var data = self.comp("fingermodeldefData");
+				data.clear();
+				$.each(jsonstr.fingermodeldefs, function(i, item) {
+
+					var options = {
+						defaultValues : [ {
+							id : item.id,
+							model : item.model
 						} ]
 					};
 					data.newData(options);
@@ -254,6 +296,11 @@ define(function(require) {
 			Minute : false,// 是否显分钟
 		})
 		this.refreshorder();
+		this.defaultinstall();
+	};
+
+	Model.prototype.modelLoad = function(event) {
+		this.refresh();
 	};
 
 	Model.prototype.select2Change = function(event) {
@@ -274,6 +321,7 @@ define(function(require) {
 	};
 
 	Model.prototype.button5Click = function(event) {
+
 		var hasid = event.bindingContext.$parent.val('productbaseid').toString().split(',');
 		var inarr = $.inArray(event.bindingContext.$object.val('id').toString(), hasid);
 		if (inarr > -1) {
@@ -337,18 +385,45 @@ define(function(require) {
 	};
 
 	Model.prototype.publicBtnClick = function(event) {
+		if (servicetype == 'install') {
+			if (this.comp('measureData').count() + this.comp('transitData').count() + this.comp('bartaskdetailData').count() + this.comp('fingerData').count() + this.comp('openlockData').count() == 0) {
+				this.comp('messageDialog1').set({
+					'message' : '请选择至少一项服务类型'
+				});
+				this.comp('messageDialog1').show();
+				return false;
+			}
 
-		if (this.comp('measureData').count() + this.comp('transitData').count() + this.comp('bartaskdetailData').count() + this.comp('fingerData').count() + this.comp('openlockData').count() == 0) {
+			var firstrow = this.comp('bartaskdetailData').getFirstRow();
+			if ((firstrow.val('productbaseid').length < 2 && firstrow.val('productincrementid').length < 2)) {
+				this.comp('messageDialog1').set({
+					'message' : '请选择至少一项服务'
+				});
+				this.comp('messageDialog1').show();
+				return false;
+			}
+		}else if(servicetype == 'finger'){
+
+		var fingerrow = this.comp('fingerData').getFirstRow();
+		if (fingerrow.val('fingermodeldef_id') == '') {
 			this.comp('messageDialog1').set({
-				'message' : '请选择至少一项服务'
+				'message' : '请选择服务项目'
+			});
+			this.comp('messageDialog1').show();
+			return false;
+		}
+}
+		if (this.comp('provinceSelect3').val() == '' || this.comp('citySelect3').val() == '' || this.comp('districtSelect3').val() == '' || this.comp('input9').val() == '') {
+			this.comp('messageDialog1').set({
+				'message' : '服务地址不完整'
 			});
 			this.comp('messageDialog1').show();
 			return false;
 		}
 
-		if (this.comp('provinceSelect3').val() == '' || this.comp('citySelect3').val() == '' || this.comp('districtSelect3').val() == '' || this.comp('input9').val() == '') {
+		if (this.comp('input4').val() == '') {
 			this.comp('messageDialog1').set({
-				'message' : '服务地址不完整'
+				'message' : '服务时间不能为空'
 			});
 			this.comp('messageDialog1').show();
 			return false;
@@ -365,6 +440,15 @@ define(function(require) {
 		if (this.comp('input7').val() == '') {
 			this.comp('messageDialog1').set({
 				'message' : '联系方式不能为空'
+			});
+			this.comp('messageDialog1').show();
+			return false;
+		}
+
+		var ischeck = $("input[name='pay']:checked").val();
+		if (ischeck == undefined) {
+			this.comp('messageDialog1').set({
+				'message' : '额外费用支付不能为空'
 			});
 			this.comp('messageDialog1').show();
 			return false;
@@ -394,25 +478,28 @@ define(function(require) {
 		oXHR = new XMLHttpRequest();
 		oXHR.addEventListener('load', function(resUpload) {
 			// 成功
-			 self.comp('messageDialog1').set({
-			 'message' : '任务发布成功'
-			 });
-			 self.refreshorder();
-			 self.comp('messageDialog1').show();
-			 self.comp('bartaskData').clear();
-			 self.comp('measureData').clear();
-			 self.comp('transitData').clear();
-			 self.comp('bartaskdetailData').clear();
-			 self.comp('fingerData').clear();
-			 self.comp('openlockData').clear();
-			 var uuid = UUID.createUUID();
-			 var options = {
-			 defaultValues : [ {
-			 id : uuid,
-			 openid : openid
-			 } ]
-			 };
-			 self.comp('bartaskData').newData(options);
+			self.comp('messageDialog1').set({
+				'message' : '任务发布成功'
+			});
+			self.refreshorder();
+			self.comp('messageDialog1').show();
+			self.comp('bartaskData').clear();
+			self.comp('measureData').clear();
+			self.comp('transitData').clear();
+			self.comp('bartaskdetailData').clear();
+			self.comp('fingerData').clear();
+			self.comp('openlockData').clear();
+			var uuid = UUID.createUUID();
+			var options = {
+				defaultValues : [ {
+					id : uuid,
+					openid : openid
+				} ]
+			};
+			self.comp('bartaskData').newData(options);
+			self.defaultinstall();
+			self.clearinfo();
+			self.comp('contents1').to('content3');
 		}, false);
 		oXHR.addEventListener('error', function() {
 			// 失败
@@ -430,6 +517,30 @@ define(function(require) {
 		if (status) {
 			row.val('isfloorheat', '0');
 		}
+	};
+
+	Model.prototype.clearinfo = function() {
+		this.comp('provinceSelect3').val('');
+		this.comp('citySelect3').val('');
+		this.comp('districtSelect3').val('');
+		this.comp('input9').val('');
+		this.comp('input4').val('');
+		this.comp('input5').val('');
+		this.comp('input6').val('');
+		this.comp('input7').val('');
+		this.comp('radio12').set({
+			'checked' : true
+		});
+		this.comp('radio12').set({
+			'checked' : false
+		});
+		this.comp('radio13').set({
+			'checked' : true
+		});
+		this.comp('radio13').set({
+			'checked' : false
+		});
+		this.comp('textarea3').val('');
 	};
 
 	Model.prototype.radio5Change = function(event) {
@@ -586,7 +697,7 @@ define(function(require) {
 	};
 
 	Model.prototype.calendar1Click = function(event) {
-		
+
 	};
 
 	Model.prototype.refreshorder = function() {
@@ -605,17 +716,22 @@ define(function(require) {
 				var data = self.comp("receiptbartaskData");
 				data.clear();
 				$.each(jsonstr.bartasks, function(i, item) {
-
+var paytype = '发单人支付';
+if(item.paytype == 1){
+paytype= '现场客户支付';
+}else if(item.paytype == 2){
+paytype= '省心全包报价';
+}
 					var options = {
 						defaultValues : [ {
 							id : item.id,
 							preprice : item.preprice,
-							prvoince : item.prvoince,
+							province : item.province,
 							city : item.city,
 							district : item.district,
 							address : item.address,
 							status : item.status,
-							installtime : item.installtime,
+							installtime : justep.Date.toString(new Date(Date.parse(item.installtime)), "yyyy-MM-dd"),
 							ordernumber : item.ordernumber,
 							contact : item.contact,
 							contactphone : item.contactphone,
@@ -624,7 +740,9 @@ define(function(require) {
 							fingercount : item.fingercount,
 							bartaskdetailcount : item.bartaskdetailcount,
 							openlockcount : item.openlockcount,
-							artisancount:item.artisancount
+							artisancount : item.artisancount,
+							servicetype:item.servicetype,
+							paytype:paytype
 						} ]
 					};
 					data.newData(options);
@@ -640,7 +758,7 @@ define(function(require) {
 		var row = event.bindingContext.$object;
 		var params = {
 			data : {
-			artisancount:row.val('artisancount'),
+				artisancount : row.val('artisancount'),
 				id : row.val('id')
 			}
 		}
@@ -656,7 +774,7 @@ define(function(require) {
 		}
 	};
 
-	Model.prototype.radio13Change = function(event){
+	Model.prototype.radio13Change = function(event) {
 		var data = this.comp("bartaskData");
 		var rows = data.getFirstRow();
 		var status = this.comp('radio13').get('checked');
@@ -665,20 +783,113 @@ define(function(require) {
 		}
 	};
 
-	Model.prototype.select1Change = function(event){
+	Model.prototype.select1Change = function(event) {
 		var row = event.bindingContext.$object;
 		row.val('product_id', event.value);
 	};
 
-	Model.prototype.li9Click = function(event){
+	Model.prototype.li9Click = function(event) {
 		var row = event.bindingContext.$object;
 		var params = {
 			data : {
-			artisancount:row.val('artisancount'),
+				artisancount : row.val('artisancount'),
 				id : row.val('id')
 			}
 		}
 		justep.Shell.showPage(require.toUrl("./processbartaskdetail.w"), params);
+	};
+
+	Model.prototype.clearlastdata = function() {
+		// this.comp('bartaskData').clear();
+		this.comp('measureData').clear();
+		this.comp('transitData').clear();
+		this.comp('bartaskdetailData').clear();
+		this.comp('fingerData').clear();
+		this.comp('openlockData').clear();
+		this.comp('measure_btn').removeClass('x-default');
+		this.comp('measure_btn').addClass('x-gray');
+		this.comp('transit_btn').removeClass('x-default');
+		this.comp('transit_btn').addClass('x-gray');
+		this.comp('bartask_btn').removeClass('x-default');
+		this.comp('bartask_btn').addClass('x-gray');
+		this.comp('finger_btn').removeClass('x-default');
+		this.comp('finger_btn').addClass('x-gray');
+
+	};
+
+	Model.prototype.measure_btnClick = function(event) {
+		this.clearlastdata();
+		var uuid = UUID.createUUID();
+		var options = {
+			defaultValues : [ {
+				id : uuid
+			} ]
+		};
+		this.comp('measureData').newData(options);
+		this.comp('measure_btn').removeClass('x-gray');
+		this.comp('measure_btn').addClass('btn-default');
+	};
+
+	Model.prototype.transit_btnClick = function(event) {
+		this.clearlastdata();
+		var uuid = UUID.createUUID();
+		var options = {
+			defaultValues : [ {
+				id : uuid
+			} ]
+		};
+		this.comp('transitData').newData(options);
+		this.comp('transit_btn').removeClass('x-gray');
+		this.comp('transit_btn').addClass('btn-default');
+	};
+
+	Model.prototype.bartask_btnClick = function(event) {
+	servicetype = 'install';
+		this.defaultinstall();
+	};
+
+	Model.prototype.defaultinstall = function() {
+	servicetype = 'install';
+		this.clearlastdata();
+		var uuid = UUID.createUUID();
+		var options = {
+			defaultValues : [ {
+				id : uuid,
+				productbaseid : '',
+				productincrementid : ''
+			} ]
+		};
+		this.comp('bartaskdetailData').newData(options);
+		this.comp('bartask_btn').removeClass('x-gray');
+		this.comp('bartask_btn').addClass('btn-default');
+	};
+
+	Model.prototype.finger_btnClick = function(event) {
+	servicetype = 'finger';
+		this.clearlastdata();
+		var uuid = UUID.createUUID();
+		var options = {
+			defaultValues : [ {
+				id : uuid
+			} ]
+		};
+		this.comp('fingerData').newData(options);
+		this.comp('finger_btn').removeClass('x-gray');
+		this.comp('finger_btn').addClass('btn-default');
+	};
+
+	Model.prototype.radio14Change = function(event) {
+		var data = this.comp("bartaskData");
+		var rows = data.getFirstRow();
+		var status = this.comp('radio14').get('checked');
+		if (status) {
+			rows.val('paytype', 2);
+		}
+	};
+
+	Model.prototype.fingermodeldefselectChange = function(event) {
+		var fingerrow = this.comp('fingerData').getFirstRow();
+		fingerrow.val('fingermodeldef_id', event.source.val());
 	};
 
 	return Model;

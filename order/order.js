@@ -28,5 +28,9 @@ define(function(require){
 
 	};
 
+	Model.prototype.row1Click = function(event){
+justep.Shell.showPage(require.toUrl("./collectionartisan.w"));
+	};
+
 	return Model;
 });

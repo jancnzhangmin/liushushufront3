@@ -2,6 +2,7 @@ define(function(require) {
 	var $ = require("jquery");
 	var justep = require("$UI/system/lib/justep");
 	var orderid;
+	var reason = '';
 
 	var Model = function() {
 		this.callParent();
@@ -9,8 +10,8 @@ define(function(require) {
 
 	Model.prototype.modelParamsReceive = function(event) {
 		if (event.params.data) {
-		orderid = event.params.data.id;
-		$(this.getElementByXid("span2")).text(event.params.data.artisancount);
+			orderid = event.params.data.id;
+			$(this.getElementByXid("span2")).text(event.params.data.artisancount);
 			var self = this;
 			$.ajax({
 				async : false,
@@ -93,7 +94,8 @@ define(function(require) {
 								id : item.id,
 								bartaskdetail_id : item.bartaskdetail_id,
 								name : item.name,
-								summary : item.summary
+								summary : item.summary,
+								isselect : item.isselect
 							} ]
 						};
 						barbasedata.newData(options);
@@ -107,7 +109,8 @@ define(function(require) {
 								id : item.id,
 								bartaskdetail_id : item.bartaskdetail_id,
 								name : item.name,
-								summary : item.summary
+								summary : item.summary,
+								isselect : item.isselect
 							} ]
 						};
 						barincrementdata.newData(options);
@@ -144,16 +147,127 @@ define(function(require) {
 				}
 
 			});
+
+			$.ajax({
+				async : false,
+				url : url + "apis/getusercancelreason",
+				type : "GET",
+				dataType : 'jsonp',
+				jsonp : 'callback',
+				timeout : 5000,
+				success : function(jsonstr) {// 客户端jquery预先定义好的callback函数,成功获取跨域服务器上的json数据后,会动态执行这个callback函数
+					var usercancelreasondata = self.comp("usercancelreasonData");
+					usercancelreasondata.clear();
+					$.each(jsonstr.usercancelreason, function(i, item) {
+						var options = {
+							defaultValues : [ {
+								id : item.id,
+								reason : item.reason
+							} ]
+						};
+						usercancelreasondata.newData(options);
+					});
+				},
+				error : function(xhr) {
+					// justep.Util.hint("错误，请检查网络");
+				}
+			});
+
 		}
 	};
 
-	Model.prototype.row1Click = function(event){
+	Model.prototype.row1Click = function(event) {
 		var params = {
 			data : {
 				id : orderid
 			}
 		}
 		justep.Shell.showPage(require.toUrl("./selectartisan.w"), params);
+	};
+
+	Model.prototype.button5Click = function(event) {
+		this.comp('popMenu3').show();
+	};
+
+	Model.prototype.cannelBtnClick = function(event) {
+		$("input[name='usercancelreason']").attr('checked', false);
+		this.comp('usercancelreasonPop').show();
+	};
+
+	Model.prototype.messageDialog1Yes = function(event) {
+		var self = this;
+		$.ajax({
+			async : false,
+			url : url + "apis/userunpaidcancel",
+			type : "GET",
+			dataType : 'jsonp',
+			jsonp : 'callback',
+			timeout : 5000,
+			data : {
+				orderid : orderid,
+			},
+			success : function(jsonstr) {// 客户端jquery预先定义好的callback函数,成功获取跨域服务器上的json数据后,会动态执行这个callback函数
+				self.comp('cannelBtn').set({
+					"disabled" : true
+				});
+			},
+			error : function(xhr) {
+				// justep.Util.hint("错误，请检查网络");
+			}
+		});
+	};
+
+	Model.prototype.seasonsubmitBtnClick = function(event) {
+		var ischeck = $("input[name='usercancelreason']:checked").val();
+		if (ischeck == undefined) {
+			return false;
+		}
+		if (this.comp('otherreasonradio').get('checked')) {
+			reason = this.comp('textarea1').val();
+		}
+
+		var self = this;
+		$.ajax({
+			async : false,
+			url : url + "apis/userunpaidcancel",
+			type : "GET",
+			dataType : 'jsonp',
+			jsonp : 'callback',
+			timeout : 5000,
+			data : {
+				orderid : orderid,
+				reason : reason
+			},
+			success : function(jsonstr) {// 客户端jquery预先定义好的callback函数,成功获取跨域服务器上的json数据后,会动态执行这个callback函数
+				self.comp('cannelBtn').set({
+					"disabled" : true
+				});
+				self.comp('usercancelreasonPop').hide();
+				self.close();
+			},
+			error : function(xhr) {
+				// justep.Util.hint("错误，请检查网络");
+			}
+		});
+
+	};
+
+	Model.prototype.radio1Change = function(event) {
+		var row = event.bindingContext.$object;
+		reason = row.val('reason');
+	};
+
+	Model.prototype.button3Click = function(event) {
+		this.comp('usercancelreasonPop').hide();
+	};
+
+	Model.prototype.textarea1Keyup = function(event) {
+		this.comp('otherreasonradio').set({
+			'checked' : false
+		});
+		this.comp('otherreasonradio').set({
+			'checked' : true
+		});
 	};
 
 	return Model;

@@ -1,5 +1,6 @@
 .form-control{
-	border:none;
+	
+	border:1px solid rgba(38, 113, 185, 0.2);
 }
 
 .input-group-addon{

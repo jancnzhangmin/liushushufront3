@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cfABBbq" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cfABBbq" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/panel/panel,">  
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cfABBbq" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cfABBbq" components="$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/row/row,$model/UI2/system/components/justep/smartContainer/smartContainer,$model/UI2/system/components/justep/titleBar/titleBar,$model/UI2/system/components/justep/panel/child,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/panel/panel,">  
   <style xmlns="" xmlns:xhtml="http://www.w3.org/1999/xhtml">.headimg.cfABBbq{border-radius: 50%; width: 40px; height: 40px; border-style: solid solid solid solid; border-color: rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0) rgb(0, 0, 0)}</style>  
   <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad" __cid="cfABBbq" class="cfABBbq"/>  
   <div xmlns="" component="$model/UI2/system/components/justep/panel/panel" class="x-panel x-full pca6Fjuu-iosstatusbar cfABBbq" xid="panel1" data-bind="component:{name:'$model/UI2/system/components/justep/panel/panel'}" __cid="cfABBbq"> 
     <div class="x-panel-top cfABBbq" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cfABBbq"> 
       <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cfABBbq" style="background-color:white;" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" __cid="cfABBbq"> 
         <div class="x-titlebar-left cfABBbq" __cid="cfABBbq"> 
-          <img src="@justepContextPath@/v_e6ba6854925f459aaf5ad8b9296eeab5l_zh_CNs_d_m/liushushufront3/image/head.png" alt="" xid="image1" class="headimg cfABBbq" __cid="cfABBbq"/> 
+          <img src="@justepContextPath@/v_d3bcc7a01c584e24a5677c806fec2e65l_zh_CNs_d_m/liushushufront3/image/head.png" alt="" xid="image1" class="headimg cfABBbq" __cid="cfABBbq"/> 
         </div>  
         <div class="x-titlebar-title cfABBbq" __cid="cfABBbq"/>  
         <div class="x-titlebar-right  cfABBbq" __cid="cfABBbq"> 
@@ -15,7 +15,22 @@
         </div> 
       </div> 
     </div>  
-    <div class="x-panel-content x-cards cfABBbq" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cfABBbq"/>  
+    <div class="x-panel-content x-cards cfABBbq" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cfABBbq"> 
+      <div component="$model/UI2/system/components/justep/smartContainer/smartContainer" class="x-smartcontainer cfABBbq" xid="smartContainer1" style="background-color:white;" data-bind="component:{name:'$model/UI2/system/components/justep/smartContainer/smartContainer'}" __cid="cfABBbq"> 
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row list-group-item cfABBbq" xid="row1" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'},event:{click:$model._callModelFn.bind($model, 'row1Click')}" __cid="cfABBbq"> 
+          <div class="x-col x-col-fixed cfABBbq" xid="col1" style="width:25px;" __cid="cfABBbq"> 
+            <i xid="i1" class="fa fa-heart cfABBbq" __cid="cfABBbq"/> 
+          </div>  
+          <div class="x-col x-col-fixed cfABBbq" xid="col3" style="width:80px;" __cid="cfABBbq"> 
+            <span xid="span1" __cid="cfABBbq" class="cfABBbq">收藏技工</span> 
+          </div>  
+          <div class="x-col text-right cfABBbq" xid="col4" __cid="cfABBbq"> 
+            <span xid="span2" __cid="cfABBbq" class="cfABBbq"/>  
+            <i xid="i2" class="fa fa-chevron-right cfABBbq" __cid="cfABBbq"/> 
+          </div> 
+        </div> 
+      </div> 
+    </div>  
     <style __cid="cfABBbq" class="cfABBbq">.x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-content {top: 48px;}</style> 
   </div> 
 </div>

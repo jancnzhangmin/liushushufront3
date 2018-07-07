@@ -13,6 +13,10 @@
           </div>
         </div> 
       </div>  
-    <div class="x-panel-content x-cards" xid="content1"/>
+    <div class="x-panel-content x-cards" xid="content1"><div component="$UI/system/components/justep/smartContainer/smartContainer" class="x-smartcontainer" xid="smartContainer1" style="background-color:white;"><div component="$UI/system/components/justep/row/row" class="x-row list-group-item" xid="row1" bind-click="row1Click">
+   <div class="x-col x-col-fixed" xid="col1" style="width:25px;"><i xid="i1" class="fa fa-heart"></i></div>
+   <div class="x-col x-col-fixed" xid="col3" style="width:80px;"><span xid="span1"><![CDATA[收藏技工]]></span></div>
+  <div class="x-col text-right" xid="col4"><span xid="span2"></span>
+  <i xid="i2" class="fa fa-chevron-right"></i></div></div></div></div>
   </div> 
-</div>
+<resource xid="resource2"><require xid="require1" url="css!$UI/liushushufront3/font-awesome-4.7.0/css/fa.icons"></require></resource></div>
