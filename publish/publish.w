@@ -268,7 +268,11 @@
    <div class="x-col" xid="col14"><span xid="span6"><![CDATA[　]]></span></div>
    <div class="x-col" xid="col16"></div>
    <div class="x-col" xid="col19"></div></div>
-  </div>
+  <div xid="div1" style="width:100%;position:fixed;bottom:48px;height:40px;display:none;" class="popdiv-background text-center" bind-click="div1Click"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row38">
+   <div class="x-col" xid="col98" bind-click="col98Click"><label xid="label6" style="color:#FFFFFF;"><![CDATA[完成注册 享受更多优惠]]></label></div>
+   <div class="x-col x-col-fixed" xid="col99" style="width:30px;"><a component="$UI/system/components/justep/button/button" class="btn btn-default btn-xs btn-only-icon pull-right div-close" label="button" xid="closediv" icon="fa fa-times" onClick="closedivClick" style="margin-top:-5px;">
+   <i xid="i2" style="margin-top:8px;" class="fa fa-times"></i>
+   <span xid="span32"></span></a></div></div></div></div>
   <div class="x-contents-content x-cards" xid="content3"><div component="$UI/system/components/justep/list/list" class="x-list" xid="list8" data="receiptbartaskData" filter=' $row.val("status") == 1'>
    <ul class="x-list-template" xid="listTemplateUl8">
     <li xid="li8" class="list-group-item" bind-click="li8Click"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row48">
@@ -385,11 +389,12 @@
   <span xid="span68" bind-visible=' val("status") == 5'><![CDATA[已验收]]></span>
   <span xid="span11" class="text-danger" bind-visible=' val("status") == -1'><![CDATA[已取消]]></span></div></div>
   </li> </ul> </div></div>
-  </div></div>
+  </div>
+  </div>
   </div> 
 <resource xid="resource2"><require xid="require1" url="css!$UI/liushushufront3/font-awesome-4.7.0/css/fa.icons"></require></resource>
   <span component="$UI/system/components/justep/messageDialog/messageDialog" xid="messageDialog1"></span>
-  <div component="$UI/system/components/justep/popOver/popOver" class="x-popOver" direction="auto" xid="popOver1" opacity="1">
+  <span component="$UI/system/components/justep/windowDialog/windowDialog" xid="windowDialog1" onReceive="windowDialog1Receive"></span><div component="$UI/system/components/justep/popOver/popOver" class="x-popOver" direction="auto" xid="popOver1" opacity="1">
    <div class="x-popOver-overlay" xid="div11"></div>
    <div class="x-popOver-content" xid="div12" style="width:100%;"></div></div>
   </div>

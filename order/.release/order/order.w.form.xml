@@ -17,7 +17,7 @@
     </div>  
     <div class="x-panel-content x-cards cfABBbq" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cfABBbq">
       <div component="$model/UI2/system/components/justep/smartContainer/smartContainer" class="x-smartcontainer cfABBbq" xid="smartContainer1" style="background-color:white;" data-bind="component:{name:'$model/UI2/system/components/justep/smartContainer/smartContainer'}" __cid="cfABBbq">
-        <div component="$model/UI2/system/components/justep/row/row" class="x-row list-group-item cfABBbq" xid="row1" bind-click="row1Click" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfABBbq"> 
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row list-group-item cfABBbq" xid="row1" bind-click="row1Click" style="padding-top:15px;padding-bottom:15px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfABBbq"> 
           <div class="x-col x-col-fixed cfABBbq" xid="col1" style="width:25px;" __cid="cfABBbq">
             <i xid="i1" class="fa fa-heart cfABBbq" __cid="cfABBbq"/>
           </div>  
@@ -28,6 +28,30 @@
             <span xid="span2" __cid="cfABBbq" class="cfABBbq"/>  
             <i xid="i2" class="fa fa-chevron-right cfABBbq" __cid="cfABBbq"/>
           </div>
+        </div>  
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row list-group-item cfABBbq" xid="row2" bind-click="row2Click" style="padding-top:15px;padding-bottom:15px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfABBbq"> 
+          <div class="x-col x-col-fixed cfABBbq" xid="col6" style="width:25px;" __cid="cfABBbq"> 
+            <i xid="i3" class="fa fa-qrcode cfABBbq" __cid="cfABBbq"/>
+          </div>  
+          <div class="x-col x-col-fixed cfABBbq" xid="col5" style="width:80px;" __cid="cfABBbq"> 
+            <span xid="span4" __cid="cfABBbq" class="cfABBbq">我的二维码</span>
+          </div>  
+          <div class="x-col text-right cfABBbq" xid="col2" __cid="cfABBbq"> 
+            <span xid="span3" __cid="cfABBbq" class="cfABBbq"/>  
+            <i xid="i4" class="fa fa-chevron-right cfABBbq" __cid="cfABBbq"/>
+          </div> 
+        </div>  
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row list-group-item cfABBbq" xid="row3" bind-click="row3Click" style="padding-top:15px;padding-bottom:15px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfABBbq"> 
+          <div class="x-col x-col-fixed cfABBbq" xid="col7" style="width:25px;" __cid="cfABBbq"> 
+            <i xid="i5" class="fa fa-ticket cfABBbq" __cid="cfABBbq"/>
+          </div>  
+          <div class="x-col x-col-fixed cfABBbq" xid="col8" style="width:80px;" __cid="cfABBbq"> 
+            <span xid="span6" __cid="cfABBbq" class="cfABBbq">优惠券</span>
+          </div>  
+          <div class="x-col text-right cfABBbq" xid="col9" __cid="cfABBbq"> 
+            <span xid="span5" __cid="cfABBbq" class="cfABBbq"/>  
+            <i xid="i6" class="fa fa-chevron-right cfABBbq" __cid="cfABBbq"/>
+          </div> 
         </div>
       </div>
     </div>  

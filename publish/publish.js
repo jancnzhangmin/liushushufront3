@@ -4,6 +4,7 @@ define(function(require) {
 	var UUID = require("$UI/system/lib/base/uuid");
 	require("../js/jquer_shijian");
 	var servicetype = 'install';// install:安装 finger:维修开锁
+	var registerstatus = false;
 	var Model = function() {
 		this.callParent();
 	};
@@ -96,9 +97,9 @@ define(function(require) {
 		var row = event.bindingContext.$object;
 		this.comp('transitData').deleteData(row)
 	};
-	
-	Model.prototype.refresh = function(){
-	var self = this;
+
+	Model.prototype.refresh = function() {
+		var self = this;
 		$.ajax({
 			async : false,
 			url : url + "apis/getproducts",
@@ -222,12 +223,12 @@ define(function(require) {
 				var data = self.comp("processData");
 				data.clear();
 				$.each(jsonstr.processtask, function(i, item) {
-				var paytype = '发单人支付';
-				if (item.paytype == 1) {
-					paytype = '现场客户支付';
-				} else if (item.paytype == 2) {
-					paytype = '省心全包报价';
-				}
+					var paytype = '发单人支付';
+					if (item.paytype == 1) {
+						paytype = '现场客户支付';
+					} else if (item.paytype == 2) {
+						paytype = '省心全包报价';
+					}
 					var options = {
 						defaultValues : [ {
 							id : item.id,
@@ -236,13 +237,13 @@ define(function(require) {
 							price : item.price,
 							taskcount : parseInt(item.measurecount) + parseInt(item.transitcount) + parseInt(item.fingercount) + parseInt(item.openlockcount),
 							status : item.status,
-							province:item.province,
-							city:item.city,
-							district:item.district,
-							address:item.address,
-							servicetype:item.servicetype,
-							paytype:paytype,
-							installtime:justep.Date.toString(new Date(Date.parse(item.installtime)), "yyyy-MM-dd"),
+							province : item.province,
+							city : item.city,
+							district : item.district,
+							address : item.address,
+							servicetype : item.servicetype,
+							paytype : paytype,
+							installtime : justep.Date.toString(new Date(Date.parse(item.installtime)), "yyyy-MM-dd"),
 						} ]
 					};
 					data.newData(options);
@@ -301,6 +302,33 @@ define(function(require) {
 
 	Model.prototype.modelLoad = function(event) {
 		this.refresh();
+		this.getuserinfo();
+	};
+
+	Model.prototype.getuserinfo = function() {
+		var self = this;
+		$.ajax({
+			async : false,
+			url : url + "apis/getuserinfo",
+			type : "GET",
+			dataType : 'jsonp',
+			jsonp : 'callback',
+			timeout : 5000,
+			data : {
+				openid : openid
+			},
+			success : function(jsonstr) {// 客户端jquery预先定义好的callback函数,成功获取跨域服务器上的json数据后,会动态执行这个callback函数
+				if (jsonstr.user.login == null) {
+					$(self.getElementByXid("div1")).show();
+				} else {
+					$(self.getElementByXid("div1")).hide();
+					registerstatus = true;
+				}
+			},
+			error : function(xhr) {
+				// justep.Util.hint("错误，请检查网络");
+			}
+		});
 	};
 
 	Model.prototype.select2Change = function(event) {
@@ -385,6 +413,10 @@ define(function(require) {
 	};
 
 	Model.prototype.publicBtnClick = function(event) {
+		if (!registerstatus) {
+			justep.Util.hint('请先注册后再发单');
+			return false;
+		}
 		if (servicetype == 'install') {
 			if (this.comp('measureData').count() + this.comp('transitData').count() + this.comp('bartaskdetailData').count() + this.comp('fingerData').count() + this.comp('openlockData').count() == 0) {
 				this.comp('messageDialog1').set({
@@ -402,17 +434,17 @@ define(function(require) {
 				this.comp('messageDialog1').show();
 				return false;
 			}
-		}else if(servicetype == 'finger'){
+		} else if (servicetype == 'finger') {
 
-		var fingerrow = this.comp('fingerData').getFirstRow();
-		if (fingerrow.val('fingermodeldef_id') == '') {
-			this.comp('messageDialog1').set({
-				'message' : '请选择服务项目'
-			});
-			this.comp('messageDialog1').show();
-			return false;
+			var fingerrow = this.comp('fingerData').getFirstRow();
+			if (fingerrow.val('fingermodeldef_id') == '') {
+				this.comp('messageDialog1').set({
+					'message' : '请选择服务项目'
+				});
+				this.comp('messageDialog1').show();
+				return false;
+			}
 		}
-}
 		if (this.comp('provinceSelect3').val() == '' || this.comp('citySelect3').val() == '' || this.comp('districtSelect3').val() == '' || this.comp('input9').val() == '') {
 			this.comp('messageDialog1').set({
 				'message' : '服务地址不完整'
@@ -716,12 +748,12 @@ define(function(require) {
 				var data = self.comp("receiptbartaskData");
 				data.clear();
 				$.each(jsonstr.bartasks, function(i, item) {
-var paytype = '发单人支付';
-if(item.paytype == 1){
-paytype= '现场客户支付';
-}else if(item.paytype == 2){
-paytype= '省心全包报价';
-}
+					var paytype = '发单人支付';
+					if (item.paytype == 1) {
+						paytype = '现场客户支付';
+					} else if (item.paytype == 2) {
+						paytype = '省心全包报价';
+					}
 					var options = {
 						defaultValues : [ {
 							id : item.id,
@@ -741,8 +773,8 @@ paytype= '省心全包报价';
 							bartaskdetailcount : item.bartaskdetailcount,
 							openlockcount : item.openlockcount,
 							artisancount : item.artisancount,
-							servicetype:item.servicetype,
-							paytype:paytype
+							servicetype : item.servicetype,
+							paytype : paytype
 						} ]
 					};
 					data.newData(options);
@@ -844,12 +876,12 @@ paytype= '省心全包报价';
 	};
 
 	Model.prototype.bartask_btnClick = function(event) {
-	servicetype = 'install';
+		servicetype = 'install';
 		this.defaultinstall();
 	};
 
 	Model.prototype.defaultinstall = function() {
-	servicetype = 'install';
+		servicetype = 'install';
 		this.clearlastdata();
 		var uuid = UUID.createUUID();
 		var options = {
@@ -865,7 +897,7 @@ paytype= '省心全包报价';
 	};
 
 	Model.prototype.finger_btnClick = function(event) {
-	servicetype = 'finger';
+		servicetype = 'finger';
 		this.clearlastdata();
 		var uuid = UUID.createUUID();
 		var options = {
@@ -890,6 +922,25 @@ paytype= '省心全包报价';
 	Model.prototype.fingermodeldefselectChange = function(event) {
 		var fingerrow = this.comp('fingerData').getFirstRow();
 		fingerrow.val('fingermodeldef_id', event.source.val());
+	};
+
+	Model.prototype.closedivClick = function(event) {
+		$(this.getElementByXid("div1")).hide();
+	};
+
+	Model.prototype.div1Click = function(event) {
+
+	};
+
+	Model.prototype.col98Click = function(event) {
+		this.comp('windowDialog1').open({
+			src : require.toUrl("../register.w")
+		});
+
+	};
+
+	Model.prototype.windowDialog1Receive = function(event) {
+		this.getuserinfo();
 	};
 
 	return Model;

@@ -1,0 +1,13 @@
+.input-group-addon{
+	border:none;
+	background-color:transparent;
+}
+.form-control {
+	border: 1px solid rgba(38, 113, 185, 0.2);
+}
+.x-panel-content>.list-group-item{
+	border:none;
+}
+.spacing{
+	margin-bottom:10px;
+}

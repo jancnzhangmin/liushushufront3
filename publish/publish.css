@@ -237,3 +237,6 @@ box-shadow: 3px 3px 3px #cccccc;
 .x-card.btn-group .btn.active{ color:#2671b9; padding:0;border-top:0;border-bottom:2px solid #2671b9;}
 
 
+.popdiv-background{background: -webkit-linear-gradient(-45deg, #c444cd, #7219e7);}
+
+.div-close{ width:30px; height:30px; border-radius:15px;color:#808080;  background-color:rgba(0,0,0,0.2);border:0px;margin-top:0px;}
