@@ -36,7 +36,8 @@
   <column name="productincrementid" type="String" xid="xid42"></column>
   <column name="brand" type="String" xid="xid17"></column>
   <column name="product" type="String" xid="xid18"></column>
-  <column name="lock" type="String" xid="xid19"></column></div>
+  <column name="lock" type="String" xid="xid19"></column>
+  <column name="projectdef" type="String" xid="xid49"></column></div>
   <div component="$UI/system/components/justep/data/data" autoLoad="true" xid="transitData" idColumn="id" confirmDelete="false">
    <column name="id" type="String" xid="column12"></column>
    <column name="startprovince" type="String" xid="column13"></column>
@@ -161,7 +162,11 @@
     <li xid="li4" class="list-group-item" style="padding:0px;padding-bottom:10px;"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row21">
    <div class="x-col" xid="col53"><span xid="span29"><![CDATA[品牌]]></span></div>
    <div class="x-col text-right" xid="col54"><span xid="span30" bind-text='val("brand")'></span></div></div>
-  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row22">
+  <div component="$UI/system/components/justep/row/row" class="x-row" xid="row39">
+   <div class="x-col" xid="col29">
+    <span xid="span60"><![CDATA[项目]]></span></div> 
+   <div class="x-col text-right" xid="col33">
+    <span xid="span61" bind-text='val("projectdef")'></span></div> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row22">
    <div class="x-col" xid="col56">
     <span xid="span32"><![CDATA[型号]]></span></div> 
    <div class="x-col text-right" xid="col55">
@@ -185,7 +190,8 @@
    <ul class="x-list-template" xid="listTemplateUl6" style="padding-left:10px;padding-right:10px;">
     <a component="$UI/system/components/justep/button/button" class="btn btn-default btn-xs" label="button" xid="button2" bind-text=' val("name")' bind-visible=' val("isselect") == 1'>
      <i xid="i3"></i>
-     <span xid="span38"></span></a> </ul> </div></li></ul> </div>
+     <span xid="span38"></span></a> </ul> </div>
+  </li></ul> </div>
   <div component="$UI/system/components/justep/row/row" class="x-row" xid="row27" bind-visible=" $model.bartaskdetailData.count() &gt; 0">
    <div class="x-col text-center" xid="col66" bind-visible="false">
     <span xid="span39"><![CDATA[指纹锁 电子猫眼安装]]></span>

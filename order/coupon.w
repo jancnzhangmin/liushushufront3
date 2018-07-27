@@ -10,9 +10,11 @@
   <column name="ordernumber" type="String" xid="xid7"></column>
   <column name="couponnumber" type="String" xid="xid8"></column>
   <column name="coupontype" type="String" xid="xid9"></column>
-  <column name="name" type="String" xid="xid10"></column></div></div>  
+  <column name="name" type="String" xid="xid10"></column>
+  <column name="artisan" type="String" xid="xid11"></column>
+  <column name="artisanuser_id" type="String" xid="xid12"></column></div></div>  
   <div component="$UI/system/components/justep/panel/panel" 
-    class="x-panel x-full" xid="panel1"> 
+    class="x-panel x-full" xid="panel1" style="color:#FF0000;"> 
       <div class="x-panel-top" xid="top1"> 
         <div component="$UI/system/components/justep/titleBar/titleBar" title="优惠券"
           class="x-titlebar" style="background-color:white;">
@@ -42,10 +44,12 @@
     <span xid="span2" bind-text="val(&quot;assignexpiry&quot;) + '前有效'" style="font-size:9px;color:#000;"></span></div> </div>
   <div component="$UI/system/components/justep/row/row" class="x-row" xid="row5" style="padding:0px;">
    <div class="x-col" xid="col9" style="padding:0px;">
-    <span xid="span3" bind-text="'消费满' + val(&quot;condition&quot;) + '可用'" style="font-size:9px;color:#000;"></span></div> </div></div><div xid="facevaluediv" class="col-xs-7 facevaluediv" style="padding:0px;margin-left:-10px;">
+    <span xid="span3" bind-text="'消费满' + val(&quot;condition&quot;) + '可用'" style="font-size:9px;color:#000;"></span></div> </div></div><div xid="facevaluediv" class="col-xs-2 facevaluediv" style="padding:0px;margin-left:-10px;">
   <div component="$UI/system/components/justep/row/row" class="x-row" xid="row2" style="padding:0px;">
    <div class="x-col" xid="col6" style="padding:0px;"><label xid="facevaluelabel" bind-text='val("facevalue") ' style="font-weight:bolder;font-size:50px;width:70px;text-align:right;letter-spacing:0px;margin-left:-5px;" class="facevaluegradient"><![CDATA[label　]]></label></div></div>
-  </div></div>
+  </div>
+  <div xid="artisandiv" class="col-xs-5" style="padding-top:15px;"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row6" style="padding-left:0px;">
+   <div class="x-col" xid="col12" style="padding-left:0px;"><span xid="span4" style="color:#FF0000;" bind-text="'技工' + val(&quot;artisan&quot;) + '专用'" bind-visible=" val(&quot;artisan&quot;) != ''"><![CDATA[]]></span></div></div></div></div>
   </li></ul> </div></div>
   </div> 
 </div>

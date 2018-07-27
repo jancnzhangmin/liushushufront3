@@ -28,7 +28,8 @@
    <div class="x-col text-right" xid="col6"><span xid="span4" style="color:#ff651a;"><![CDATA[]]></span></div></div>
   </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row3">
    <div class="x-col text-center" xid="col9"><span xid="span5" style="color:#C0C0C0;"><![CDATA[该费用预支付到刘叔叔安装平台，待技工完成安装，您通过验收后，该费用支付给技工]]></span></div></div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row5" bind-click="row5Click">
-   <div class="x-col" xid="col4"><span component="$UI/system/components/justep/button/checkbox" class="x-checkbox" xid="checkbox1" label="使用优惠券" disabled="true"></span></div>
+   <div class="x-col" xid="col4"><span component="$UI/system/components/justep/button/checkbox" class="x-checkbox" xid="checkbox1" bind-click="row5Click" disabled="true"></span>
+  <span xid="span10"><![CDATA[使用优惠券]]></span></div>
    <div class="x-col text-right" xid="col7" style="padding-top:10px;"><span xid="span7"><![CDATA[本次抵扣]]></span>
   <span xid="span8" style="color:#ff651a;"><![CDATA[0.00]]></span>
   <span xid="span9"><![CDATA[元]]></span></div></div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row4">

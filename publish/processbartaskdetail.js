@@ -88,7 +88,9 @@ define(function(require) {
 								id : item.id,
 								bartask_id : item.bartask_id,
 								product : item.product,
-								lock : item.lock
+								lock : item.lock,
+								brand:item.brand,
+								projectdef:item.projectdef
 							} ]
 						};
 						bartaskdetaildata.newData(options);

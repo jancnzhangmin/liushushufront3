@@ -33,7 +33,7 @@
         <div class="x-contents-content x-cards active cnEnuqa" xid="content2" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cnEnuqa"> 
           <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row19" style="padding:0px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
             <div class="x-col cnEnuqa" xid="col25" style="padding:0px;" __cid="cnEnuqa"> 
-              <img src="@justepContextPath@/v_dfff6db67dd04ca18daec81c15a04d65l_zh_CNs_d_m/liushushufront3/image/back01.png" alt="" xid="image1" style="width:100%;" __cid="cnEnuqa" class="cnEnuqa"/> 
+              <img src="@justepContextPath@/v_39831b761b1c416ba0a4548f6e6dc60el_zh_CNs_d_m/liushushufront3/image/back01.png" alt="" xid="image1" style="width:100%;" __cid="cnEnuqa" class="cnEnuqa"/> 
             </div> 
           </div>  
           <div component="$model/UI2/system/components/justep/row/row" class="x-row list-group-item cnEnuqa" xid="row59" style="padding-top:5px;margin-bottom:10px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
@@ -238,6 +238,14 @@
                     </div> 
                   </div> 
                 </div>  
+                <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row60" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                  <div class="x-col cnEnuqa" xid="col54" __cid="cnEnuqa"> 
+                    <div class="input-group cnEnuqa" component="$model/UI2/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup6" data-bind="component:{name:'$model/UI2/system/components/bootstrap/inputGroup/inputGroup'}" __cid="cnEnuqa"> 
+                      <span class="input-group-addon cnEnuqa" xid="span25" __cid="cnEnuqa">项　　目</span>  
+                      <select component="$model/UI2/system/components/justep/select/select" class="form-control cnEnuqa" xid="select3" data-bind="component:{name:'$model/UI2/system/components/justep/select/select'},optionsCaption:'请选择...',options:$model.projectdefData.datas,optionsValue:'id',optionsText:'project',optionsAfterRender2:$model.__justep__.selectOptionsAfterRender.bind($model,$element),optionsBeforeRender:$model.__justep__.selectOptionsBeforeRender.bind($model,$element)" data-events="onChange:select3Change" __cid="cnEnuqa"/> 
+                    </div> 
+                  </div> 
+                </div>  
                 <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row44" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
                   <div class="x-col cnEnuqa" xid="col10" __cid="cnEnuqa"> 
                     <div class="input-group cnEnuqa" component="$model/UI2/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup8" data-bind="component:{name:'$model/UI2/system/components/bootstrap/inputGroup/inputGroup'}" __cid="cnEnuqa"> 
@@ -357,7 +365,7 @@
               <div class="x-col cnEnuqa" xid="col90" __cid="cnEnuqa"> 
                 <div class="input-group cnEnuqa" component="$model/UI2/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup4" data-bind="component:{name:'$model/UI2/system/components/bootstrap/inputGroup/inputGroup'}" __cid="cnEnuqa"> 
                   <span class="input-group-addon cnEnuqa" xid="span30" __cid="cnEnuqa">联系人　</span>  
-                  <input class="form-control cnEnuqa" component="$model/UI2/system/components/justep/input/input" xid="input6" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input6Change" data-config="{&quot;dataType&quot;:&quot;String&quot;}" __cid="cnEnuqa"/> 
+                  <input class="form-control cnEnuqa" component="$model/UI2/system/components/justep/input/input" xid="input6" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input6Change" data-config="{&quot;dataType&quot;:&quot;String&quot;,&quot;placeHolder&quot;:&quot;现场联系人&quot;}" __cid="cnEnuqa"/> 
                 </div> 
               </div> 
             </div>  
@@ -365,7 +373,7 @@
               <div class="x-col cnEnuqa" xid="col91" __cid="cnEnuqa"> 
                 <div class="input-group cnEnuqa" component="$model/UI2/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup5" data-bind="component:{name:'$model/UI2/system/components/bootstrap/inputGroup/inputGroup'}" __cid="cnEnuqa"> 
                   <span class="input-group-addon cnEnuqa" xid="span31" __cid="cnEnuqa">联系方式</span>  
-                  <input class="form-control cnEnuqa" component="$model/UI2/system/components/justep/input/input" xid="input7" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input7Change" data-config="{&quot;dataType&quot;:&quot;String&quot;}" __cid="cnEnuqa"/> 
+                  <input class="form-control cnEnuqa" component="$model/UI2/system/components/justep/input/input" xid="input7" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input7Change" data-config="{&quot;dataType&quot;:&quot;String&quot;,&quot;placeHolder&quot;:&quot;现场联系人电话&quot;}" __cid="cnEnuqa"/> 
                 </div> 
               </div> 
             </div>  

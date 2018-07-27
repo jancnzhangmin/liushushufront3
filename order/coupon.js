@@ -6,6 +6,7 @@ define(function(require) {
 	var height = 0;
 	var width = 0;
 	var scale = 1;
+	var artisanuser_id = 0;
 	var Model = function() {
 		this.callParent();
 	};
@@ -46,7 +47,9 @@ define(function(require) {
 							ordernumber : item.ordernumber,
 							couponnumber : item.couponnumber,
 							coupontype : coupontype,
-							name : item.name
+							name : item.name,
+							artisan : item.artisan,
+							artisanuser_id:item.artisanuser_id
 						} ]
 					};
 					data.newData(options);
@@ -83,6 +86,14 @@ define(function(require) {
 		var flag = true;
 		if (price != 0) {
 			flag = price >= row.val('condition');
+			if(row.val('artisanuser_id') != artisanuser_id){
+			flag = false;
+			}
+		}
+		if (price != 0 && row.val('artisanuser_id') != artisanuser_id) {
+			//flag = false;
+		} else {
+			//flag = false;
 		}
 		return flag;
 	};
@@ -91,7 +102,7 @@ define(function(require) {
 		if (event.params.data) {
 			status = event.params.data.status;
 			price = parseFloat(event.params.data.amount);
-
+			artisanuser_id = event.params.data.artisanuser_id;
 			this.comp('list1').refresh();
 			$('.couponback').height($('.couponback').outerWidth() * 0.445);
 			$('.listdiv').css('top', 80 * scale);

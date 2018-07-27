@@ -8,7 +8,6 @@ define(function(require) {
 	};
 
 	Model.prototype.validateBtnClick = function(event) {
-		alert('c');
 		if (!this.comp('phoneInput').val()) {
 			justep.Util.hint('手机号码不能为空！');
 			return false;
@@ -60,7 +59,7 @@ define(function(require) {
 
 	Model.prototype.registerBtnClick = function(event) {
 		var self = this;
-		if (!self.comp('provinceSelect1').val() || !self.comp('citySelect1').val() || self.comp('districtSelect1').val()) {
+		if (!self.comp('provinceSelect1').val() || !self.comp('citySelect1').val() || !self.comp('districtSelect1').val()) {
 			justep.Util.hint('地址不能为空！');
 			return false;
 		}
@@ -77,7 +76,7 @@ define(function(require) {
 				openid : openid,
 				province : self.comp('provinceSelect1').val(),
 				city : self.comp('citySelect1').val(),
-				districy : self.comp('districtSelect1').val()
+				district : self.comp('districtSelect1').val()
 			},
 			success : function(jsonstr) {// 客户端jquery预先定义好的callback函数,成功获取跨域服务器上的json数据后,会动态执行这个callback函数
 				if (jsonstr.status == '0') {

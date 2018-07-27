@@ -52,6 +52,18 @@
             <span xid="span5" __cid="cfABBbq" class="cfABBbq"/>  
             <i xid="i6" class="fa fa-chevron-right cfABBbq" __cid="cfABBbq"/>
           </div> 
+        </div>  
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row list-group-item cfABBbq" xid="row4" style="padding-top:15px;padding-bottom:15px;" bind-click="row4Click" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfABBbq"> 
+          <div class="x-col x-col-fixed cfABBbq" xid="col12" style="width:25px;" __cid="cfABBbq"> 
+            <i xid="i7" class="fa fa-code-fork cfABBbq" __cid="cfABBbq"/>
+          </div>  
+          <div class="x-col x-col-fixed cfABBbq" xid="col10" style="width:80px;" __cid="cfABBbq"> 
+            <span xid="span8" __cid="cfABBbq" class="cfABBbq">业务提成</span>
+          </div>  
+          <div class="x-col text-right cfABBbq" xid="col11" __cid="cfABBbq"> 
+            <span xid="span7" __cid="cfABBbq" class="cfABBbq"/>  
+            <i xid="i8" class="fa fa-chevron-right cfABBbq" __cid="cfABBbq"/>
+          </div> 
         </div>
       </div>
     </div>  

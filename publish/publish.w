@@ -29,7 +29,8 @@
   <column name="productbaseid" type="String" xid="xid37"></column>
   <column name="productincrementid" type="String" xid="xid42"></column>
   <column name="lock_id" type="String" xid="xid78"></column>
-  <column name="brand" type="String" xid="xid79"></column></div>
+  <column name="brand" type="String" xid="xid79"></column>
+  <column name="projectdef_id" type="String" xid="xid101"></column></div>
   <div component="$UI/system/components/justep/data/data" autoLoad="true" xid="productData" idColumn="id"><column name="id" type="String" xid="xid19"></column>
   <column name="product" type="String" xid="xid20"></column></div>
   <div component="$UI/system/components/justep/data/data" autoLoad="true" xid="barbaseData" idColumn="id"><column name="id" type="String" xid="xid23"></column>
@@ -98,7 +99,9 @@
   <column name="paytype" type="String" xid="xid97"></column>
   <column name="installtime" type="String" xid="xid98"></column></div>
   <div component="$UI/system/components/justep/data/data" autoLoad="true" xid="fingermodeldefData" idColumn="id"><column name="id" type="String" xid="xid88"></column>
-  <column name="model" type="String" xid="xid89"></column></div></div>  
+  <column name="model" type="String" xid="xid89"></column></div>
+  <div component="$UI/system/components/justep/data/data" autoLoad="true" xid="projectdefData" idColumn="id"><column name="id" type="String" xid="xid99"></column>
+  <column name="project" type="String" xid="xid100"></column></div></div>  
   <div component="$UI/system/components/justep/panel/panel" 
     class="x-panel x-full" xid="panel1"> 
       <div class="x-panel-top" xid="top1" height="48"><div component="$UI/system/components/justep/button/buttonGroup" class="btn-group x-card btn-group-justified x-liushushu-top" tabbed="true" xid="buttonGroup1">
@@ -188,7 +191,11 @@
    <div class="x-col" xid="col8"><div class="input-group" component="$UI/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup7">
    <span class="input-group-addon" xid="span41"><![CDATA[品　　牌]]></span>
    <input class="form-control" component="$UI/system/components/justep/input/input" xid="input8" dataType="String" onChange="input5Change" bind-ref='ref("brand")' placeHolder="品牌"></input></div></div>
-  </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row44">
+  </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row60">
+   <div class="x-col" xid="col54">
+    <div class="input-group" component="$UI/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup6">
+     <span class="input-group-addon" xid="span25"><![CDATA[项　　目]]></span>
+     <select component="$UI/system/components/justep/select/select" bind-optionsCaption="请选择..." class="form-control" xid="select3" bind-options="$model.projectdefData" bind-optionsValue="id" bind-optionsLabel="project" onChange="select3Change"></select></div> </div> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row44">
    <div class="x-col" xid="col10">
     <div class="input-group" component="$UI/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup8">
      <span class="input-group-addon" xid="span42"><![CDATA[类　　型]]></span>
@@ -219,7 +226,8 @@
        <a component="$UI/system/components/justep/button/button" class="btn btn-default btn-xs basebtn btn-outline-off" label="button" xid="button7" bind-text='val("name")' style="margin-left:5px;width:80px;" onClick="button7Click">
         <i xid="i7"></i>
         <span xid="span22"></span></a> 
-       <span xid="span21" bind-text='val("summary")' style="font-size:small;color:#C0C0C0;margin-left:5px;"></span></div> </div> </li> </ul> </div></li></ul> </div><div component="$UI/system/components/justep/list/list" class="x-list" xid="list6" data="fingerData">
+       <span xid="span21" bind-text='val("summary")' style="font-size:small;color:#C0C0C0;margin-left:5px;"></span></div> </div> </li> </ul> </div>
+  </li></ul> </div><div component="$UI/system/components/justep/list/list" class="x-list" xid="list6" data="fingerData">
    <ul class="x-list-template" xid="listTemplateUl6">
     <li xid="li6" class="list-group-item  blue-border"><div component="$UI/system/components/justep/row/row" class="x-row " xid="row20">
    <div class="x-col" xid="col7"><div component="$UI/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label30" xid="labelEdit1">
@@ -245,12 +253,12 @@
    <div class="x-col" xid="col90">
     <div class="input-group" component="$UI/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup4">
      <span class="input-group-addon" xid="span30"><![CDATA[联系人　]]></span>
-     <input class="form-control" component="$UI/system/components/justep/input/input" xid="input6" dataType="String" onChange="input6Change"></input></div> </div> </div>
+     <input class="form-control" component="$UI/system/components/justep/input/input" xid="input6" dataType="String" onChange="input6Change" placeHolder="现场联系人"></input></div> </div> </div>
   <div component="$UI/system/components/justep/row/row" class="x-row" xid="row34">
    <div class="x-col" xid="col91">
     <div class="input-group" component="$UI/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup5">
      <span class="input-group-addon" xid="span31"><![CDATA[联系方式]]></span>
-     <input class="form-control" component="$UI/system/components/justep/input/input" xid="input7" dataType="String" onChange="input7Change"></input></div> </div> </div>
+     <input class="form-control" component="$UI/system/components/justep/input/input" xid="input7" dataType="String" onChange="input7Change" placeHolder="现场联系人电话"></input></div> </div> </div>
   <div component="$UI/system/components/justep/row/row" class="x-row" xid="row45">
    <div class="x-col" xid="col28">
     <span xid="span43" style="margin-left:10px;"><![CDATA[额外费用支付]]></span></div> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row46">

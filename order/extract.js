@@ -10,7 +10,7 @@ define(function(require){
 			var self = this;
 		$.ajax({
 			async : false,
-			url : url + "apis/getwxuserinfo",
+			url : url + "apis/get_user_extract",
 			type : "GET",
 			dataType : 'jsonp',
 			jsonp : 'callback',
@@ -19,29 +19,29 @@ define(function(require){
 				openid : openid
 			},
 			success : function(jsonstr) {// 客户端jquery预先定义好的callback函数,成功获取跨域服务器上的json数据后,会动态执行这个callback函数
-				$(self.getElementByXid("image1")).attr('src', jsonstr.user.headurl);
+					var extractdata = self.comp("extractData");
+					extractdata.clear();
+					$.each(jsonstr.extracts, function(i, item) {
+					if(item.score != null){
+					score = item.score;
+					}
+						var options = {
+							defaultValues : [ {
+								id : item.id,
+								amount : parseFloat(item.amount).toFixed(2),
+								headurl : item.headurl,
+								name : item.name
+							} ]
+						};
+						extractdata.newData(options);
+					});
+
 			},
 			error : function(xhr) {
 				// justep.Util.hint("错误，请检查网络");
 			}
 		});
 
-	};
-
-	Model.prototype.row1Click = function(event){
-justep.Shell.showPage(require.toUrl("./collectionartisan.w"));
-	};
-
-	Model.prototype.row2Click = function(event){
-justep.Shell.showPage(require.toUrl("./qrcode.w"));
-	};
-
-	Model.prototype.row3Click = function(event){
-justep.Shell.showPage(require.toUrl("./coupon.w"));
-	};
-
-	Model.prototype.row4Click = function(event){
-justep.Shell.showPage(require.toUrl("./extract.w"));
 	};
 
 	return Model;

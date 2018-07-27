@@ -35,11 +35,11 @@ define(function(require) {
 			data : {
 				// url : window.location.href,
 				price : price,
-				facevalue:facevalue,
+				facevalue : facevalue,
 				artisanid : artisanid,
 				bartaskid : bartaskid,
 				openid : openid,
-				couponnumber:couponnumber
+				couponnumber : couponnumber
 			},
 			success : function(jsonstr) {// 客户端jquery预先定义好的callback函数,成功获取跨域服务器上的json数据后,会动态执行这个callback函数
 				wx.config({
@@ -83,7 +83,8 @@ define(function(require) {
 		var params = {
 			data : {
 				status : 'pay',
-				amount : price
+				amount : price,
+				artisanuser_id : artisanid
 			}
 		}
 
@@ -103,13 +104,15 @@ define(function(require) {
 
 	};
 
-	Model.prototype.windowDialog1Received = function(event){
-	if(event.data.data.couponnumber != ''){
-	facevalue = parseFloat(event.data.data.facevalue);
-	couponnumber = event.data.data.couponnumber;
-	$(this.getElementByXid("span8")).text(facevalue.toFixed(2));
-	this.comp('checkbox1').set({'checked':true});
-	}
+	Model.prototype.windowDialog1Received = function(event) {
+		if (event.data.data.couponnumber != '') {
+			facevalue = parseFloat(event.data.data.facevalue);
+			couponnumber = event.data.data.couponnumber;
+			$(this.getElementByXid("span8")).text(facevalue.toFixed(2));
+			this.comp('checkbox1').set({
+				'checked' : true
+			});
+		}
 
 	};
 

@@ -22,19 +22,25 @@ define(function(require) {
 				timeout : 5000,
 				data : {
 					orderid : event.params.data.id,
-					openid:openid
+					openid : openid
 				},
 				success : function(jsonstr) {// 客户端jquery预先定义好的callback函数,成功获取跨域服务器上的json数据后,会动态执行这个callback函数
 					var artisanuser = self.comp("artisanuserData");
 					artisanuser.clear();
 					$.each(jsonstr.artisans, function(i, item) {
+					var score = 3.0;
+					if(item.score != null){
+					score = item.score;
+					}
 						var options = {
 							defaultValues : [ {
 								id : item.id,
 								login : item.login,
 								username : item.username,
 								headurl : item.headurl,
-								iscollection:item.iscollection
+								iscollection : item.iscollection,
+								score:parseFloat(score).toFixed(1),
+								ordercount:item.ordercount
 							} ]
 						};
 						artisanuser.newData(options);
@@ -43,12 +49,12 @@ define(function(require) {
 					var offerdata = self.comp("offerData");
 					offerdata.clear();
 					$.each(jsonstr.offers, function(i, item) {
-					var iscollection = 0;
-					artisanuser.each(function(param){
-					if(param.row.val('id') == item.artisanuser_id && param.row.val('iscollection') == '1'){
-					iscollection = 1;
-					}
-					});
+						var iscollection = 0;
+						artisanuser.each(function(param) {
+							if (param.row.val('id') == item.artisanuser_id && param.row.val('iscollection') == '1') {
+								iscollection = 1;
+							}
+						});
 						var options = {
 							defaultValues : [ {
 								id : item.id,
@@ -57,7 +63,7 @@ define(function(require) {
 								price : parseFloat(item.price).toFixed(2),
 								summary : item.summary,
 								isselect : item.isselect,
-								iscollection:iscollection
+								iscollection : iscollection
 							} ]
 						};
 						offerdata.newData(options);
@@ -69,6 +75,8 @@ define(function(require) {
 								offer.row.val('login', artisan.row.val('login'));
 								offer.row.val('username', artisan.row.val('username'));
 								offer.row.val('headurl', artisan.row.val('headurl'));
+								offer.row.val('score', artisan.row.val('score'));
+								offer.row.val('ordercount', artisan.row.val('ordercount'));
 							}
 
 						});
@@ -110,6 +118,47 @@ define(function(require) {
 			}
 		}
 		justep.Shell.showPage(require.toUrl("./payment.w"), params);
+	};
+
+	Model.prototype.modelLoad = function(event) {
+		var self = this;
+		$.ajax({
+			async : false,
+			url : url + "apis/getcoupon",
+			type : "GET",
+			dataType : 'jsonp',
+			jsonp : 'callback',
+			timeout : 5000,
+			data : {
+				openid : openid
+			},
+			success : function(jsonstr) {// 客户端jquery预先定义好的callback函数,成功获取跨域服务器上的json数据后,会动态执行这个callback函数
+				var data = self.comp("couponData");
+				data.clear();
+				$.each(jsonstr.coupons, function(i, item) {
+					var options = {
+						defaultValues : [ {
+							id : item.id,
+							artisanuser_id : item.artisanuser_id
+						} ]
+					};
+					data.newData(options);
+				});
+			},
+			error : function(xhr) {
+				// justep.Util.hint("错误，请检查网络");
+			}
+		});
+	};
+
+	Model.prototype.checkcoupon = function(row) {
+		var flag = false;
+		this.comp('couponData').each(function(param) {
+			if (param.row.val('artisanuser_id') == row) {
+				flag = true;
+			}
+		});
+		return flag;
 	};
 
 	return Model;

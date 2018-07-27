@@ -125,6 +125,33 @@ define(function(require) {
 				// justep.Util.hint("错误，请检查网络");
 			}
 		});
+		
+				$.ajax({
+			async : false,
+			url : url + "apis/getprojectdefs",
+			type : "GET",
+			dataType : 'jsonp',
+			jsonp : 'callback',
+			timeout : 5000,
+			success : function(jsonstr) {// 客户端jquery预先定义好的callback函数,成功获取跨域服务器上的json数据后,会动态执行这个callback函数
+				var data = self.comp("projectdefData");
+				data.clear();
+				$.each(jsonstr.projectdefs, function(i, item) {
+
+					var options = {
+						defaultValues : [ {
+							id : item.id,
+							project : item.project
+						} ]
+					};
+					data.newData(options);
+				});
+			},
+			error : function(xhr) {
+				// justep.Util.hint("错误，请检查网络");
+			}
+		});
+		
 		$.ajax({
 			async : false,
 			url : url + "apis/getlocks",
@@ -941,6 +968,11 @@ define(function(require) {
 
 	Model.prototype.windowDialog1Receive = function(event) {
 		this.getuserinfo();
+	};
+
+	Model.prototype.select3Change = function(event){
+		var row = event.bindingContext.$object;
+		row.val('projectdef_id', event.value);
 	};
 
 	return Model;

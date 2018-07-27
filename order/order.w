@@ -33,6 +33,14 @@
     <span xid="span6"><![CDATA[优惠券]]></span></div> 
    <div class="x-col text-right" xid="col9">
     <span xid="span5"></span>
-    <i xid="i6" class="fa fa-chevron-right"></i></div> </div></div></div>
+    <i xid="i6" class="fa fa-chevron-right"></i></div> </div>
+  <div component="$UI/system/components/justep/row/row" class="x-row list-group-item" xid="row4" style="padding-top:15px;padding-bottom:15px;" bind-click="row4Click">
+   <div class="x-col x-col-fixed" xid="col12" style="width:25px;">
+    <i xid="i7" class="fa fa-code-fork"></i></div> 
+   <div class="x-col x-col-fixed" xid="col10" style="width:80px;">
+    <span xid="span8"><![CDATA[业务提成]]></span></div> 
+   <div class="x-col text-right" xid="col11">
+    <span xid="span7"></span>
+    <i xid="i8" class="fa fa-chevron-right"></i></div> </div></div></div>
   </div> 
 <resource xid="resource2"><require xid="require1" url="css!$UI/liushushufront3/font-awesome-4.7.0/css/fa.icons"></require></resource></div>

@@ -238,6 +238,14 @@
                     </div>
                   </div> 
                 </div>
+                <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row60" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                  <div class="x-col cnEnuqa" xid="col54" __cid="cnEnuqa"> 
+                    <div class="input-group cnEnuqa" component="$model/UI2/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup6" data-bind="component:{name:'$model/UI2/system/components/bootstrap/inputGroup/inputGroup'}" __cid="cnEnuqa"> 
+                      <span class="input-group-addon cnEnuqa" xid="span25" __cid="cnEnuqa">项　　目</span>  
+                      <select component="$model/UI2/system/components/justep/select/select" bind-optionsCaption="'请选择...'" class="form-control cnEnuqa" xid="select3" bind-options="$model.projectdefData.datas" bind-optionsValue="'id'" bind-optionsText="'project'" bind-optionsAfterRender2="$model.__justep__.selectOptionsAfterRender.bind($model,$element)" bind-optionsBeforeRender="$model.__justep__.selectOptionsBeforeRender.bind($model,$element)" data-bind="component:{name:'$model/UI2/system/components/justep/select/select'}" data-events="onChange:select3Change" __cid="cnEnuqa"/>
+                    </div> 
+                  </div> 
+                </div>
                 <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row44" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
                   <div class="x-col cnEnuqa" xid="col10" __cid="cnEnuqa"> 
                     <div class="input-group cnEnuqa" component="$model/UI2/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup8" data-bind="component:{name:'$model/UI2/system/components/bootstrap/inputGroup/inputGroup'}" __cid="cnEnuqa"> 
@@ -293,7 +301,7 @@
                       </div> 
                     </li> 
                   </ul> 
-                </div>
+                </div> 
               </li>
             </ul> 
           </div>
@@ -357,7 +365,7 @@
               <div class="x-col cnEnuqa" xid="col90" __cid="cnEnuqa"> 
                 <div class="input-group cnEnuqa" component="$model/UI2/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup4" data-bind="component:{name:'$model/UI2/system/components/bootstrap/inputGroup/inputGroup'}" __cid="cnEnuqa"> 
                   <span class="input-group-addon cnEnuqa" xid="span30" __cid="cnEnuqa">联系人　</span>  
-                  <input class="form-control cnEnuqa" component="$model/UI2/system/components/justep/input/input" xid="input6" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input6Change" data-config="{&quot;dataType&quot;:&quot;String&quot;}" __cid="cnEnuqa"/>
+                  <input class="form-control cnEnuqa" component="$model/UI2/system/components/justep/input/input" xid="input6" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input6Change" data-config="{&quot;dataType&quot;:&quot;String&quot;,&quot;placeHolder&quot;:&quot;现场联系人&quot;}" __cid="cnEnuqa"/>
                 </div> 
               </div> 
             </div>  
@@ -365,7 +373,7 @@
               <div class="x-col cnEnuqa" xid="col91" __cid="cnEnuqa"> 
                 <div class="input-group cnEnuqa" component="$model/UI2/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup5" data-bind="component:{name:'$model/UI2/system/components/bootstrap/inputGroup/inputGroup'}" __cid="cnEnuqa"> 
                   <span class="input-group-addon cnEnuqa" xid="span31" __cid="cnEnuqa">联系方式</span>  
-                  <input class="form-control cnEnuqa" component="$model/UI2/system/components/justep/input/input" xid="input7" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input7Change" data-config="{&quot;dataType&quot;:&quot;String&quot;}" __cid="cnEnuqa"/>
+                  <input class="form-control cnEnuqa" component="$model/UI2/system/components/justep/input/input" xid="input7" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input7Change" data-config="{&quot;dataType&quot;:&quot;String&quot;,&quot;placeHolder&quot;:&quot;现场联系人电话&quot;}" __cid="cnEnuqa"/>
                 </div> 
               </div> 
             </div>  
