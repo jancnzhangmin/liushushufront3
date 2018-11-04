@@ -178,55 +178,6 @@
               </li>
             </ul> 
           </div>
-          <div component="$model/UI2/system/components/justep/list/list" class="x-list cnEnuqa" xid="list2" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;transitData&quot;}" __cid="cnEnuqa"> 
-            <ul class="x-list-template hide cnEnuqa" xid="listTemplateUl2" bind-foreach="{data:$model.foreach_list2($element),afterRender:$model.foreach_afterRender_list2.bind($model,$element)}" __cid="cnEnuqa"> 
-              <li xid="li2" class="list-group-item  blue-border cnEnuqa" __cid="cnEnuqa">
-                <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row13" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
-                  <div class="x-col cnEnuqa" xid="col40" style="padding-top:10px;" __cid="cnEnuqa">
-                    <span xid="span9" __cid="cnEnuqa" class="cnEnuqa">起点</span>
-                  </div>  
-                  <div class="x-col text-right cnEnuqa" xid="col55" style="padding:0px;" __cid="cnEnuqa"/>
-                </div>
-                <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row14" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
-                  <div class="x-col cnEnuqa" xid="col41" __cid="cnEnuqa">
-                    <select component="$model/UI2/system/components/justep/distpicker/provinceSelect" class="form-control cnEnuqa" xid="provinceSelect1" data-bind="component:{ref:ref(&quot;startprovince&quot;),name:'$model/UI2/system/components/justep/distpicker/provinceSelect'}" data-events="onChange:provinceSelect1Change" __cid="cnEnuqa"/>
-                  </div>  
-                  <div class="x-col cnEnuqa" xid="col42" __cid="cnEnuqa">
-                    <select component="$model/UI2/system/components/justep/distpicker/citySelect" class="form-control cnEnuqa" xid="citySelect1" data-bind="component:{ref:ref(&quot;startcity&quot;),name:'$model/UI2/system/components/justep/distpicker/citySelect',provinceRef:val(&quot;startprovince&quot;)}" data-events="onChange:citySelect1Change" __cid="cnEnuqa"/>
-                  </div>  
-                  <div class="x-col cnEnuqa" xid="col43" __cid="cnEnuqa">
-                    <select component="$model/UI2/system/components/justep/distpicker/districtSelect" class="form-control cnEnuqa" xid="districtSelect1" data-bind="component:{ref:ref(&quot;startdistrict&quot;),name:'$model/UI2/system/components/justep/distpicker/districtSelect',cityRef:val(&quot;startcity&quot;)}" data-events="onChange:districtSelect1Change" __cid="cnEnuqa"/>
-                  </div>
-                </div>
-                <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row17" style="border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#F0F0F0;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
-                  <div class="x-col cnEnuqa" xid="col50" __cid="cnEnuqa">
-                    <input component="$model/UI2/system/components/justep/input/input" class="form-control cnEnuqa" xid="input1" data-bind="component:{ref:ref(&quot;startaddress&quot;),name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input1Change" data-config="{&quot;placeHolder&quot;:&quot;起点详细地址&quot;}" __cid="cnEnuqa"/>
-                  </div>
-                </div>
-                <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row15" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
-                  <div class="x-col cnEnuqa" xid="col44" __cid="cnEnuqa"> 
-                    <span xid="span10" __cid="cnEnuqa" class="cnEnuqa">终点</span>
-                  </div> 
-                </div>
-                <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row16" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
-                  <div class="x-col cnEnuqa" xid="col47" __cid="cnEnuqa"> 
-                    <select component="$model/UI2/system/components/justep/distpicker/provinceSelect" class="form-control cnEnuqa" xid="provinceSelect2" data-bind="component:{ref:ref(&quot;endprovince&quot;),name:'$model/UI2/system/components/justep/distpicker/provinceSelect'}" data-events="onChange:provinceSelect2Change" __cid="cnEnuqa"/>
-                  </div>  
-                  <div class="x-col cnEnuqa" xid="col46" __cid="cnEnuqa"> 
-                    <select component="$model/UI2/system/components/justep/distpicker/citySelect" class="form-control cnEnuqa" xid="citySelect2" data-bind="component:{ref:ref(&quot;endcity&quot;),name:'$model/UI2/system/components/justep/distpicker/citySelect',provinceRef:val(&quot;endprovince&quot;)}" __cid="cnEnuqa"/>
-                  </div>  
-                  <div class="x-col cnEnuqa" xid="col45" __cid="cnEnuqa"> 
-                    <select component="$model/UI2/system/components/justep/distpicker/districtSelect" class="form-control cnEnuqa" xid="districtSelect2" data-bind="component:{ref:ref(&quot;enddistrict&quot;),name:'$model/UI2/system/components/justep/distpicker/districtSelect',cityRef:val(&quot;endcity&quot;)}" data-events="onChange:districtSelect2Change" __cid="cnEnuqa"/>
-                  </div> 
-                </div>
-                <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row18" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
-                  <div class="x-col cnEnuqa" xid="col51" __cid="cnEnuqa"> 
-                    <input component="$model/UI2/system/components/justep/input/input" class="form-control cnEnuqa" xid="input2" data-bind="component:{name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input2Change" data-config="{&quot;placeHolder&quot;:&quot;终点详细地址&quot;}" __cid="cnEnuqa"/>
-                  </div> 
-                </div> 
-              </li>
-            </ul> 
-          </div>
           <div component="$model/UI2/system/components/justep/list/list" class="x-list cnEnuqa" xid="list3" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;bartaskdetailData&quot;}" __cid="cnEnuqa"> 
             <ul class="x-list-template hide cnEnuqa" xid="listTemplateUl3" style="padding-left:5px;padding-right:5px;" bind-foreach="{data:$model.foreach_list3($element),afterRender:$model.foreach_afterRender_list3.bind($model,$element)}" __cid="cnEnuqa"> 
               <li xid="li3" class="list-group-item  blue-border  cnEnuqa" style="padding:0px;" __cid="cnEnuqa">
@@ -269,9 +220,9 @@
                 </div>
                 <div component="$model/UI2/system/components/justep/list/list" class="x-list cnEnuqa" xid="list4" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;barbaseData&quot;}" __cid="cnEnuqa"> 
                   <ul class="x-list-template hide cnEnuqa" xid="listTemplateUl4" bind-foreach="{data:$model.foreach_list4($element),afterRender:$model.foreach_afterRender_list4.bind($model,$element)}" __cid="cnEnuqa"> 
-                    <li xid="li4" __cid="cnEnuqa" class="cnEnuqa">
+                    <li xid="li4" class="col-xs-6 col-sm-6 cnEnuqa" style="padding-left:0px;padding-right:0px;" __cid="cnEnuqa">
                       <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row24" style="padding:0px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
-                        <div class="x-col cnEnuqa" xid="col70" style="padding-left:36px;" __cid="cnEnuqa">
+                        <div class="x-col cnEnuqa" xid="col70" style="padding-left:5px;" __cid="cnEnuqa">
                           <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-xs basebtn btn-outline-off cnEnuqa" xid="button5" bind-text="val(&quot;name&quot;)" style="margin-left:5px;width:80px;" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button5Click" data-config="{&quot;label&quot;:&quot;button&quot;}" __cid="cnEnuqa"> 
                             <i xid="i5" __cid="cnEnuqa" class="cnEnuqa"/>  
                             <span xid="span17" __cid="cnEnuqa" class="cnEnuqa"/>
@@ -289,9 +240,9 @@
                 </div>  
                 <div component="$model/UI2/system/components/justep/list/list" class="x-list cnEnuqa" xid="list5" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;$model.barincrementData&quot;}" __cid="cnEnuqa"> 
                   <ul class="x-list-template hide cnEnuqa" xid="listTemplateUl5" bind-foreach="{data:$model.foreach_list5($element),afterRender:$model.foreach_afterRender_list5.bind($model,$element)}" __cid="cnEnuqa"> 
-                    <li xid="li5" __cid="cnEnuqa" class="cnEnuqa"> 
+                    <li xid="li5" style="padding-left:0px;padding-right:0px;" __cid="cnEnuqa" class="cnEnuqa"> 
                       <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row27" style="padding:0px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
-                        <div class="x-col cnEnuqa" xid="col73" style="padding-left:36px;" __cid="cnEnuqa"> 
+                        <div class="x-col cnEnuqa" xid="col73" style="padding-left:5px;" __cid="cnEnuqa"> 
                           <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default btn-xs basebtn btn-outline-off cnEnuqa" xid="button7" bind-text="val(&quot;name&quot;)" style="margin-left:5px;width:80px;" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-events="onClick:button7Click" data-config="{&quot;label&quot;:&quot;button&quot;}" __cid="cnEnuqa"> 
                             <i xid="i7" __cid="cnEnuqa" class="cnEnuqa"/>  
                             <span xid="span22" __cid="cnEnuqa" class="cnEnuqa"/>
@@ -302,6 +253,34 @@
                     </li> 
                   </ul> 
                 </div> 
+              </li>
+            </ul> 
+          </div>
+          <div component="$model/UI2/system/components/justep/list/list" class="x-list cnEnuqa" xid="list2" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;transitData&quot;}" __cid="cnEnuqa"> 
+            <ul class="x-list-template hide cnEnuqa" xid="listTemplateUl2" style="padding-left:5px;padding-right:5px;" bind-foreach="{data:$model.foreach_list2($element),afterRender:$model.foreach_afterRender_list2.bind($model,$element)}" __cid="cnEnuqa"> 
+              <li xid="li2" class="list-group-item  blue-border cnEnuqa" __cid="cnEnuqa">
+                <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row13" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                  <div class="x-col cnEnuqa" xid="col40" style="padding-top:10px;" __cid="cnEnuqa">
+                    <span xid="span9" __cid="cnEnuqa" class="cnEnuqa">运输起点</span>
+                  </div>  
+                  <div class="x-col text-right cnEnuqa" xid="col55" style="padding:0px;" __cid="cnEnuqa"/>
+                </div>
+                <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row14" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                  <div class="x-col cnEnuqa" xid="col41" __cid="cnEnuqa">
+                    <select component="$model/UI2/system/components/justep/distpicker/provinceSelect" class="form-control cnEnuqa" xid="provinceSelect1" data-bind="component:{ref:ref(&quot;startprovince&quot;),name:'$model/UI2/system/components/justep/distpicker/provinceSelect'}" data-events="onChange:provinceSelect1Change" __cid="cnEnuqa"/>
+                  </div>  
+                  <div class="x-col cnEnuqa" xid="col42" __cid="cnEnuqa">
+                    <select component="$model/UI2/system/components/justep/distpicker/citySelect" class="form-control cnEnuqa" xid="citySelect1" data-bind="component:{ref:ref(&quot;startcity&quot;),name:'$model/UI2/system/components/justep/distpicker/citySelect',provinceRef:val(&quot;startprovince&quot;)}" data-events="onChange:citySelect1Change" __cid="cnEnuqa"/>
+                  </div>  
+                  <div class="x-col cnEnuqa" xid="col43" __cid="cnEnuqa">
+                    <select component="$model/UI2/system/components/justep/distpicker/districtSelect" class="form-control cnEnuqa" xid="districtSelect1" data-bind="component:{ref:ref(&quot;startdistrict&quot;),name:'$model/UI2/system/components/justep/distpicker/districtSelect',cityRef:val(&quot;startcity&quot;)}" data-events="onChange:districtSelect1Change" __cid="cnEnuqa"/>
+                  </div>
+                </div>
+                <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row17" style="border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#F0F0F0;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
+                  <div class="x-col cnEnuqa" xid="col50" __cid="cnEnuqa">
+                    <input component="$model/UI2/system/components/justep/input/input" class="form-control cnEnuqa" xid="input1" data-bind="component:{ref:ref(&quot;startaddress&quot;),name:'$model/UI2/system/components/justep/input/input'}" data-events="onChange:input1Change" data-config="{&quot;placeHolder&quot;:&quot;起点详细地址&quot;}" __cid="cnEnuqa"/>
+                  </div>
+                </div>
               </li>
             </ul> 
           </div>
@@ -432,7 +411,7 @@
           </div>
         </div>  
         <div class="x-contents-content x-cards cnEnuqa" xid="content3" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cnEnuqa">
-          <div component="$model/UI2/system/components/justep/list/list" class="x-list cnEnuqa" xid="list8" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;receiptbartaskData&quot;,&quot;filter&quot;:&quot; $row.val(\&quot;status\&quot;) == 1&quot;}" __cid="cnEnuqa"> 
+          <div component="$model/UI2/system/components/justep/list/list" class="x-list cnEnuqa" xid="list8" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;data&quot;:&quot;receiptbartaskData&quot;,&quot;filter&quot;:&quot;$row.val(\&quot;status\&quot;) == 1 || $row.val(\&quot;status\&quot;) == -2&quot;}" __cid="cnEnuqa"> 
             <ul class="x-list-template hide cnEnuqa" xid="listTemplateUl8" bind-foreach="{data:$model.foreach_list8($element),afterRender:$model.foreach_afterRender_list8.bind($model,$element)}" __cid="cnEnuqa"> 
               <li xid="li8" class="list-group-item cnEnuqa" bind-click="li8Click" __cid="cnEnuqa">
                 <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row48" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 
@@ -441,6 +420,9 @@
                   </div>  
                   <div class="x-col cnEnuqa" xid="col56" __cid="cnEnuqa">
                     <span xid="span45" bind-text="val(&quot;installtime&quot;)" class="text-info cnEnuqa" __cid="cnEnuqa"/>
+                  </div>  
+                  <div class="x-col text-right cnEnuqa" xid="col44" __cid="cnEnuqa">
+                    <span xid="span10" class="text-danger cnEnuqa" bind-visible=" val(&quot;status&quot;) == -2" __cid="cnEnuqa">已过期</span>
                   </div>
                 </div>  
                 <div component="$model/UI2/system/components/justep/row/row" class="x-row cnEnuqa" xid="row49" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cnEnuqa"> 

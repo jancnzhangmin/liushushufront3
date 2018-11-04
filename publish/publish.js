@@ -919,6 +919,16 @@ define(function(require) {
 			} ]
 		};
 		this.comp('bartaskdetailData').newData(options);
+		
+				//this.clearlastdata();
+		var uuid = UUID.createUUID();
+		var options = {
+			defaultValues : [ {
+				id : uuid
+			} ]
+		};
+		this.comp('transitData').newData(options);
+		
 		this.comp('bartask_btn').removeClass('x-gray');
 		this.comp('bartask_btn').addClass('btn-default');
 	};

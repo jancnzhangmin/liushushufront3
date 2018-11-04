@@ -4,7 +4,7 @@
   <div component="$UI/system/components/justep/model/model" xid="model"/> 
 <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full" xid="panel1">
    <div class="x-panel-content x-cards" xid="content1"><div component="$UI/system/components/justep/contents/contents" class="x-contents x-full" active="0" xid="contents1">
-   <div class="x-contents-content" xid="publishcontent"><div component="$UI/system/components/justep/windowContainer/windowContainer" class="x-window-container" xid="windowContainer1" src="$UI/liushushufront3/publish/publish.w"></div></div>
+   <div class="x-contents-content" xid="publishcontent"><div component="$UI/system/components/justep/windowContainer/windowContainer" class="x-window-container" xid="windowContainer1" src="$UI/liushushufront3/publishV2/publishV2.w"></div></div>
   <div class="x-contents-content" xid="ordercontent"><div component="$UI/system/components/justep/windowContainer/windowContainer" class="x-window-container" xid="windowContainer2" src="$UI/liushushufront3/order/order.w"></div></div>
   </div></div>
    <div class="x-panel-bottom" xid="bottom1"><div component="$UI/system/components/justep/button/buttonGroup" class="btn-group x-card btn-group-justified x-liushushu" tabbed="true" xid="buttonGroup1">

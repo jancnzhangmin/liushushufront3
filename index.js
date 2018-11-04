@@ -1,5 +1,5 @@
-var url = 'http://192.168.1.102:3000/';
-var url = 'http://artisan.liushushu.com/';
+var url = 'http://192.168.1.105:3000/';
+var url = 'http://artisan.ysdsoft.com/';
 var openid = '';
 //openid = 'opN8uxEts2tNZpp2U8Nm8V_ecV1c';//张敏
 //openid='opN8uxHw0bq4JqLEY0u2BiIv0NC0';//高斌

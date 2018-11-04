@@ -13,7 +13,14 @@
           </div>
         </div> 
       </div>  
-    <div class="x-panel-content x-cards" xid="content1"><div component="$UI/system/components/justep/smartContainer/smartContainer" class="x-smartcontainer" xid="smartContainer1" style="background-color:white;"><div component="$UI/system/components/justep/row/row" class="x-row list-group-item" xid="row1" bind-click="row1Click" style="padding-top:15px;padding-bottom:15px;">
+    <div class="x-panel-content x-cards" xid="content1"><div component="$UI/system/components/justep/smartContainer/smartContainer" class="x-smartcontainer" xid="smartContainer1" style="background-color:white;"><div component="$UI/system/components/justep/row/row" class="x-row list-group-item" xid="row5" style="padding-top:15px;padding-bottom:15px;" bind-click="row5Click">
+   <div class="x-col x-col-fixed" xid="col15" style="width:25px;">
+    <i xid="i9" class="fa fa-user"></i></div> 
+   <div class="x-col x-col-fixed" xid="col14" style="width:80px;">
+    <span xid="span10"><![CDATA[注册]]></span></div> 
+   <div class="x-col text-right" xid="col13">
+    <span xid="span9"></span>
+    <i xid="i10" class="fa fa-chevron-right"></i></div> </div><div component="$UI/system/components/justep/row/row" class="x-row list-group-item" xid="row1" bind-click="row1Click" style="padding-top:15px;padding-bottom:15px;">
    <div class="x-col x-col-fixed" xid="col1" style="width:25px;"><i xid="i1" class="fa fa-heart"></i></div>
    <div class="x-col x-col-fixed" xid="col3" style="width:80px;"><span xid="span1"><![CDATA[收藏技工]]></span></div>
   <div class="x-col text-right" xid="col4"><span xid="span2"></span>
@@ -41,6 +48,7 @@
     <span xid="span8"><![CDATA[业务提成]]></span></div> 
    <div class="x-col text-right" xid="col11">
     <span xid="span7"></span>
-    <i xid="i8" class="fa fa-chevron-right"></i></div> </div></div></div>
+    <i xid="i8" class="fa fa-chevron-right"></i></div> </div>
+  </div></div>
   </div> 
 <resource xid="resource2"><require xid="require1" url="css!$UI/liushushufront3/font-awesome-4.7.0/css/fa.icons"></require></resource></div>

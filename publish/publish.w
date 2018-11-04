@@ -166,25 +166,6 @@
    <div class="x-col" xid="col37"><div class="input-group" component="$UI/system/components/bootstrap/inputGroup/inputGroup" xid="inputGroup1" style="width:100%;">
    
   <textarea component="$UI/system/components/justep/textarea/textarea" class="form-control" xid="textarea2" onChange="textarea2Change" bind-ref='ref("summary")'></textarea></div></div></div>
-  </li></ul> </div><div component="$UI/system/components/justep/list/list" class="x-list" xid="list2" data="transitData">
-   <ul class="x-list-template" xid="listTemplateUl2">
-    <li xid="li2" class="list-group-item  blue-border"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row13">
-   <div class="x-col" xid="col40" style="padding-top:10px;"><span xid="span9"><![CDATA[起点]]></span></div>
-  <div class="x-col text-right" xid="col55" style="padding:0px;"></div></div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row14">
-   <div class="x-col" xid="col41"><select component="$UI/system/components/justep/distpicker/provinceSelect" class="form-control" xid="provinceSelect1" onChange="provinceSelect1Change" bind-ref='ref("startprovince")'></select></div>
-   <div class="x-col" xid="col42"><select component="$UI/system/components/justep/distpicker/citySelect" class="form-control" xid="citySelect1" bind-provinceRef='val("startprovince")' bind-ref='ref("startcity")' onChange="citySelect1Change"></select></div>
-   <div class="x-col" xid="col43"><select component="$UI/system/components/justep/distpicker/districtSelect" class="form-control" xid="districtSelect1" bind-cityRef='val("startcity")' bind-ref='ref("startdistrict")' onChange="districtSelect1Change"></select></div></div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row17" style="border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#F0F0F0;">
-   <div class="x-col" xid="col50"><input component="$UI/system/components/justep/input/input" class="form-control" xid="input1" placeHolder="起点详细地址" bind-ref='ref("startaddress")' onChange="input1Change"></input></div></div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row15">
-   <div class="x-col" xid="col44">
-    <span xid="span10"><![CDATA[终点]]></span></div> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row16">
-   <div class="x-col" xid="col47">
-    <select component="$UI/system/components/justep/distpicker/provinceSelect" class="form-control" xid="provinceSelect2" bind-ref='ref("endprovince")' onChange="provinceSelect2Change"></select></div> 
-   <div class="x-col" xid="col46">
-    <select component="$UI/system/components/justep/distpicker/citySelect" class="form-control" xid="citySelect2" bind-provinceRef='val("endprovince")' bind-ref='ref("endcity")'></select></div> 
-   <div class="x-col" xid="col45">
-    <select component="$UI/system/components/justep/distpicker/districtSelect" class="form-control" xid="districtSelect2" onChange="districtSelect2Change" bind-ref='ref("enddistrict")' bind-cityRef='val("endcity")'></select></div> </div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row18">
-   <div class="x-col" xid="col51">
-    <input component="$UI/system/components/justep/input/input" class="form-control" xid="input2" placeHolder="终点详细地址" onChange="input2Change"></input></div> </div>
   </li></ul> </div><div component="$UI/system/components/justep/list/list" class="x-list" xid="list3" data="bartaskdetailData">
    <ul class="x-list-template" xid="listTemplateUl3" style="padding-left:5px;padding-right:5px;">
     <li xid="li3" class="list-group-item  blue-border " style="padding:0px;"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row43">
@@ -209,8 +190,8 @@
    <div class="x-col" xid="col65" style="padding-left:16px;"><span xid="span16"><![CDATA[基础服务]]></span></div>
    </div><div component="$UI/system/components/justep/list/list" class="x-list" xid="list4" data="barbaseData">
    <ul class="x-list-template" xid="listTemplateUl4">
-    <li xid="li4"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row24" style="padding:0px;">
-   <div class="x-col" xid="col70" style="padding-left:36px;"><a component="$UI/system/components/justep/button/button" class="btn btn-default btn-xs basebtn btn-outline-off" label="button" xid="button5" bind-text='val("name")' style="margin-left:5px;width:80px;" onClick="button5Click">
+    <li xid="li4" class="col-xs-6 col-sm-6" style="padding-left:0px;padding-right:0px;"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row24" style="padding:0px;">
+   <div class="x-col" xid="col70" style="padding-left:5px;"><a component="$UI/system/components/justep/button/button" class="btn btn-default btn-xs basebtn btn-outline-off" label="button" xid="button5" bind-text='val("name")' style="margin-left:5px;width:80px;" onClick="button5Click">
    <i xid="i5"></i>
    <span xid="span17"></span></a>
   <span xid="span18" bind-text='val("summary")' style="font-size:small;color:#C0C0C0;margin-left:5px;"></span></div></div></li></ul> </div>
@@ -220,14 +201,22 @@
   
   <div component="$UI/system/components/justep/list/list" class="x-list" xid="list5" data="$model.barincrementData">
    <ul class="x-list-template" xid="listTemplateUl5">
-    <li xid="li5">
+    <li xid="li5" style="padding-left:0px;padding-right:0px;">
      <div component="$UI/system/components/justep/row/row" class="x-row" xid="row27" style="padding:0px;">
-      <div class="x-col" xid="col73" style="padding-left:36px;">
+      <div class="x-col" xid="col73" style="padding-left:5px;">
        <a component="$UI/system/components/justep/button/button" class="btn btn-default btn-xs basebtn btn-outline-off" label="button" xid="button7" bind-text='val("name")' style="margin-left:5px;width:80px;" onClick="button7Click">
         <i xid="i7"></i>
         <span xid="span22"></span></a> 
        <span xid="span21" bind-text='val("summary")' style="font-size:small;color:#C0C0C0;margin-left:5px;"></span></div> </div> </li> </ul> </div>
-  </li></ul> </div><div component="$UI/system/components/justep/list/list" class="x-list" xid="list6" data="fingerData">
+  </li></ul> </div><div component="$UI/system/components/justep/list/list" class="x-list" xid="list2" data="transitData">
+   <ul class="x-list-template" xid="listTemplateUl2" style="padding-left:5px;padding-right:5px;">
+    <li xid="li2" class="list-group-item  blue-border"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row13">
+   <div class="x-col" xid="col40" style="padding-top:10px;"><span xid="span9"><![CDATA[运输起点]]></span></div>
+  <div class="x-col text-right" xid="col55" style="padding:0px;"></div></div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row14">
+   <div class="x-col" xid="col41"><select component="$UI/system/components/justep/distpicker/provinceSelect" class="form-control" xid="provinceSelect1" onChange="provinceSelect1Change" bind-ref='ref("startprovince")'></select></div>
+   <div class="x-col" xid="col42"><select component="$UI/system/components/justep/distpicker/citySelect" class="form-control" xid="citySelect1" bind-provinceRef='val("startprovince")' bind-ref='ref("startcity")' onChange="citySelect1Change"></select></div>
+   <div class="x-col" xid="col43"><select component="$UI/system/components/justep/distpicker/districtSelect" class="form-control" xid="districtSelect1" bind-cityRef='val("startcity")' bind-ref='ref("startdistrict")' onChange="districtSelect1Change"></select></div></div><div component="$UI/system/components/justep/row/row" class="x-row" xid="row17" style="border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#F0F0F0;">
+   <div class="x-col" xid="col50"><input component="$UI/system/components/justep/input/input" class="form-control" xid="input1" placeHolder="起点详细地址" bind-ref='ref("startaddress")' onChange="input1Change"></input></div></div></li></ul> </div><div component="$UI/system/components/justep/list/list" class="x-list" xid="list6" data="fingerData">
    <ul class="x-list-template" xid="listTemplateUl6">
     <li xid="li6" class="list-group-item  blue-border"><div component="$UI/system/components/justep/row/row" class="x-row " xid="row20">
    <div class="x-col" xid="col7"><div component="$UI/system/components/justep/labelEdit/labelEdit" class="x-label-edit x-label30" xid="labelEdit1">
@@ -281,12 +270,13 @@
    <div class="x-col x-col-fixed" xid="col99" style="width:30px;"><a component="$UI/system/components/justep/button/button" class="btn btn-default btn-xs btn-only-icon pull-right div-close" label="button" xid="closediv" icon="fa fa-times" onClick="closedivClick" style="margin-top:-5px;">
    <i xid="i2" style="margin-top:8px;" class="fa fa-times"></i>
    <span xid="span32"></span></a></div></div></div></div>
-  <div class="x-contents-content x-cards" xid="content3"><div component="$UI/system/components/justep/list/list" class="x-list" xid="list8" data="receiptbartaskData" filter=' $row.val("status") == 1'>
+  <div class="x-contents-content x-cards" xid="content3"><div component="$UI/system/components/justep/list/list" class="x-list" xid="list8" data="receiptbartaskData" filter='$row.val("status") == 1 || $row.val("status") == -2'>
    <ul class="x-list-template" xid="listTemplateUl8">
     <li xid="li8" class="list-group-item" bind-click="li8Click"><div component="$UI/system/components/justep/row/row" class="x-row" xid="row48">
    <div class="x-col x-col-fixed" xid="col53" style="width:80px;"><![CDATA[]]>
   <span xid="span44"><![CDATA[预约时间]]></span></div>
-   <div class="x-col" xid="col56"><span xid="span45" bind-text='val("installtime")' class="text-info"></span></div></div>
+   <div class="x-col" xid="col56"><span xid="span45" bind-text='val("installtime")' class="text-info"></span></div>
+  <div class="x-col text-right" xid="col44"><span xid="span10" class="text-danger" bind-visible=' val("status") == -2'><![CDATA[已过期]]></span></div></div>
   <div component="$UI/system/components/justep/row/row" class="x-row" xid="row49">
    <div class="x-col x-col-fixed" xid="col58" style="width:80px;"><span xid="span46"><![CDATA[参与技工]]></span></div>
    <div class="x-col" xid="col59"><span xid="span47" bind-text='val("artisancount")'><![CDATA[0]]></span></div></div>

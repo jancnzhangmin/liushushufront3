@@ -7,7 +7,7 @@
     <div class="x-panel-top cfABBbq" xid="top1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cfABBbq"> 
       <div component="$model/UI2/system/components/justep/titleBar/titleBar" class="x-titlebar cfABBbq" style="background-color:white;" data-bind="component:{name:'$model/UI2/system/components/justep/titleBar/titleBar'}" __cid="cfABBbq"> 
         <div class="x-titlebar-left cfABBbq" __cid="cfABBbq"> 
-          <img src="@justepContextPath@/v_0140e31278fa4d0f89264a413c9dc273l_zh_CNs_d_m/liushushufront3/image/head.png" alt="" xid="image1" class="headimg cfABBbq" __cid="cfABBbq"/> 
+          <img src="@justepContextPath@/v_625eb156eb6949639a4901dfd6f5c330l_zh_CNs_d_m/liushushufront3/image/head.png" alt="" xid="image1" class="headimg cfABBbq" __cid="cfABBbq"/> 
         </div>  
         <div class="x-titlebar-title cfABBbq" __cid="cfABBbq"/>  
         <div class="x-titlebar-right  cfABBbq" __cid="cfABBbq"> 
@@ -17,6 +17,18 @@
     </div>  
     <div class="x-panel-content x-cards cfABBbq" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cfABBbq"> 
       <div component="$model/UI2/system/components/justep/smartContainer/smartContainer" class="x-smartcontainer cfABBbq" xid="smartContainer1" style="background-color:white;" data-bind="component:{name:'$model/UI2/system/components/justep/smartContainer/smartContainer'}" __cid="cfABBbq"> 
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row list-group-item cfABBbq" xid="row5" style="padding-top:15px;padding-bottom:15px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'},event:{click:$model._callModelFn.bind($model, 'row5Click')}" __cid="cfABBbq"> 
+          <div class="x-col x-col-fixed cfABBbq" xid="col15" style="width:25px;" __cid="cfABBbq"> 
+            <i xid="i9" class="fa fa-user cfABBbq" __cid="cfABBbq"/> 
+          </div>  
+          <div class="x-col x-col-fixed cfABBbq" xid="col14" style="width:80px;" __cid="cfABBbq"> 
+            <span xid="span10" __cid="cfABBbq" class="cfABBbq">注册</span> 
+          </div>  
+          <div class="x-col text-right cfABBbq" xid="col13" __cid="cfABBbq"> 
+            <span xid="span9" __cid="cfABBbq" class="cfABBbq"/>  
+            <i xid="i10" class="fa fa-chevron-right cfABBbq" __cid="cfABBbq"/> 
+          </div> 
+        </div>  
         <div component="$model/UI2/system/components/justep/row/row" class="x-row list-group-item cfABBbq" xid="row1" style="padding-top:15px;padding-bottom:15px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'},event:{click:$model._callModelFn.bind($model, 'row1Click')}" __cid="cfABBbq"> 
           <div class="x-col x-col-fixed cfABBbq" xid="col1" style="width:25px;" __cid="cfABBbq"> 
             <i xid="i1" class="fa fa-heart cfABBbq" __cid="cfABBbq"/> 

@@ -17,6 +17,18 @@
     </div>  
     <div class="x-panel-content x-cards cfABBbq" xid="content1" component="$model/UI2/system/components/justep/panel/child" data-bind="component:{name:'$model/UI2/system/components/justep/panel/child'}" __cid="cfABBbq">
       <div component="$model/UI2/system/components/justep/smartContainer/smartContainer" class="x-smartcontainer cfABBbq" xid="smartContainer1" style="background-color:white;" data-bind="component:{name:'$model/UI2/system/components/justep/smartContainer/smartContainer'}" __cid="cfABBbq">
+        <div component="$model/UI2/system/components/justep/row/row" class="x-row list-group-item cfABBbq" xid="row5" style="padding-top:15px;padding-bottom:15px;" bind-click="row5Click" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfABBbq"> 
+          <div class="x-col x-col-fixed cfABBbq" xid="col15" style="width:25px;" __cid="cfABBbq"> 
+            <i xid="i9" class="fa fa-user cfABBbq" __cid="cfABBbq"/>
+          </div>  
+          <div class="x-col x-col-fixed cfABBbq" xid="col14" style="width:80px;" __cid="cfABBbq"> 
+            <span xid="span10" __cid="cfABBbq" class="cfABBbq">注册</span>
+          </div>  
+          <div class="x-col text-right cfABBbq" xid="col13" __cid="cfABBbq"> 
+            <span xid="span9" __cid="cfABBbq" class="cfABBbq"/>  
+            <i xid="i10" class="fa fa-chevron-right cfABBbq" __cid="cfABBbq"/>
+          </div> 
+        </div>
         <div component="$model/UI2/system/components/justep/row/row" class="x-row list-group-item cfABBbq" xid="row1" bind-click="row1Click" style="padding-top:15px;padding-bottom:15px;" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cfABBbq"> 
           <div class="x-col x-col-fixed cfABBbq" xid="col1" style="width:25px;" __cid="cfABBbq">
             <i xid="i1" class="fa fa-heart cfABBbq" __cid="cfABBbq"/>
@@ -64,7 +76,7 @@
             <span xid="span7" __cid="cfABBbq" class="cfABBbq"/>  
             <i xid="i8" class="fa fa-chevron-right cfABBbq" __cid="cfABBbq"/>
           </div> 
-        </div>
+        </div> 
       </div>
     </div>  
     <style __cid="cfABBbq" class="cfABBbq">.x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-top {height: 48px;}.x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-content { top: 48px;bottom: nullpx;}.x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-bottom {height: nullpx;}.iosstatusbar .x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-top,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-top {height: 68px;}.iosstatusbar .x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-content,.iosstatusbar .x-panel .x-panel-content .x-has-iosstatusbar.x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-content { top: 68px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-top {height: 48px;}.iosstatusbar .x-panel .x-panel-content .x-panel.pca6Fjuu-iosstatusbar &gt;.x-panel-content {top: 48px;}</style>

@@ -44,5 +44,10 @@ justep.Shell.showPage(require.toUrl("./coupon.w"));
 justep.Shell.showPage(require.toUrl("./extract.w"));
 	};
 
+	Model.prototype.row5Click = function(event){
+	justep.Shell.showPage(require.toUrl("../register.w"));
+
+	};
+
 	return Model;
 });
